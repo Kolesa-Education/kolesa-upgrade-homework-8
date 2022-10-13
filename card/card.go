@@ -89,6 +89,17 @@ func (c Card) SuitUnicode() (string, error) {
 	}
 }
 
+func (c Card) ShortRepresentation() (string, error) {
+	unicode, err := c.SuitUnicode()
+	if err != nil {
+		return "", err
+	}
+	if !isValidFace(c.Face) {
+		return "", errors.New("card face is invalid")
+	}
+	return fmt.Sprintf("%s%s", unicode, c.Face), nil
+}
+
 func New(suit string, face string) (*Card, error) {
 	if isValidSuit(suit) && isValidFace(face) {
 		return &Card{

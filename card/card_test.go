@@ -1,6 +1,7 @@
 package card
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"math/rand"
@@ -134,5 +135,53 @@ func TestRandom(t *testing.T) {
 			_, err := Random(*random)
 			require.NoError(t, err)
 		}
+	})
+}
+
+func TestCard_ShortRepresentation(t *testing.T) {
+	t.Run("Ace Diamonds", func(t *testing.T) {
+		c := Card{
+			Suit: SuitDiamonds,
+			Face: FaceAce,
+		}
+		representation, err := c.ShortRepresentation()
+		require.NoError(t, err)
+		fmt.Println(representation)
+		assert.Equal(t, "♦A", representation)
+	})
+
+	t.Run("2 Spades", func(t *testing.T) {
+		c := Card{
+			Suit: SuitSpades,
+			Face: Face2,
+		}
+		representation, err := c.ShortRepresentation()
+		require.NoError(t, err)
+		fmt.Println(representation)
+		assert.Equal(t, "♠2", representation)
+	})
+
+	t.Run("invalid suit", func(t *testing.T) {
+		c := Card{
+			Suit: "invalid",
+			Face: FaceAce,
+		}
+		representation, err := c.ShortRepresentation()
+		require.Error(t, err)
+		fmt.Println(representation)
+		assert.Equal(t, "", representation)
+	})
+
+	t.Run("invalid face", func(t *testing.T) {
+		t.Run("invalid suit", func(t *testing.T) {
+			c := Card{
+				Suit: SuitSpades,
+				Face: "invalid",
+			}
+			representation, err := c.ShortRepresentation()
+			require.Error(t, err)
+			fmt.Println(representation)
+			assert.Equal(t, "", representation)
+		})
 	})
 }
