@@ -3,7 +3,9 @@ package card
 import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"math/rand"
 	"testing"
+	"time"
 )
 
 func Test_isValidSuit(t *testing.T) {
@@ -110,5 +112,27 @@ func TestCard_SuitUnicode(t *testing.T) {
 		unicode, err := c.SuitUnicode()
 		assert.Equal(t, "", unicode)
 		require.Error(t, err)
+	})
+}
+
+func TestRandom(t *testing.T) {
+	t.Run("seed 1", func(t *testing.T) {
+		randomSource := rand.NewSource(1)
+		random := rand.New(randomSource)
+		card, err := Random(*random)
+		require.NoError(t, err)
+		// Can be tested because of the fixed seed
+		assert.Equal(t, card.Suit, SuitDiamonds)
+		assert.Equal(t, card.Face, Face10)
+	})
+
+	t.Run("produces no errors", func(t *testing.T) {
+		for i := 0; i < 10_000; i++ {
+			randomSource := rand.NewSource(time.Now().UnixNano())
+			random := rand.New(randomSource)
+
+			_, err := Random(*random)
+			require.NoError(t, err)
+		}
 	})
 }

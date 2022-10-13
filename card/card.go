@@ -3,9 +3,12 @@ package card
 import (
 	"errors"
 	"fmt"
+	"math/rand"
 )
 
 const (
+	SuitCount = 4
+
 	SuitDiamonds        = "diamonds"
 	SuitDiamondsUnicode = "\u2666"
 
@@ -20,6 +23,7 @@ const (
 )
 
 const (
+	FaceCount = 13
 	Face2     = "2"
 	Face3     = "3"
 	Face4     = "4"
@@ -58,6 +62,18 @@ func isValidFace(face string) bool {
 	}
 }
 
+func randomSuit(rand rand.Rand) string {
+	index := rand.Intn(SuitCount)
+	suits := []string{SuitHearts, SuitDiamonds, SuitSpades, SuitClubs}
+	return suits[index]
+}
+
+func randomFace(random rand.Rand) string {
+	index := random.Intn(FaceCount)
+	suits := []string{Face2, Face3, Face4, Face5, Face6, Face7, Face8, Face9, Face10, FaceJack, FaceQueen, FaceKing, FaceAce}
+	return suits[index]
+}
+
 func (c Card) SuitUnicode() (string, error) {
 	switch c.Suit {
 	case SuitClubs:
@@ -82,4 +98,10 @@ func New(suit string, face string) (*Card, error) {
 	} else {
 		return nil, errors.New(fmt.Sprintf("Cannot construct Card with suit %s, face %s", suit, face))
 	}
+}
+
+func Random(random rand.Rand) (*Card, error) {
+	suit := randomSuit(random)
+	face := randomFace(random)
+	return New(suit, face)
 }
