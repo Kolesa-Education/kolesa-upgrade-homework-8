@@ -1,4 +1,4 @@
-module upgrade2022-concurrency
+module github.com/Kolesa-Education/kolesa-upgrade-homework-8
 
 go 1.19
 
