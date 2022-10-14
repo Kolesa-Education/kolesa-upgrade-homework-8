@@ -25,9 +25,9 @@ func main() {
 	log.Printf("Initialized random with seed %d\n", seed)
 
 	fmt.Println("Starting to generate cards...")
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 100; i++ {
 		log.Printf("Iteration %d\n", i)
-		cardsInFile := random.Intn(5) + 3 // [4, 7]
+		cardsInFile := random.Intn(7) + 10 // [10, 17]
 		cards := make([]card.Card, 0)
 
 		for j := 0; j < cardsInFile; j++ {
