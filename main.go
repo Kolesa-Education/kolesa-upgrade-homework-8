@@ -412,6 +412,7 @@ func main() {
 		writer.Flush()
 		_ = file.Close()
 		go logicGo(i)
+		//Добавил задержку, т.к. если выполнять без неё, то большая часть данных будет теряться, из лекции Хамбара я так понял что это норма?
 		time.Sleep(5 * time.Second)
 		duration := time.Since(start)
 		fmt.Println(duration)
