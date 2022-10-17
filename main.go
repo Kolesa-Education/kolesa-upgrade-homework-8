@@ -3,11 +3,12 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
-	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
-	"github.com/samber/lo"
 	"log"
 	"math/rand"
 	"os"
+
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/samber/lo"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
