@@ -88,9 +88,11 @@ func main() {
 	check, twoPairs := combinations.GetTwoPairs(cards)
 	fmt.Println("Two pairs:", check, twoPairs)
 	check, threeOfAKind := combinations.GetThreeOfAKind(cards)
-	fmt.Println("Three of a kind:", check, threeOfAKind)
+	fmt.Println("Three Of A Kind:", check, threeOfAKind)
 	check, flush := combinations.GetFlush(cards)
 	fmt.Println("Flush:", check, flush)
 	check, fullHouse := combinations.GetFullHouse(cards)
 	fmt.Println("Full House:", check, fullHouse)
+	check, fourOfAKind := combinations.GetFourOfAKind(cards)
+	fmt.Println("Four Of A Kind:", check, fourOfAKind)
 }

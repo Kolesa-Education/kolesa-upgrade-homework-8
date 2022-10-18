@@ -51,19 +51,25 @@ var (
 )
 
 func GetFourOfAKind(cards []card.Card) (bool, []card.Card) {
-	var combination []card.Card
-	check, threeOfAKind := GetThreeOfAKind(cards)
-	if !check {
-		return false, combination
-	}
-	combination = append(combination, threeOfAKind...)
-	check, pair := GetPair(cards)
-	if !check {
+	var (
+		counter     int
+		combination []card.Card
+	)
+	for i, curCard := range cards {
+		combination = append(combination, curCard)
+		for _, compCard := range cards[i+1:] {
+			if curCard.Face == compCard.Face {
+				combination = append(combination, compCard)
+				counter++
+			}
+			if counter == 3 {
+				return true, combination
+			}
+		}
+		counter = 0
 		combination = []card.Card{}
-		return false, combination
 	}
-	combination = append(combination, pair...)
-	return true, combination
+	return false, combination
 }
 
 func GetFullHouse(cards []card.Card) (bool, []card.Card) {
