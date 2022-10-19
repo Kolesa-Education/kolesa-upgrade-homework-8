@@ -1,4 +1,4 @@
-package main
+package pipeline
 
 import (
 	"encoding/csv"
@@ -9,17 +9,10 @@ import (
 	"gonum.org/v1/gonum/stat/combin"
 	"log"
 	"os"
+	"sync"
 )
 
-//func cardsToRepresentations(cards []card.Card) []string {
-//	representations := lo.Map[card.Card, string](cards, func(c card.Card, index int) string {
-//		r, _ := c.ShortRepresentation()
-//		return r
-//	})
-//	return representations
-//}
-
-func openDataset(path string) ([]string, error) {
+func openCSV(path string) ([]string, error) {
 	f, err := os.Open(path)
 	if err != nil {
 		log.Fatal("Unable to read input file "+path, err)
@@ -33,6 +26,22 @@ func openDataset(path string) ([]string, error) {
 	return records, nil
 }
 
+func writeCSV(filePath string, data [][]string) {
+	f, err := os.Create(filePath)
+	if err != nil {
+		log.Fatalf("failed creating file: %s", err)
+	}
+	csvWriter := csv.NewWriter(f)
+	for _, oneComb := range data {
+		err = csvWriter.Write(oneComb)
+		if err != nil {
+			log.Fatalf("failed writing file: %s", err)
+		}
+	}
+	csvWriter.Flush()
+	f.Close()
+}
+
 func removeDuplicateStr(strSlice []string) []string {
 	allKeys := make(map[string]bool)
 	var list []string
@@ -44,15 +53,6 @@ func removeDuplicateStr(strSlice []string) []string {
 	}
 	return list
 }
-
-//func Contains(a []string, x string) bool {
-//	for _, n := range a {
-//		if x == n {
-//			return true
-//		}
-//	}
-//	return false
-//}
 
 func cardToStruct(cardStr string) (card.Card, error) {
 	strToBytes := []rune(cardStr)
@@ -126,63 +126,72 @@ func getCombinations(cards []card.Card, col int) [][]card.Card {
 	return superList
 }
 
-func main() {
-	dataset, err := openDataset("./dataset/dat0.csv")
+func combsToStrings(cardsCombs [][]card.Card) [][]string {
+	var res [][]string
+	for _, comb := range cardsCombs {
+		combName := checkCombinations(comb)
+		if combName == "" {
+			continue
+		}
+		combLst := []string{combName}
+		res = append(res, combLst)
+	}
+	return res
+}
+
+func checkCombinations(cards []card.Card) (combString string) {
+	combString = structToString(cards)
+	switch true {
+	case combinations.GetStraightFlush(cards):
+		combString += " | Straight Flush"
+		return
+	case combinations.GetFourOfAKind(cards):
+		combString += " | Four Of A Kind"
+		return
+	case combinations.GetFullHouse(cards):
+		combString += " | Full House"
+		return
+	case combinations.GetFlush(cards):
+		combString += " | Flush"
+		return
+	case combinations.GetStraight(cards):
+		combString += " | Straight"
+		return
+	case combinations.GetThreeOfAKind(cards):
+		combString += " | Three Of A Kind"
+		return
+	case combinations.GetTwoPairs(cards):
+		combString += " | Two Pairs"
+		return
+	case combinations.GetPair(cards):
+		combString += " | Pair"
+		return
+	default:
+		return ""
+	}
+}
+
+func structToString(comb []card.Card) string {
+	var res string
+	for i, cardItem := range comb {
+		res += fmt.Sprintf("%s%s", cardItem.Suit, cardItem.Face)
+		if i != len(comb)-1 {
+			res += ","
+		}
+	}
+	return res
+}
+
+func Pipeline(num string, group *sync.WaitGroup) {
+	dataset, err := openCSV("./dataset/dat" + num + ".csv")
 	if err != nil {
 		log.Fatalln("failed to open file", err)
 	}
 	uniqCards := removeDuplicateStr(dataset)
 	cards := getStructCards(uniqCards)
-	combsList := getCombinations(cards, 5)
-	combLst := combsToStrings(combsList)
-	fmt.Println(combLst)
-}
-
-func combsToStrings(cardsCombs [][]card.Card) []string {
-	var stringLst []string
-	for _, comb := range cardsCombs {
-		combName := checkCombinations(comb)
-		stringLst = append(stringLst, combName)
-	}
-	return stringLst
-}
-
-func checkCombinations(cards []card.Card) string {
-	var combString string
-	check, _ := combinations.GetStraightFlush(cards)
-	if check {
-		combString = structToString(cards)
-		combString += fmt.Sprintf(" | Straight Flush")
-		return combString
-	}
-	check, _ = combinations.GetFourOfAKind(cards)
-	if check {
-		combString = structToString(cards)
-		combString += fmt.Sprintf(" | Four Of A Kind")
-		return combString
-	}
-	check, fullHouse := combinations.GetFullHouse(cards)
-	if check {
-		combString = structToString(cards)
-	}
-	fmt.Println("Full House:", check, fullHouse)
-	check, flush := combinations.GetFlush(cards)
-	fmt.Println("Flush:", check, flush)
-	check, straight := combinations.GetStraight(cards)
-	fmt.Println("Straight:", check, straight)
-	check, threeOfAKind := combinations.GetThreeOfAKind(cards)
-	fmt.Println("Three Of A Kind:", check, threeOfAKind)
-	check, twoPairs := combinations.GetTwoPairs(cards)
-	fmt.Println("Two pairs:", check, twoPairs)
-	check, pair := combinations.GetPair(cards)
-	fmt.Println("Pair:", check, pair)
-	return ""
-}
-
-func structToString(comb []card.Card) string {
-	var res string
-	for _, card := range comb {
-		res += fmt.Sprintf("%s%s", card.Suit, card.Face)
-	}
-	return res
+	combStructLst := getCombinations(cards, 5)
+	combStringLst := combsToStrings(combStructLst)
+	writeCSV("./results/dat"+num+".csv", combStringLst)
+	//fmt.Println(combStringLst)
+	group.Done()
 }

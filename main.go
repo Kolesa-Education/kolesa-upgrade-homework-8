@@ -2,7 +2,10 @@ package main
 
 import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/pipeline"
 	"github.com/samber/lo"
+	"strconv"
+	"sync"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -13,6 +16,16 @@ func cardsToRepresentations(cards []card.Card) []string {
 	return representations
 }
 
+func main() {
+	var group sync.WaitGroup
+	for i := 0; i < 100; i++ {
+		group.Add(1)
+		go pipeline.Pipeline(strconv.Itoa(i), &group)
+		group.Wait()
+	}
+}
+
+// Khambar's main function
 //func main() {
 //	var seed int64 = 1665694295623135151
 //	randomSource := rand.NewSource(seed)
