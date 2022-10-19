@@ -1,7 +1,7 @@
 package hw
 
 import (
-	"fmt"
+	"errors"
 	"io/ioutil"
 	"sort"
 	"strconv"
@@ -9,6 +9,8 @@ import (
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 )
+
+var errNotCombination = errors.New("Not a Combination")
 
 type CardComb struct {
 	cards []card.Card
@@ -46,7 +48,6 @@ func GetCards(fileName string) ([]card.Card, error) {
 		cards = append(cards, card)
 	}
 
-	fmt.Println(sortMapValues(countFaces(cards)))
 	return cards, nil
 }
 
@@ -120,14 +121,31 @@ func isFourKind(cards []card.Card) bool {
 	return isFaceComb(cards, 4, 1)
 }
 
-func Straight(cards []card.Card) { // string {
-	sort.SliceStable(cards, func(i, j int) bool {
-		return cards[i].Face < cards[j].Face
+func isStraight(cards []card.Card) bool {
+	var cardsFaces []int
+
+	for _, card := range cards {
+		cardsFaces = append(cardsFaces, getFaceNum(card.Face))
+	}
+
+	sort.SliceStable(cardsFaces, func(i, j int) bool {
+		return cardsFaces[i] < cardsFaces[j]
 	})
-	fmt.Println(cards)
+
+	for i := range cardsFaces {
+		if i == 0 && cardsFaces[i] == 0 {
+			continue
+		}
+
+		if i != len(cardsFaces)-1 && cardsFaces[i]+1 != cardsFaces[i+1] {
+			return false
+		}
+	}
+
+	return true
 }
 
-func getNum(s string) int {
+func getFaceNum(s string) int {
 	switch s {
 	case "J":
 		return 11
@@ -140,5 +158,49 @@ func getNum(s string) int {
 	default:
 		n, _ := strconv.Atoi(s)
 		return n
+	}
+}
+
+func isFlush(cards []card.Card) bool {
+	suitCount := countSuits(cards)
+
+	if len(suitCount) == 1 {
+		return true
+	}
+
+	return false
+}
+
+func isStraightFlush(cards []card.Card) bool {
+	if isFlush(cards) && isStraight(cards) {
+		return true
+	}
+	return false
+}
+
+func DetectCombination(cards []card.Card) (string, error) {
+	if len(cards) != 5 {
+		return "", errNotCombination
+	}
+
+	switch {
+	case isStraightFlush(cards):
+		return "Straight Flush", nil
+	case isFourKind(cards):
+		return "Four of a kind", nil
+	case isFullHouse(cards):
+		return "Full House", nil
+	case isFlush(cards):
+		return "Flush", nil
+	case isStraight(cards):
+		return "Straight", nil
+	case isThreeKind(cards):
+		return "Three of a Kind", nil
+	case isTwoPairs(cards):
+		return "Two Pairs", nil
+	case isPair(cards):
+		return "Pair", nil
+	default:
+		return "", errNotCombination
 	}
 }
