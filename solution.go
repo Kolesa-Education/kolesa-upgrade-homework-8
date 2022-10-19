@@ -7,7 +7,10 @@ import (
 	"os"
 	"log"
 	"io"
+	"strings"
 )
+
+
 
 
 func readFile(fileName string){
@@ -26,12 +29,41 @@ func getDataFromCSV(fileName string){
 	if err != nil {
 		log.Fatal(err)
 	}
-	return data
+	return data[0]
 
+}
+
+func getCardMapFromSlice(dataSlice){
+	dataMap = make(map[string]int, len(dataSlice))
+	for i:=0; i<len(data_slice);i++ {
+		if val, ok := dataMap[dataSlice[i]]; ok {
+			dataSlice[dataSlice[i]]++
+		}else{
+			dataSlice[dataSlice[i]] = 0
+		}
+	}
+	return dataMap
+}
+
+func checkQuantativeCombinations(dataSlice, dataMap){
+	res := ""
+	for i:=0;i<len(dataSlice);i++ {
+		switch dataMap[dataSlice[i]]{
+		case 2:
+			res += "2"
+		case 3:
+			res += "3"
+		case 4:
+			res += "4"
+		}
+	}
 }
 
 func main() {
 		fileName := ""
 		data = getDataFromCSV(fileName)
+		dataSlice = strings.Split(data, ',')
+		dataMap = getCardMapFromSlice(dataSlice)
+
 	}
 }
