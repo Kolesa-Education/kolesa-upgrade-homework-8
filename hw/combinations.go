@@ -92,20 +92,32 @@ func sortMapValues(m map[string]int) []int {
 	return values
 }
 
-func isPair(cards []card.Card) bool {
-	sortedCards := sortMapValues(countFaces(cards))
-	if sortedCards[0] == 2 {
+func isFaceComb(cards []card.Card, combNum1, combNum2 int) bool {
+	sortedCardsFaces := sortMapValues(countFaces(cards))
+	if sortedCardsFaces[0] == combNum1 && sortedCardsFaces[1] == combNum2 {
 		return true
 	}
 	return false
 }
 
-func isTwoPair(cards []card.Card) bool {
-	sortedCards := sortMapValues(countFaces(cards))
-	if sortedCards[0] == 2 && sortedCards[1] == 2 {
-		return true
-	}
-	return false
+func isPair(cards []card.Card) bool {
+	return isFaceComb(cards, 2, 1)
+}
+
+func isTwoPairs(cards []card.Card) bool {
+	return isFaceComb(cards, 2, 2)
+}
+
+func isThreeKind(cards []card.Card) bool {
+	return isFaceComb(cards, 3, 1)
+}
+
+func isFullHouse(cards []card.Card) bool {
+	return isFaceComb(cards, 3, 2)
+}
+
+func isFourKind(cards []card.Card) bool {
+	return isFaceComb(cards, 4, 1)
 }
 
 func Straight(cards []card.Card) { // string {
