@@ -3,11 +3,14 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"math/rand"
 	"os"
+	"strings"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/hw"
 	"github.com/samber/lo"
 )
 
@@ -49,5 +52,20 @@ func main() {
 
 		writer.Flush()
 		_ = file.Close()
+	}
+
+	resultChan := make(chan hw.Result, 1)
+	for i := 0; i < 100; i++ {
+		go hw.GetAllPokerCombinations(fmt.Sprintf("dataset/dat%d.csv", i), resultChan)
+	}
+
+	for i := 0; i < 100; i++ {
+		result := <-resultChan
+		go func() {
+			if err := ioutil.WriteFile(fmt.Sprintf("results/data%s", strings.Trim(result.GetFileName(), "dataset/")),
+				[]byte(result.GetResult()), 0644); err != nil {
+				log.Fatalln(err)
+			}
+		}()
 	}
 }

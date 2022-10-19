@@ -6,13 +6,27 @@ import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 )
 
-func GetAllPokerCombinations(dataFileName, resultFileName string) {
-	cardsStrSlice, err := getCardsStrSlice(dataFileName)
+type Result struct {
+	fileName string
+	result   string
+}
+
+func (r Result) GetFileName() string {
+	return r.fileName
+}
+
+func (r Result) GetResult() string {
+	return r.result
+}
+
+func GetAllPokerCombinations(fileName string, ch chan Result) {
+	cardsStrSlice, err := getCardsStrSlice(fileName)
 	if err != nil {
 	}
 
 	allCombinations := getAllCardCombinations(cardsStrSlice)
 
+	var cardCombinationsResult string
 	for _, comb := range allCombinations {
 		cards := getCardsFromStr(comb)
 		cardComb := CardCombination{
@@ -22,9 +36,14 @@ func GetAllPokerCombinations(dataFileName, resultFileName string) {
 			continue
 		}
 
-		result := fmt.Sprintf("%s| %s", cardsToStr(cards), cardComb.GetCombinationName())
-		fmt.Println(result)
+		cardCombinationsResult += fmt.Sprintf("%s| %s\n", cardsToStr(cards), cardComb.GetCombinationName())
 	}
+
+	result := Result{
+		fileName: fileName,
+		result:   cardCombinationsResult,
+	}
+	ch <- result
 }
 
 func cardsToStr(cards []card.Card) string {
