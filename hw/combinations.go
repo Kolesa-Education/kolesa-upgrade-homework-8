@@ -11,35 +11,35 @@ import (
 var errNotCombination = errors.New("Not a Combination")
 
 type CardCombination struct {
-	cards    []card.Card
+	Cards    []card.Card
 	combName string
 }
 
-func (c CardCombination) getCombinationName() string {
+func (c CardCombination) GetCombinationName() string {
 	return c.combName
 }
 
-func (c CardCombination) DetectCombination() error {
-	if len(c.cards) != 5 {
+func (c *CardCombination) DetectCombination() error {
+	if len(c.Cards) != 5 {
 		return errNotCombination
 	}
 
 	switch {
-	case isStraightFlush(c.cards):
+	case isStraightFlush(c.Cards):
 		c.combName = "Straight Flush"
-	case isFourKind(c.cards):
+	case isFourKind(c.Cards):
 		c.combName = "Four of a kind"
-	case isFullHouse(c.cards):
+	case isFullHouse(c.Cards):
 		c.combName = "Full House"
-	case isFlush(c.cards):
+	case isFlush(c.Cards):
 		c.combName = "Flush"
-	case isStraight(c.cards):
+	case isStraight(c.Cards):
 		c.combName = "Straight"
-	case isThreeKind(c.cards):
+	case isThreeKind(c.Cards):
 		c.combName = "Three of a Kind"
-	case isTwoPairs(c.cards):
+	case isTwoPairs(c.Cards):
 		c.combName = "Two Pairs"
-	case isPair(c.cards):
+	case isPair(c.Cards):
 		c.combName = "Pair"
 	default:
 		return errNotCombination

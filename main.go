@@ -2,14 +2,32 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/hw"
 )
 
 func main() {
-	res, _ := hw.GetCards("dataset/dat1.csv")
-	fmt.Println(res)
-	hw.Straight(res)
+	cardsStrSlice, err := hw.GetCardsStrSlice("dataset/dat1.csv")
+	fmt.Println(cardsStrSlice)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	allCombinations := hw.GetAllCardCombinations(cardsStrSlice)
+
+	for _, comb := range allCombinations {
+		cards := hw.GetCardsFromStr(comb)
+		cardComb := hw.CardCombination{
+			Cards: cards,
+		}
+		if err := cardComb.DetectCombination(); err != nil {
+			continue
+		}
+
+		result := fmt.Sprintf("%s| %s", hw.CardsToStr(cards), cardComb.GetCombinationName())
+		fmt.Println(result)
+	}
 }
 
 /**
