@@ -1,7 +1,6 @@
 package combinations
 
 import (
-	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"sort"
 )
@@ -52,106 +51,83 @@ var (
 	}
 )
 
-func GetStraightFlush(cards []card.Card) (bool, []card.Card) {
-	var combination []card.Card
-	check, straight := GetStraight(cards)
-	if !check {
-		return false, combination
+func GetStraightFlush(cards []card.Card) bool {
+	straight := GetStraight(cards)
+	if !straight {
+		return false
 	}
-	combination = append(combination, straight...)
-	check, flush := GetFlush(cards)
-	if !check {
-		combination = []card.Card{}
-		return false, combination
+	flush := GetFlush(cards)
+	if !flush {
+		return false
 	}
-	combination = append(combination, flush...)
-	fmt.Println(combination)
-	return true, combination
+	return true
 }
 
-func GetFourOfAKind(cards []card.Card) (bool, []card.Card) {
-	var (
-		counter     int
-		combination []card.Card
-	)
+func GetFourOfAKind(cards []card.Card) bool {
+	var counter int
 	for i, curCard := range cards {
-		combination = append(combination, curCard)
 		for _, compCard := range cards[i+1:] {
 			if curCard.Face == compCard.Face {
-				combination = append(combination, compCard)
 				counter++
 			}
 			if counter == 3 {
-				return true, combination
+				return true
 			}
 		}
 		counter = 0
-		combination = []card.Card{}
 	}
-	return false, combination
+	return false
 }
 
-func GetFullHouse(cards []card.Card) (bool, []card.Card) {
-	var combination []card.Card
-	check, threeOfAKind := GetThreeOfAKind(cards)
-	if !check {
-		return false, combination
+func GetFullHouse(cards []card.Card) bool {
+	threeOfAKind := GetThreeOfAKind(cards)
+	if !threeOfAKind {
+		return false
 	}
-	combination = append(combination, threeOfAKind...)
-	check, pair := GetPair(cards)
-	if !check {
-		combination = []card.Card{}
-		return false, combination
+	pair := GetPair(cards)
+	if !pair {
+		return false
 	}
-	combination = append(combination, pair...)
-	return true, combination
+	return true
 }
 
-func GetFlush(cards []card.Card) (bool, []card.Card) {
-	var combination []card.Card
+func GetFlush(cards []card.Card) bool {
 	firstCard := cards[0]
-	combination = append(combination, firstCard)
 	for _, compCard := range cards[+1:] {
 		if firstCard.Suit != compCard.Suit {
-			combination = []card.Card{}
-			return false, combination
+			return false
 		}
-		combination = append(combination, compCard)
 	}
-	return true, combination
+	return true
 }
 
-func GetStraight(cards []card.Card) (bool, []card.Card) {
+func GetStraight(cards []card.Card) bool {
 	sort.Slice(cards, func(i, j int) bool {
 		return cards[i].Weight < cards[j].Weight
 	})
-	var combination []card.Card
 	firstCard := cards[0]
 	lastCard := cards[len(cards)-1]
 	if lastCard.Weight == 14 {
 		check := checkAces(cards)
 		if !check {
-			return false, combination
+			return false
 		}
 		lastCard.Weight = 1
 		cardsWithoutAce := cards[:len(cards)-1]
 		cardsAceFirst := make([]card.Card, 1)
 		cardsAceFirst[0] = lastCard
 		cardsAceFirst = append(cardsAceFirst, cardsWithoutAce...)
-		check, aceFirst := GetStraight(cardsAceFirst)
-		if check {
-			return true, aceFirst
+		aceFirst := GetStraight(cardsAceFirst)
+		if aceFirst {
+			return true
 		}
 	}
-	combination = append(combination, firstCard)
 	for i, compCard := range cards[1:] {
 		if compCard.Weight != firstCard.Weight+(i+1) {
-			combination = []card.Card{}
-			return false, combination
+			return false
 		}
-		combination = append(combination, compCard)
 	}
-	return true, combination
+	return true
 }
 
 func checkAces(cards []card.Card) bool {
@@ -169,60 +145,45 @@ func checkAces(cards []card.Card) bool {
 	return true
 }
 
-func GetThreeOfAKind(cards []card.Card) (bool, []card.Card) {
-	var (
-		counter     int
-		combination []card.Card
-	)
+func GetThreeOfAKind(cards []card.Card) bool {
+	var counter int
 	for i, curCard := range cards {
-		combination = append(combination, curCard)
 		for _, compCard := range cards[i+1:] {
 			if curCard.Face == compCard.Face {
-				combination = append(combination, compCard)
 				counter++
 			}
 			if counter == 2 {
-				return true, combination
+				return true
 			}
 		}
 		counter = 0
-		combination = []card.Card{}
 	}
-	return false, combination
+	return false
 }
 
-func GetTwoPairs(cards []card.Card) (bool, []card.Card) {
-	var (
-		firstPair   bool
-		combination []card.Card
-	)
+func GetTwoPairs(cards []card.Card) bool {
+	var firstPair bool
 	for i, curCard := range cards {
 		for _, compCard := range cards[i+1:] {
 			if curCard.Face == compCard.Face {
-				combination = append(combination, curCard)
 				if !firstPair {
 					firstPair = true
-					combination = append(combination, compCard)
 					continue
 				}
-				combination = append(combination, compCard)
-				return true, combination
+				return true
 			}
 		}
 	}
-	combination = []card.Card{}
-	return false, combination
+	return false
 }
 
-func GetPair(cards []card.Card) (bool, []card.Card) {
-	var combination []card.Card
+func GetPair(cards []card.Card) bool {
 	for i, curCard := range cards {
 		for _, compCard := range cards[i+1:] {
 			if curCard.Face == compCard.Face {
-				combination = append(combination, curCard, compCard)
-				return true, combination
+				return true
 			}
 		}
 	}
-	return false, combination
+	return false
 }
