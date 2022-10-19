@@ -149,20 +149,22 @@ func combsToStrings(cardsCombs [][]card.Card) []string {
 
 func checkCombinations(cards []card.Card) string {
 	var combString string
-	check, straightFlush := combinations.GetStraightFlush(cards)
+	check, _ := combinations.GetStraightFlush(cards)
 	if check {
 		combString = structToString(cards)
 		combString += fmt.Sprintf(" | Straight Flush")
 		return combString
 	}
-	check, fourOfAKind := combinations.GetFourOfAKind(cards)
+	check, _ = combinations.GetFourOfAKind(cards)
 	if check {
-		combString = structToString(straightFlush)
-		combString += fmt.Sprintf(" | Straight Flush")
+		combString = structToString(cards)
+		combString += fmt.Sprintf(" | Four Of A Kind")
 		return combString
 	}
-	fmt.Println("Four Of A Kind:", check, fourOfAKind)
 	check, fullHouse := combinations.GetFullHouse(cards)
+	if check {
+		combString = structToString(cards)
+	}
 	fmt.Println("Full House:", check, fullHouse)
 	check, flush := combinations.GetFlush(cards)
 	fmt.Println("Flush:", check, flush)
@@ -174,6 +176,7 @@ func checkCombinations(cards []card.Card) string {
 	fmt.Println("Two pairs:", check, twoPairs)
 	check, pair := combinations.GetPair(cards)
 	fmt.Println("Pair:", check, pair)
+	return ""
 }
 
 func structToString(comb []card.Card) string {
