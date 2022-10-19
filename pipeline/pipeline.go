@@ -9,6 +9,7 @@ import (
 	"gonum.org/v1/gonum/stat/combin"
 	"log"
 	"os"
+	"regexp"
 	"sync"
 )
 
@@ -182,6 +183,19 @@ func structToString(comb []card.Card) string {
 	return res
 }
 
+func removeQuotes(filename string) error {
+	input2, err := os.ReadFile(filename)
+	if err != nil {
+		return err
+	}
+	output2 := regexp.MustCompile(`(?m)(^"|"\r?$|";")|"`).ReplaceAll(input2, []byte("${1}"))
+
+	if err = os.WriteFile("output.csv", output2, 0666); err != nil {
+		return err
+	}
+	return nil
+}
+
 func Pipeline(num string, group *sync.WaitGroup) {
 	dataset, err := openCSV("./dataset/dat" + num + ".csv")
 	if err != nil {
@@ -191,7 +205,12 @@ func Pipeline(num string, group *sync.WaitGroup) {
 	cards := getStructCards(uniqCards)
 	combStructLst := getCombinations(cards, 5)
 	combStringLst := combsToStrings(combStructLst)
-	writeCSV("./results/dat"+num+".csv", combStringLst)
+	filename := "./results/dat" + num + ".csv"
+	writeCSV(filename, combStringLst)
+	err = removeQuotes(filename)
+	if err != nil {
+		log.Fatalln("failed to remove quotes from file:", filename)
+	}
 	//fmt.Println(combStringLst)
 	group.Done()
 }
