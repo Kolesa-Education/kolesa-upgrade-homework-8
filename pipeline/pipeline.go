@@ -188,9 +188,9 @@ func removeQuotes(filename string) error {
 	if err != nil {
 		return err
 	}
-	output2 := regexp.MustCompile(`(?m)(^"|"\r?$|";")|"`).ReplaceAll(input2, []byte("${1}"))
+	output2 := regexp.MustCompile(`"`).ReplaceAll(input2, []byte(""))
 
-	if err = os.WriteFile("output.csv", output2, 0666); err != nil {
+	if err = os.WriteFile(filename, output2, 0666); err != nil {
 		return err
 	}
 	return nil
