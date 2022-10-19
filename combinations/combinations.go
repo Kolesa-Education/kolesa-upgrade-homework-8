@@ -52,6 +52,23 @@ var (
 	}
 )
 
+func GetStraightFlush(cards []card.Card) (bool, []card.Card) {
+	var combination []card.Card
+	check, straight := GetStraight(cards)
+	if !check {
+		return false, combination
+	}
+	combination = append(combination, straight...)
+	check, flush := GetFlush(cards)
+	if !check {
+		combination = []card.Card{}
+		return false, combination
+	}
+	combination = append(combination, flush...)
+	fmt.Println(combination)
+	return true, combination
+}
+
 func GetFourOfAKind(cards []card.Card) (bool, []card.Card) {
 	var (
 		counter     int
@@ -121,7 +138,6 @@ func GetStraight(cards []card.Card) (bool, []card.Card) {
 		cardsAceFirst := make([]card.Card, 1)
 		cardsAceFirst[0] = lastCard
 		cardsAceFirst = append(cardsAceFirst, cardsWithoutAce...)
-		fmt.Println(cardsAceFirst)
 		check, aceFirst := GetStraight(cardsAceFirst)
 		if check {
 			return true, aceFirst

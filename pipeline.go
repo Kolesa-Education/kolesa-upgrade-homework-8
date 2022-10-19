@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/combinations"
+	"gonum.org/v1/gonum/stat/combin"
 	"log"
 	"os"
 )
@@ -112,26 +113,73 @@ func getStructCards(cards []string) []card.Card {
 	return structs
 }
 
+func getCombinations(cards []card.Card, col int) [][]card.Card {
+	cs := combin.Combinations(len(cards), col)
+	var superList [][]card.Card
+	for _, c := range cs {
+		var list []card.Card
+		for i := 0; i < col; i++ {
+			list = append(list, cards[c[i]])
+		}
+		superList = append(superList, list)
+	}
+	return superList
+}
+
 func main() {
-	dataset, err := openDataset("./dataset/dattest.csv")
+	dataset, err := openDataset("./dataset/dat0.csv")
 	if err != nil {
 		log.Fatalln("failed to open file", err)
 	}
 	uniqCards := removeDuplicateStr(dataset)
 	cards := getStructCards(uniqCards)
-	fmt.Println(cards)
-	check, pair := combinations.GetPair(cards)
-	fmt.Println("Pair:", check, pair)
-	check, twoPairs := combinations.GetTwoPairs(cards)
-	fmt.Println("Two pairs:", check, twoPairs)
-	check, threeOfAKind := combinations.GetThreeOfAKind(cards)
-	fmt.Println("Three Of A Kind:", check, threeOfAKind)
-	check, flush := combinations.GetFlush(cards)
-	fmt.Println("Flush:", check, flush)
+	combsList := getCombinations(cards, 5)
+	combLst := combsToStrings(combsList)
+	fmt.Println(combLst)
+}
+
+func combsToStrings(cardsCombs [][]card.Card) []string {
+	var stringLst []string
+	for _, comb := range cardsCombs {
+		combName := checkCombinations(comb)
+		stringLst = append(stringLst, combName)
+	}
+	return stringLst
+}
+
+func checkCombinations(cards []card.Card) string {
+	var combString string
+	check, straightFlush := combinations.GetStraightFlush(cards)
+	if check {
+		combString = structToString(cards)
+		combString += fmt.Sprintf(" | Straight Flush")
+		return combString
+	}
+	check, fourOfAKind := combinations.GetFourOfAKind(cards)
+	if check {
+		combString = structToString(straightFlush)
+		combString += fmt.Sprintf(" | Straight Flush")
+		return combString
+	}
+	fmt.Println("Four Of A Kind:", check, fourOfAKind)
 	check, fullHouse := combinations.GetFullHouse(cards)
 	fmt.Println("Full House:", check, fullHouse)
-	check, fourOfAKind := combinations.GetFourOfAKind(cards)
-	fmt.Println("Four Of A Kind:", check, fourOfAKind)
+	check, flush := combinations.GetFlush(cards)
+	fmt.Println("Flush:", check, flush)
 	check, straight := combinations.GetStraight(cards)
 	fmt.Println("Straight:", check, straight)
+	check, threeOfAKind := combinations.GetThreeOfAKind(cards)
+	fmt.Println("Three Of A Kind:", check, threeOfAKind)
+	check, twoPairs := combinations.GetTwoPairs(cards)
+	fmt.Println("Two pairs:", check, twoPairs)
+	check, pair := combinations.GetPair(cards)
+	fmt.Println("Pair:", check, pair)
+}
+
+func structToString(comb []card.Card) string {
+	var res string
+	for _, card := range comb {
+		res += fmt.Sprintf("%s%s", card.Suit, card.Face)
+	}
+	return res
 }
