@@ -5,52 +5,6 @@ import (
 	"sort"
 )
 
-type Combination struct {
-	suit     int
-	face1    int
-	face2    int
-	straight bool
-	weight   int
-}
-
-var (
-	Pair = Combination{
-		face1:  2,
-		weight: 2,
-	}
-	TwoPairs = Combination{
-		face1:  2,
-		face2:  2,
-		weight: 3,
-	}
-	ThreeOfAKind = Combination{
-		face1:  3,
-		weight: 4,
-	}
-	Straight = Combination{
-		straight: true,
-		weight:   5,
-	}
-	Flush = Combination{
-		suit:   5,
-		weight: 6,
-	}
-	FullHouse = Combination{
-		face1:  3,
-		face2:  2,
-		weight: 7,
-	}
-	FourOfAKind = Combination{
-		face1:  4,
-		weight: 8,
-	}
-	StraightFlush = Combination{
-		suit:     5,
-		straight: true,
-		weight:   9,
-	}
-)
-
 func GetStraightFlush(cards []card.Card) bool {
 	straight := GetStraight(cards)
 	if !straight {
