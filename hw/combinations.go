@@ -2,65 +2,50 @@ package hw
 
 import (
 	"errors"
-	"io/ioutil"
 	"sort"
 	"strconv"
-	"strings"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 )
 
 var errNotCombination = errors.New("Not a Combination")
 
-type CardComb struct {
-	cards []card.Card
+type CardCombination struct {
+	cards    []card.Card
+	combName string
 }
 
-func isSuit(suit string) bool {
-	switch suit {
-	case card.SuitClubsUnicode, card.SuitDiamondsUnicode, card.SuitHeartsUnicode, card.SuitSpadesUnicode:
-		return true
+func (c CardCombination) getCombinationName() string {
+	return c.combName
+}
+
+func (c CardCombination) DetectCombination() error {
+	if len(c.cards) != 5 {
+		return errNotCombination
+	}
+
+	switch {
+	case isStraightFlush(c.cards):
+		c.combName = "Straight Flush"
+	case isFourKind(c.cards):
+		c.combName = "Four of a kind"
+	case isFullHouse(c.cards):
+		c.combName = "Full House"
+	case isFlush(c.cards):
+		c.combName = "Flush"
+	case isStraight(c.cards):
+		c.combName = "Straight"
+	case isThreeKind(c.cards):
+		c.combName = "Three of a Kind"
+	case isTwoPairs(c.cards):
+		c.combName = "Two Pairs"
+	case isPair(c.cards):
+		c.combName = "Pair"
 	default:
-		return false
-	}
-}
-
-func GetCards(fileName string) ([]card.Card, error) {
-	content, err := ioutil.ReadFile(fileName)
-	if err != nil {
-		return nil, err
+		return errNotCombination
 	}
 
-	s := string(content)
-	strCards := removeDuplicateStr(strings.Split(s[:len(s)-1], ","))
-
-	var cards []card.Card
-	var card card.Card
-	for _, c := range strCards {
-		for i, v := range c {
-			if isSuit(string(v)) {
-				card.Suit = string(v)
-			} else {
-				card.Face = c[i:]
-				break
-			}
-		}
-		cards = append(cards, card)
-	}
-
-	return cards, nil
-}
-
-func removeDuplicateStr(strSlice []string) []string {
-	allKeys := make(map[string]bool)
-	list := []string{}
-	for _, item := range strSlice {
-		if _, value := allKeys[item]; !value {
-			allKeys[item] = true
-			list = append(list, item)
-		}
-	}
-	return list
+	return nil
 }
 
 func countFaces(cards []card.Card) map[string]int {
@@ -133,7 +118,7 @@ func isStraight(cards []card.Card) bool {
 	})
 
 	for i := range cardsFaces {
-		if i == 0 && cardsFaces[i] == 0 {
+		if i == 0 && cardsFaces[i] == 0 && cardsFaces[i+1] == 11 {
 			continue
 		}
 
@@ -176,31 +161,4 @@ func isStraightFlush(cards []card.Card) bool {
 		return true
 	}
 	return false
-}
-
-func DetectCombination(cards []card.Card) (string, error) {
-	if len(cards) != 5 {
-		return "", errNotCombination
-	}
-
-	switch {
-	case isStraightFlush(cards):
-		return "Straight Flush", nil
-	case isFourKind(cards):
-		return "Four of a kind", nil
-	case isFullHouse(cards):
-		return "Full House", nil
-	case isFlush(cards):
-		return "Flush", nil
-	case isStraight(cards):
-		return "Straight", nil
-	case isThreeKind(cards):
-		return "Three of a Kind", nil
-	case isTwoPairs(cards):
-		return "Two Pairs", nil
-	case isPair(cards):
-		return "Pair", nil
-	default:
-		return "", errNotCombination
-	}
 }
