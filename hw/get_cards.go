@@ -7,7 +7,7 @@ import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 )
 
-func GetCardsStrSlice(fileName string) ([]string, error) {
+func getCardsStrSlice(fileName string) ([]string, error) {
 	content, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		return nil, err
@@ -19,7 +19,7 @@ func GetCardsStrSlice(fileName string) ([]string, error) {
 	return strCards, nil
 }
 
-func GetCardsFromStr(strCards []string) []card.Card {
+func getCardsFromStr(strCards []string) []card.Card {
 	var cards []card.Card
 	var card card.Card
 	for _, c := range strCards {
