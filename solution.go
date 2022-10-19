@@ -45,7 +45,7 @@ func getCardMapFromSlice(dataSlice){
 	return dataMap
 }
 
-func checkQuantativeCombinations(dataSlice, dataMap){
+func checkQuantativeCombinations(valuesSlice, dataMap){
 	quantativeCombinations := make(map[string]string{
 		"22": "2 pairs",
 		"23": "full house",
@@ -55,8 +55,8 @@ func checkQuantativeCombinations(dataSlice, dataMap){
 		"4": "four of a kind"
 	})
 	combination := ""
-	for i:=0;i<len(dataSlice);i++{
-		switch dataMap[dataSlice[i]]{
+	for i:=0;i<len(valuesSlice);i++{
+		switch dataMap[valuesSlice[i]]{
 		case 2:
 			res += "2"
 		case 3:
@@ -73,21 +73,25 @@ func checkQuantativeCombinations(dataSlice, dataMap){
 
 }
 
-func checkStraightOrFlush(dataSlice){
-	combination := ""
-	cardsOrder = "2345678910jqka2345678910jqka"
-	values [len(dataSlice)]string
-	valuesString string
-	suits := make(map[string]bool)
-	for i:=0;i<len(dataSlice);i++ {
-		suits[dataSlice[i][0]] = true
-		values[i] = dataSlice[i][1]
+func getCardValuesSliceAndSuitsMap(dataSlice){
+	valuesSlice [len(dataSlice)]string
+	suitsMap := make(map[string]bool)
+	for i:=0;i<len(dataSlice);i++{
+		suitsMap[dataSlice[i][0]] = true
+		valuesSlice[i] = dataSlice[i][1]
 	}
-	if strings.Contains(cardsOrder, strings.Join(values, "")){
+	return valuesSlice, suitsMap
+}
+
+func checkStraightOrFlush(valuesSlice, suitsMap){
+	combination := ""
+	cardsOrder = "A2345678910JQKA"
+	valuesString string
+	if strings.Contains(cardsOrder, strings.Join(valuesSlice, "")){
 		combination += "straight"
 	}
 
-	if len(suits) == 1{
+	if len(suitsMap) == 1{
 		combination += "flush"
 	}
 	return combination
@@ -98,6 +102,7 @@ func main() {
 		data = getDataFromCSV(fileName)
 		dataSlice = strings.Split(data, ',')
 		dataMap = getCardMapFromSlice(dataSlice)
+		valuesSlice, suitsMap = getCardValuesSliceAndSuitsMap(dataSlice)
 
 	}
 }
