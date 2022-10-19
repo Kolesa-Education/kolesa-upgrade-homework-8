@@ -44,35 +44,72 @@ func removeDuplicateStr(strSlice []string) []string {
 	return list
 }
 
-func Contains(a []string, x string) bool {
-	for _, n := range a {
-		if x == n {
-			return true
-		}
-	}
-	return false
-}
+//func Contains(a []string, x string) bool {
+//	for _, n := range a {
+//		if x == n {
+//			return true
+//		}
+//	}
+//	return false
+//}
 
 func cardToStruct(cardStr string) (card.Card, error) {
 	strToBytes := []rune(cardStr)
-	suit := fmt.Sprintf("%q", strToBytes[0])
-	face := fmt.Sprintf("%q", strToBytes[1])
-	if suit == "" || face == "" {
-		return card.Card{}, errors.New("cannot get cardStr suit and face")
+	suit := string(strToBytes[0])
+	face := string(strToBytes[1])
+	if face == "1" {
+		face += "0"
 	}
-	return card.Card{Suit: suit, Face: face}, nil
+	weight := getWeight(face)
+	if suit == "" || face == "" {
+		return card.Card{}, errors.New("cannot get cardStr data")
+	}
+	return card.Card{Suit: suit, Face: face, Weight: weight}, nil
+}
+
+func getWeight(face string) int {
+	switch face {
+	case card.Face2:
+		return 2
+	case card.Face3:
+		return 3
+	case card.Face4:
+		return 4
+	case card.Face5:
+		return 5
+	case card.Face6:
+		return 6
+	case card.Face7:
+		return 7
+	case card.Face8:
+		return 8
+	case card.Face9:
+		return 9
+	case card.Face10:
+		return 10
+	case card.FaceJack:
+		return 11
+	case card.FaceQueen:
+		return 12
+	case card.FaceKing:
+		return 13
+	case card.FaceAce:
+		return 14
+	default:
+		return 0
+	}
 }
 
 func getStructCards(cards []string) []card.Card {
-	var structCards []card.Card
+	var structs []card.Card
 	for _, c := range cards {
 		cardStruct, err := cardToStruct(c)
 		if err != nil {
 			log.Fatalln("failed to convert string card representation to struct", err)
 		}
-		structCards = append(structCards, cardStruct)
+		structs = append(structs, cardStruct)
 	}
-	return structCards
+	return structs
 }
 
 func main() {
@@ -95,4 +132,6 @@ func main() {
 	fmt.Println("Full House:", check, fullHouse)
 	check, fourOfAKind := combinations.GetFourOfAKind(cards)
 	fmt.Println("Four Of A Kind:", check, fourOfAKind)
+	check, straight := combinations.GetStraight(cards)
+	fmt.Println("Straight:", check, straight)
 }

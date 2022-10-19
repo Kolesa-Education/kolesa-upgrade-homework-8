@@ -1,7 +1,9 @@
 package combinations
 
 import (
+	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"sort"
 )
 
 type Combination struct {
@@ -102,32 +104,54 @@ func GetFlush(cards []card.Card) (bool, []card.Card) {
 	return true, combination
 }
 
-//func getStraight(cards []card.Card) (bool, []card.Card) {
-//	sorted
-//	var (
-//		counter     int
-//		combination []card.Card
-//	)
+func GetStraight(cards []card.Card) (bool, []card.Card) {
+	sort.Slice(cards, func(i, j int) bool {
+		return cards[i].Weight < cards[j].Weight
+	})
+	var combination []card.Card
+	firstCard := cards[0]
+	lastCard := cards[len(cards)-1]
+	if lastCard.Weight == 14 {
+		check := checkAces(cards)
+		if !check {
+			return false, combination
+		}
+		lastCard.Weight = 1
+		cardsWithoutAce := cards[:len(cards)-1]
+		cardsAceFirst := make([]card.Card, 1)
+		cardsAceFirst[0] = lastCard
+		cardsAceFirst = append(cardsAceFirst, cardsWithoutAce...)
+		fmt.Println(cardsAceFirst)
+		check, aceFirst := GetStraight(cardsAceFirst)
+		if check {
+			return true, aceFirst
+		}
+	}
+	combination = append(combination, firstCard)
+	for i, compCard := range cards[1:] {
+		if compCard.Weight != firstCard.Weight+(i+1) {
+			combination = []card.Card{}
+			return false, combination
+		}
+		combination = append(combination, compCard)
+	}
+	return true, combination
+}
 
-//for i, curCard := range cards {
-//	fmt.Println("curCard:", curCard)
-//	combination = append(combination, curCard)
-//	for _, compCard := range cards[i+1:] {
-//		fmt.Println("compCard:", compCard)
-//		if curCard.Face == compCard.Face {
-//			combination = append(combination, compCard)
-//			counter++
-//			fmt.Println(counter)
-//		}
-//		if counter == 2 {
-//		}
-//	}
-//	counter = 0
-//	combination = []card.Card{}
-//}
-//	return true, combination
-//	return false, combination
-//}
+func checkAces(cards []card.Card) bool {
+	cpCards := make([]card.Card, 0)
+	copy(cpCards, cards)
+	sort.Slice(cpCards, func(i, j int) bool {
+		return cards[i].Weight > cards[j].Weight
+	})
+	firstAce := cards[0]
+	for _, curCard := range cards[1:] {
+		if firstAce.Weight == curCard.Weight {
+			return false
+		}
+	}
+	return true
+}
 
 func GetThreeOfAKind(cards []card.Card) (bool, []card.Card) {
 	var (
