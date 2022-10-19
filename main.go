@@ -3,12 +3,24 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
-	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
-	"github.com/samber/lo"
 	"log"
 	"math/rand"
 	"os"
+
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/samber/lo"
 )
+
+// remove duplicated elements
+
+// func Pair
+// func Two Pairs
+// func Three of a Kind
+//func Straight
+//func Flush
+//func Full House
+//func Four of a kind
+//func Straight Flush
 
 func cardsToRepresentations(cards []card.Card) []string {
 	representations := lo.Map[card.Card, string](cards, func(c card.Card, index int) string {
@@ -34,6 +46,7 @@ func main() {
 			generatedCard, _ := card.Random(*random)
 			cards = append(cards, *generatedCard)
 		}
+
 		log.Printf("Generated cards %s\n", cards)
 		summary := cardsToRepresentations(cards)
 		file, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
