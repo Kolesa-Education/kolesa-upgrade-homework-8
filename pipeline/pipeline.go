@@ -13,7 +13,7 @@ import (
 	"gonum.org/v1/gonum/stat/combin"
 )
 
-func readCsvFile(filePath string) []string {
+func readCsvFile(filePath string) [][]string {
 	f, err := os.Open(filePath)
 	if err != nil {
 		log.Fatal("Unable to read input file "+filePath, err)
@@ -24,24 +24,13 @@ func readCsvFile(filePath string) []string {
 	if err != nil {
 		log.Fatal("Unable to parse file as CSV for "+filePath, err)
 	}
-	return res[0]
+	return res
 }
 
-func readCsvFile_plusSort(filePath string) [][]string {
-	f, err := os.Open(filePath)
-	if err != nil {
-		log.Fatal("Unable to read input file "+filePath, err)
-	}
-	defer f.Close()
-	csvReader := csv.NewReader(f)
-	res, err := csvReader.ReadAll()
-	if err != nil {
-		log.Fatal("Unable to parse file as CSV for "+filePath, err)
-	}
-	sort.Slice(res, func(i, j int) bool {
-		return res[i][5] < res[j][5]
+func sort2D(array [][]string) {
+	sort.Slice(array, func(i, j int) bool {
+		return array[i][5] < array[j][5]
 	})
-	return res
 }
 
 func writeCsvFile(filePath string, data [][]string) {
@@ -57,21 +46,17 @@ func writeCsvFile(filePath string, data [][]string) {
 	csvFile.Close()
 }
 
-func writeCsvFile_plusChangeVal(filePath string, data [][]string) {
-	csvFile, err := os.Create(filePath)
-	if err != nil {
-		log.Fatalf("failed creating file: %s", err)
-	}
-	csvwriter := csv.NewWriter(csvFile)
-	for _, oneComb := range data {
-		hand_name := evaluate.AnalyzeHand(strings.Join(changeVal(oneComb), " "))
+func addHandName(combin_list [][]string) [][]string {
+	var lineWithName []string
+	arrWithHandsNames := [][]string{}
+	for _, oneLine := range combin_list {
+		hand_name := evaluate.AnalyzeHand(strings.Join(changeVal(oneLine), " "))
 		if hand_name != "High card" && hand_name != "Invalid hand" {
-			full_arr := append(oneComb, []string{hand_name}...)
-			_ = csvwriter.Write(full_arr)
+			lineWithName = append(oneLine, []string{hand_name}...)
+			arrWithHandsNames = append(arrWithHandsNames, lineWithName)
 		}
 	}
-	csvwriter.Flush()
-	csvFile.Close()
+	return arrWithHandsNames
 }
 
 func removeDuplicates(cards []string) []string {
@@ -144,11 +129,11 @@ func getCombinations(cards []string, col int) [][]string {
 }
 
 func Pipeline(num string, wgrp *sync.WaitGroup) {
-	records := readCsvFile("dataset/dat" + num + ".csv")
+	records := readCsvFile("dataset/dat" + num + ".csv")[0]
 	records = removeDuplicates(records)
 	combin_list := getCombinations(records, 5)
-	writeCsvFile_plusChangeVal("datares/dat"+num+"_res.csv", combin_list)
-	sortRecords := readCsvFile_plusSort("datares/dat" + num + "_res.csv")
-	writeCsvFile("datares/dat"+num+"_res.csv", sortRecords)
+	combin_list = addHandName(combin_list)
+	sort2D(combin_list)
+	writeCsvFile("datares/dat"+num+"_res.csv", combin_list)
 	wgrp.Done()
 }
