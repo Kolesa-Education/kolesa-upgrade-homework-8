@@ -46,7 +46,7 @@ func GetCards(fileName string) ([]card.Card, error) {
 		cards = append(cards, card)
 	}
 
-	fmt.Println(sortMapByValue(countFaces(cards)))
+	fmt.Println(sortMapValues(countFaces(cards)))
 	return cards, nil
 }
 
@@ -79,34 +79,40 @@ func countSuits(cards []card.Card) map[string]int {
 	return result
 }
 
-func sortMapByValue(m map[string]int) map[string]int {
-	keys := make([]string, 0, len(m))
+func sortMapValues(m map[string]int) []int {
+	values := make([]int, 0, len(m))
 
 	for key := range m {
-		keys = append(keys, key)
+		values = append(values, m[key])
 	}
 
-	sort.SliceStable(keys, func(i, j int) bool {
-		return m[keys[i]] > m[keys[j]]
+	sort.SliceStable(values, func(i, j int) bool {
+		return values[i] > values[j]
 	})
-	return m
+	return values
+}
+
+func isPair(cards []card.Card) bool {
+	sortedCards := sortMapValues(countFaces(cards))
+	if sortedCards[0] == 2 {
+		return true
+	}
+	return false
+}
+
+func isTwoPair(cards []card.Card) bool {
+	sortedCards := sortMapValues(countFaces(cards))
+	if sortedCards[0] == 2 && sortedCards[1] == 2 {
+		return true
+	}
+	return false
 }
 
 func Straight(cards []card.Card) { // string {
-	sortCards(cards)
+	sort.SliceStable(cards, func(i, j int) bool {
+		return cards[i].Face < cards[j].Face
+	})
 	fmt.Println(cards)
-}
-
-func sortCards(table []card.Card) {
-	for i := 0; i < len(table)-1; i++ {
-		for j := 0; j < len(table)-i-1; j++ {
-			if getNum(table[j].Face) > getNum(table[j+1].Face) {
-				temp := table[j]
-				table[j] = table[j+1]
-				table[j+1] = temp
-			}
-		}
-	}
 }
 
 func getNum(s string) int {
