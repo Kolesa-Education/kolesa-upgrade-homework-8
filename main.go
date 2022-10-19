@@ -1,6 +1,19 @@
 package main
 
 import (
+	"fmt"
+
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/hw"
+)
+
+func main() {
+	res, _ := hw.GetCards("dataset/dat1.csv")
+	fmt.Println(res)
+	hw.Straight(res)
+}
+
+/**
+import (
 	"encoding/csv"
 	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
@@ -50,4 +63,4 @@ func main() {
 		writer.Flush()
 		_ = file.Close()
 	}
-}
+}**/
