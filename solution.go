@@ -46,8 +46,16 @@ func getCardMapFromSlice(dataSlice){
 }
 
 func checkQuantativeCombinations(dataSlice, dataMap){
-	res := ""
-	for i:=0;i<len(dataSlice);i++ {
+	quantativeCombinations := make(map[string]string{
+		"22": "2 pairs",
+		"23": "full house",
+		"32": "full house",
+		"2": "pair",
+		"3": "three of a kind",
+		"4": "four of a kind"
+	})
+	combination := ""
+	for i:=0;i<len(dataSlice);i++{
 		switch dataMap[dataSlice[i]]{
 		case 2:
 			res += "2"
@@ -57,6 +65,32 @@ func checkQuantativeCombinations(dataSlice, dataMap){
 			res += "4"
 		}
 	}
+	res, ok = quantativeCombinations[combination]
+	if ok{
+		return res
+	}
+	return "0"
+
+}
+
+func checkStraightOrFlush(dataSlice){
+	combination := ""
+	cardsOrder = "2345678910jqka2345678910jqka"
+	values [len(dataSlice)]string
+	valuesString string
+	suits := make(map[string]bool)
+	for i:=0;i<len(dataSlice);i++ {
+		suits[dataSlice[i][0]] = true
+		values[i] = dataSlice[i][1]
+	}
+	if strings.Contains(cardsOrder, strings.Join(values, "")){
+		combination += "straight"
+	}
+
+	if len(suits) == 1{
+		combination += "flush"
+	}
+	return combination
 }
 
 func main() {
