@@ -60,7 +60,6 @@ func checkQuantativeCombinations(valuesSlice []string, dataMap map[string]int) s
 	res := ""
 	combination := ""
 	for i := 0; i < len(valuesSlice); i++ {
-		//fmt.Println(dataMap[valuesSlice[i]])
 		switch dataMap[valuesSlice[i]] {
 		case 2:
 			res += "2"
@@ -80,17 +79,16 @@ func checkQuantativeCombinations(valuesSlice []string, dataMap map[string]int) s
 
 }
 
-func getCardValuesSliceAndSuitsMap(dataSlice []string) ([]string, map[string]bool) {
-	var valuesSlice []string = make([]string, len(dataSlice))
+func getSuitsMap(dataSlice []string) (map[string]bool) {
 	suitsMap := make(map[string]bool)
 	for i := 0; i < len(dataSlice); i++ {
 		suitsMap[string(dataSlice[i][0:3])] = true
-		valuesSlice[i] = string(dataSlice[i][3])
 	}
-	return valuesSlice, suitsMap
+	return suitsMap
 }
 
 func checkStraightOrFlush(valuesSlice []string, suitsMap map[string]bool) string {
+	//sort valuesSlice by function
 	combination := ""
 	cardsOrder := "A2345678910JQKA"
 	if strings.Contains(cardsOrder, strings.Join(valuesSlice, "")) {
@@ -106,18 +104,17 @@ func checkStraightOrFlush(valuesSlice []string, suitsMap map[string]bool) string
 func main() {
 	fileName := "dataset/dat0.csv"
 	dataSlice := getDataFromCSV(fileName)
+
 	dataMap := getCardMapFromSlice(dataSlice)
 	values := getUniqueValuesFromDataMap(dataMap, 3)
-	uniqueValuesMap := getCardMapFromSlice(values)
-	uniqueValues := getUniqueValuesFromDataMap(uniqueValuesMap, 0)
 
-	_, suitsMap := getCardValuesSliceAndSuitsMap(dataSlice)
+	cardsMap := getCardMapFromSlice(values)
+	uniqueValues := getUniqueValuesFromDataMap(cardsMap, 0)
+	suitsMap := getSuitsMap(dataSlice)
 	sort.Strings(uniqueValues)
 	fmt.Println(uniqueValues)
-	//fmt.Println(dataMap)
-	//fmt.Println(dataMap)
 	isFlushOrStraight := checkStraightOrFlush(uniqueValues, suitsMap)
-	isQuantative := checkQuantativeCombinations(uniqueValues, uniqueValuesMap)
+	isQuantative := checkQuantativeCombinations(uniqueValues, cardsMap)
 	fmt.Print(isFlushOrStraight + " " + isQuantative)
 
 }
