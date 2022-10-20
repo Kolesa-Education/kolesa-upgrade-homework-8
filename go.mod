@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/samber/lo v1.32.0
 	github.com/stretchr/testify v1.8.0
+	github.com/Koala610/solution v1.0.0
 )
 
 require (

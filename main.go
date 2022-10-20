@@ -1,6 +1,10 @@
 package main
 
 import (
+	"fmt"
+	"os"
+	"strings"
+
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/samber/lo"
 )
@@ -13,36 +17,41 @@ func cardsToRepresentations(cards []card.Card) []string {
 	return representations
 }
 
-/*func main() {
-	var seed int64 = 1665694295623135151
-	randomSource := rand.NewSource(seed)
-	random := rand.New(randomSource)
-	log.Printf("Initialized random with seed %d\n", seed)
-
-	fmt.Println("Starting to generate cards...")
-	for i := 0; i < 100; i++ {
-		log.Printf("Iteration %d\n", i)
-		cardsInFile := random.Intn(7) + 10 // [10, 17]
-		cards := make([]card.Card, 0)
-
-		for j := 0; j < cardsInFile; j++ {
-			generatedCard, _ := card.Random(*random)
-			cards = append(cards, *generatedCard)
-		}
-		log.Printf("Generated cards %s\n", cards)
-		summary := cardsToRepresentations(cards)
-		file, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
-
-		if err != nil {
-			log.Fatalln("failed to open file", err)
-		}
-
-		writer := csv.NewWriter(file)
-		if err = writer.Write(summary); err != nil {
-			log.Fatalln("error writing to a file!")
-		}
-
-		writer.Flush()
-		_ = file.Close()
+func main() {
+	f, err := os.Open("./dataset")
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
-}*/
+	files, err := f.Readdir(0)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	cnt := 0
+	for _, file := range files {
+		fileName := file.Name()
+		dataSlice := getDataFromCSV("dataset/" + fileName)
+		dataMap := getCardMapFromSlice(dataSlice)
+		dataSlice = getUniqueValuesFromDataMap(dataMap, -1)
+		cardCombinations := strings.Split(makeCombinations(dataSlice), ";")
+		var combinations []string = make([]string, len(cardCombinations))
+		pos := 0
+		for i := 0; i < len(cardCombinations); i++ {
+			dataSlice = strings.Split(cardCombinations[i], ",")
+			if len(dataSlice) == 1 {
+				continue
+			}
+			combination := findCombination(dataSlice)
+			if combination == "" {
+				continue
+			}
+			combinations[pos] = combination
+			pos++
+		}
+
+		go writeDataInCSV(combinations, cnt)
+		cnt++
+	}
+}

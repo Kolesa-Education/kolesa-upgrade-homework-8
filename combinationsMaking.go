@@ -1,4 +1,4 @@
-package solution
+package main
 
 func getFactorial(n int) int {
 	var res int = 1
@@ -24,6 +24,6 @@ func makeCombinations(cardsSlice []string) string {
 		}
 
 	}
-	fmt.Println(res)
+	//fmt.Println(res)
 	return res
 }
