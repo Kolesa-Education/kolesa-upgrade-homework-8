@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func getFactorial(n int)int{
@@ -10,30 +11,35 @@ func getFactorial(n int)int{
 }
 
 func makeCombinations(cardsSlice []string)[][]string{
-	length := getFactorial(len(cardsSlice)) / getFactorial(5)
+	length := len(cardsSlice)
 	res := make([][]string, length)
+	tmp := make([]string, length)
+	a := 0
 	for i:=0;i<length-1;i++ {
-		tmp := make([]string, length)
 		for j:=i+1;j<length;j++ {
 			for k:=j+1;k<length;k++ {
 			    for l:=k+1;l<length;l++ {
         			cnt := 0
         			for m:=l+1;m<length;m++ {
         			    tmpRes := cardsSlice[i] + cardsSlice[j] +cardsSlice[k] + cardsSlice[l] +cardsSlice[m]
-            			tmp[cnt] = tmpRes
-            			fmt.Println(cnt)
+            			//tmp[cnt] = 
+            			res[i][cnt] = tmpRes
+            			fmt.Println(res)
             			cnt++
+            			a++
             		}
+            		
         		}
 		    }
 		}
 		fmt.Println(tmp)
-		res[i] = tmp
+		
 	}
+	fmt.Println(a)
 	return res
 }
 func main() {
-    fmt.Println(getFactorial(4))
-    //fmt.Println(makeCombinations([]string{"1", "2", "3", "4", "5"}))
+    //fmt.Println(getFactorial(4))
+    fmt.Println(makeCombinations([]string{"1", "2", "3", "4", "5"}))
     fmt.Println("Hello World")
 }

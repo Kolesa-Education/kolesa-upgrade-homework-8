@@ -1,23 +1,37 @@
 package solution
 
-func makeCombinations(cardsSlice []string)[][]string{
-	var length := len(cardsSlice)
-	var res := make([][]string, length)
-	for i:=0;i<length-1;i++ {
-		var tmp := make([]string, length-i)
-		for j:=i+1;length;j++{
-			tmp[i] = cardsSlice[i]
-		}
-		res[i] = tmp
+func getFactorial(n int) int {
+	var res int = 1
+	for i := 1; i <= n; i++ {
+		res *= i
 	}
 	return res
 }
 
-/*
-a b c d
+func makeCombinations(cardsSlice []string) string {
+	length := len(cardsSlice)
+	res := ""
+	for i := 0; i < length-1; i++ {
+		//res[i] = make([]string, length)
 
-ab ac ad
-bc bd
-cd
+		for j := i + 1; j < length; j++ {
+			for k := j + 1; k < length; k++ {
+				for l := k + 1; l < length; l++ {
+					cnt := 0
+					//tmp := make([]string, length)
+					for m := l + 1; m < length; m++ {
+						tmpRes := cardsSlice[i] + "," + cardsSlice[j] + "," + cardsSlice[k] + "," + cardsSlice[l] + "," + cardsSlice[m]
+						res += tmpRes + ";"
+						//tmp[cnt] = tmpRes
+						cnt++
+						//fmt.Println(res)
+					}
+					//res[i] = tmp
+				}
+			}
+		}
 
-*/
+	}
+	fmt.Println(res)
+	return res
+}
