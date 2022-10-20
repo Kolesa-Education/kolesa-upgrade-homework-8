@@ -3,6 +3,7 @@ module github.com/Kolesa-Education/kolesa-upgrade-homework-8
 go 1.19
 
 require (
+	github.com/natemcintosh/gocombinatorics v0.3.1
 	github.com/samber/lo v1.32.0
 	github.com/stretchr/testify v1.8.0
 )
