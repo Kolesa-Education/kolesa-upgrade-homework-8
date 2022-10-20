@@ -39,15 +39,18 @@ func main() {
 		var combinations []string = make([]string, len(cardCombinations))
 		pos := 0
 		for i := 0; i < len(cardCombinations); i++ {
+			//combination := ""
 			dataSlice = strings.Split(cardCombinations[i], ",")
 			if len(dataSlice) == 1 {
 				continue
 			}
-			combination := findCombination(dataSlice)
-			if combination == "" {
+			channel := make(chan string)
+			go findCombination(dataSlice, channel)
+			res := <-channel
+			if res == "" {
 				continue
 			}
-			combinations[pos] = combination
+			combinations[pos] = res
 			pos++
 		}
 

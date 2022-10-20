@@ -125,7 +125,7 @@ func checkStraightOrFlush(uniqueValues []string, suitsMap map[string]bool) strin
 	return combination
 }
 
-func findCombination(dataSlice []string) string {
+func findCombination(dataSlice []string, channel chan string) {
 
 	dataMap := getCardMapFromSlice(dataSlice)
 
@@ -150,8 +150,8 @@ func findCombination(dataSlice []string) string {
 		resultantCombination = isFlushOrStraight
 	}
 	if isFlushOrStraight == "" && isQuantative == "" {
-		return ""
+		channel <- ""
 	}
 
-	return strings.Join(dataSlice, ",") + " | " + resultantCombination
+	channel <- strings.Join(dataSlice, ",") + " | " + resultantCombination
 }

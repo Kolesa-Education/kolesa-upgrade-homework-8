@@ -1,216 +1,216 @@
-"♣K,♠Q,♠5,♠J,♠K | Pair
+"♠J,♥4,♦J,♠6,♣K | Pair
 "
-"♣K,♠Q,♠5,♠J,♦J | Pair
+"♠J,♥4,♦J,♠6,♠Q | Pair
 "
-"♣K,♠Q,♠5,♥4,♠K | Pair
+"♠J,♥4,♦J,♠6,♠K | Pair
 "
-"♣K,♠Q,♠5,♠K,♦8 | Pair
+"♠J,♥4,♦J,♠6,♦8 | Pair
 "
-"♣K,♠Q,♠5,♠K,♦9 | Pair
+"♠J,♥4,♦J,♠6,♦9 | Pair
 "
-"♣K,♠Q,♠5,♠K,♠6 | Pair
+"♠J,♥4,♦J,♠6,♠5 | Pair
 "
-"♣K,♠Q,♠5,♠K,♦J | Pair
+"♠J,♥4,♦J,♣K,♠Q | Pair
 "
-"♣K,♠Q,♠J,♥4,♠K | Pair
+"♠J,♥4,♦J,♣K,♠K | Two pairs
 "
-"♣K,♠Q,♠J,♥4,♦J | Pair
+"♠J,♥4,♦J,♣K,♦8 | Pair
 "
-"♣K,♠Q,♠J,♠K,♦8 | Pair
+"♠J,♥4,♦J,♣K,♦9 | Pair
 "
-"♣K,♠Q,♠J,♠K,♦9 | Pair
+"♠J,♥4,♦J,♣K,♠5 | Pair
 "
-"♣K,♠Q,♠J,♠K,♠6 | Pair
+"♠J,♥4,♦J,♠Q,♠K | Pair
 "
-"♣K,♠Q,♠J,♠K,♦J | Two pairs
+"♠J,♥4,♦J,♠Q,♦8 | Pair
 "
-"♣K,♠Q,♠J,♦8,♦J | Pair
+"♠J,♥4,♦J,♠Q,♦9 | Pair
 "
-"♣K,♠Q,♠J,♦9,♦J | Pair
+"♠J,♥4,♦J,♠Q,♠5 | Pair
 "
-"♣K,♠Q,♠J,♠6,♦J | Pair
+"♠J,♥4,♦J,♠K,♦8 | Pair
 "
-"♣K,♠Q,♥4,♠K,♦8 | Pair
+"♠J,♥4,♦J,♠K,♦9 | Pair
 "
-"♣K,♠Q,♥4,♠K,♦9 | Pair
+"♠J,♥4,♦J,♠K,♠5 | Pair
 "
-"♣K,♠Q,♥4,♠K,♠6 | Pair
+"♠J,♥4,♦J,♦8,♦9 | Pair
 "
-"♣K,♠Q,♥4,♠K,♦J | Pair
+"♠J,♥4,♦J,♦8,♠5 | Pair
+"
+"♠J,♥4,♦J,♦9,♠5 | Pair
+"
+"♠J,♥4,♠6,♣K,♠K | Pair
+"
+"♠J,♥4,♣K,♠Q,♠K | Pair
+"
+"♠J,♥4,♣K,♠K,♦8 | Pair
+"
+"♠J,♥4,♣K,♠K,♦9 | Pair
+"
+"♠J,♥4,♣K,♠K,♠5 | Pair
+"
+"♠J,♦J,♠6,♣K,♠Q | Pair
+"
+"♠J,♦J,♠6,♣K,♠K | Two pairs
+"
+"♠J,♦J,♠6,♣K,♦8 | Pair
+"
+"♠J,♦J,♠6,♣K,♦9 | Pair
+"
+"♠J,♦J,♠6,♣K,♠5 | Pair
+"
+"♠J,♦J,♠6,♠Q,♠K | Pair
+"
+"♠J,♦J,♠6,♠Q,♦8 | Pair
+"
+"♠J,♦J,♠6,♠Q,♦9 | Pair
+"
+"♠J,♦J,♠6,♠Q,♠5 | Pair
+"
+"♠J,♦J,♠6,♠K,♦8 | Pair
+"
+"♠J,♦J,♠6,♠K,♦9 | Pair
+"
+"♠J,♦J,♠6,♠K,♠5 | Pair
+"
+"♠J,♦J,♠6,♦8,♦9 | Pair
+"
+"♠J,♦J,♠6,♦8,♠5 | Pair
+"
+"♠J,♦J,♠6,♦9,♠5 | Pair
+"
+"♠J,♦J,♣K,♠Q,♠K | Two pairs
+"
+"♠J,♦J,♣K,♠Q,♦8 | Pair
+"
+"♠J,♦J,♣K,♠Q,♦9 | Pair
+"
+"♠J,♦J,♣K,♠Q,♠5 | Pair
+"
+"♠J,♦J,♣K,♠K,♦8 | Two pairs
+"
+"♠J,♦J,♣K,♠K,♦9 | Two pairs
+"
+"♠J,♦J,♣K,♠K,♠5 | Two pairs
+"
+"♠J,♦J,♣K,♦8,♦9 | Pair
+"
+"♠J,♦J,♣K,♦8,♠5 | Pair
+"
+"♠J,♦J,♣K,♦9,♠5 | Pair
+"
+"♠J,♦J,♠Q,♠K,♦8 | Pair
+"
+"♠J,♦J,♠Q,♠K,♦9 | Pair
+"
+"♠J,♦J,♠Q,♠K,♠5 | Pair
+"
+"♠J,♦J,♠Q,♦8,♦9 | Pair
+"
+"♠J,♦J,♠Q,♦8,♠5 | Pair
+"
+"♠J,♦J,♠Q,♦9,♠5 | Pair
+"
+"♠J,♦J,♠K,♦8,♦9 | Pair
+"
+"♠J,♦J,♠K,♦8,♠5 | Pair
+"
+"♠J,♦J,♠K,♦9,♠5 | Pair
+"
+"♠J,♦J,♦8,♦9,♠5 | Pair
+"
+"♠J,♠6,♣K,♠Q,♠K | Pair
+"
+"♠J,♠6,♣K,♠K,♦8 | Pair
+"
+"♠J,♠6,♣K,♠K,♦9 | Pair
+"
+"♠J,♠6,♣K,♠K,♠5 | Pair
+"
+"♠J,♠6,♠Q,♠K,♠5 | Flush
+"
+"♠J,♣K,♠Q,♠K,♦8 | Pair
+"
+"♠J,♣K,♠Q,♠K,♦9 | Pair
+"
+"♠J,♣K,♠Q,♠K,♠5 | Pair
+"
+"♠J,♣K,♠K,♦8,♦9 | Pair
+"
+"♠J,♣K,♠K,♦8,♠5 | Pair
+"
+"♠J,♣K,♠K,♦9,♠5 | Pair
+"
+"♥4,♦J,♠6,♣K,♠K | Pair
+"
+"♥4,♦J,♣K,♠Q,♠K | Pair
+"
+"♥4,♦J,♣K,♠K,♦8 | Pair
+"
+"♥4,♦J,♣K,♠K,♦9 | Pair
+"
+"♥4,♦J,♣K,♠K,♠5 | Pair
+"
+"♥4,♠6,♣K,♠Q,♠K | Pair
+"
+"♥4,♠6,♣K,♠K,♦8 | Pair
+"
+"♥4,♠6,♣K,♠K,♦9 | Pair
+"
+"♥4,♠6,♣K,♠K,♠5 | Pair
+"
+"♥4,♣K,♠Q,♠K,♦8 | Pair
+"
+"♥4,♣K,♠Q,♠K,♦9 | Pair
+"
+"♥4,♣K,♠Q,♠K,♠5 | Pair
+"
+"♥4,♣K,♠K,♦8,♦9 | Pair
+"
+"♥4,♣K,♠K,♦8,♠5 | Pair
+"
+"♥4,♣K,♠K,♦9,♠5 | Pair
+"
+"♦J,♠6,♣K,♠Q,♠K | Pair
+"
+"♦J,♠6,♣K,♠K,♦8 | Pair
+"
+"♦J,♠6,♣K,♠K,♦9 | Pair
+"
+"♦J,♠6,♣K,♠K,♠5 | Pair
+"
+"♦J,♣K,♠Q,♠K,♦8 | Pair
+"
+"♦J,♣K,♠Q,♠K,♦9 | Pair
+"
+"♦J,♣K,♠Q,♠K,♠5 | Pair
+"
+"♦J,♣K,♠K,♦8,♦9 | Pair
+"
+"♦J,♣K,♠K,♦8,♠5 | Pair
+"
+"♦J,♣K,♠K,♦9,♠5 | Pair
+"
+"♠6,♣K,♠Q,♠K,♦8 | Pair
+"
+"♠6,♣K,♠Q,♠K,♦9 | Pair
+"
+"♠6,♣K,♠Q,♠K,♠5 | Pair
+"
+"♠6,♣K,♠K,♦8,♦9 | Pair
+"
+"♠6,♣K,♠K,♦8,♠5 | Pair
+"
+"♠6,♣K,♠K,♦9,♠5 | Pair
 "
 "♣K,♠Q,♠K,♦8,♦9 | Pair
 "
-"♣K,♠Q,♠K,♦8,♠6 | Pair
+"♣K,♠Q,♠K,♦8,♠5 | Pair
 "
-"♣K,♠Q,♠K,♦8,♦J | Pair
+"♣K,♠Q,♠K,♦9,♠5 | Pair
 "
-"♣K,♠Q,♠K,♦9,♠6 | Pair
-"
-"♣K,♠Q,♠K,♦9,♦J | Pair
-"
-"♣K,♠Q,♠K,♠6,♦J | Pair
-"
-"♣K,♠5,♠J,♥4,♠K | Pair
-"
-"♣K,♠5,♠J,♥4,♦J | Pair
-"
-"♣K,♠5,♠J,♠K,♦8 | Pair
-"
-"♣K,♠5,♠J,♠K,♦9 | Pair
-"
-"♣K,♠5,♠J,♠K,♠6 | Pair
-"
-"♣K,♠5,♠J,♠K,♦J | Two pairs
-"
-"♣K,♠5,♠J,♦8,♦J | Pair
-"
-"♣K,♠5,♠J,♦9,♦J | Pair
-"
-"♣K,♠5,♠J,♠6,♦J | Pair
-"
-"♣K,♠5,♥4,♠K,♦8 | Pair
-"
-"♣K,♠5,♥4,♠K,♦9 | Pair
-"
-"♣K,♠5,♥4,♠K,♠6 | Pair
-"
-"♣K,♠5,♥4,♠K,♦J | Pair
-"
-"♣K,♠5,♠K,♦8,♦9 | Pair
-"
-"♣K,♠5,♠K,♦8,♠6 | Pair
-"
-"♣K,♠5,♠K,♦8,♦J | Pair
-"
-"♣K,♠5,♠K,♦9,♠6 | Pair
-"
-"♣K,♠5,♠K,♦9,♦J | Pair
-"
-"♣K,♠5,♠K,♠6,♦J | Pair
-"
-"♣K,♠J,♥4,♠K,♦8 | Pair
-"
-"♣K,♠J,♥4,♠K,♦9 | Pair
-"
-"♣K,♠J,♥4,♠K,♠6 | Pair
-"
-"♣K,♠J,♥4,♠K,♦J | Two pairs
-"
-"♣K,♠J,♥4,♦8,♦J | Pair
-"
-"♣K,♠J,♥4,♦9,♦J | Pair
-"
-"♣K,♠J,♥4,♠6,♦J | Pair
-"
-"♣K,♠J,♠K,♦8,♦9 | Pair
-"
-"♣K,♠J,♠K,♦8,♠6 | Pair
-"
-"♣K,♠J,♠K,♦8,♦J | Two pairs
-"
-"♣K,♠J,♠K,♦9,♠6 | Pair
-"
-"♣K,♠J,♠K,♦9,♦J | Two pairs
-"
-"♣K,♠J,♠K,♠6,♦J | Two pairs
-"
-"♣K,♠J,♦8,♦9,♦J | Pair
-"
-"♣K,♠J,♦8,♠6,♦J | Pair
-"
-"♣K,♠J,♦9,♠6,♦J | Pair
-"
-"♣K,♥4,♠K,♦8,♦9 | Pair
-"
-"♣K,♥4,♠K,♦8,♠6 | Pair
-"
-"♣K,♥4,♠K,♦8,♦J | Pair
-"
-"♣K,♥4,♠K,♦9,♠6 | Pair
-"
-"♣K,♥4,♠K,♦9,♦J | Pair
-"
-"♣K,♥4,♠K,♠6,♦J | Pair
-"
-"♣K,♠K,♦8,♦9,♠6 | Pair
-"
-"♣K,♠K,♦8,♦9,♦J | Pair
-"
-"♣K,♠K,♦8,♠6,♦J | Pair
-"
-"♣K,♠K,♦9,♠6,♦J | Pair
-"
-"♠Q,♠5,♠J,♥4,♦J | Pair
-"
-"♠Q,♠5,♠J,♠K,♠6 | Flush
-"
-"♠Q,♠5,♠J,♠K,♦J | Pair
-"
-"♠Q,♠5,♠J,♦8,♦J | Pair
-"
-"♠Q,♠5,♠J,♦9,♦J | Pair
-"
-"♠Q,♠5,♠J,♠6,♦J | Pair
-"
-"♠Q,♠J,♥4,♠K,♦J | Pair
-"
-"♠Q,♠J,♥4,♦8,♦J | Pair
-"
-"♠Q,♠J,♥4,♦9,♦J | Pair
-"
-"♠Q,♠J,♥4,♠6,♦J | Pair
-"
-"♠Q,♠J,♠K,♦8,♦J | Pair
-"
-"♠Q,♠J,♠K,♦9,♦J | Pair
-"
-"♠Q,♠J,♠K,♠6,♦J | Pair
-"
-"♠Q,♠J,♦8,♦9,♦J | Pair
-"
-"♠Q,♠J,♦8,♠6,♦J | Pair
-"
-"♠Q,♠J,♦9,♠6,♦J | Pair
-"
-"♠5,♠J,♥4,♠K,♦J | Pair
-"
-"♠5,♠J,♥4,♦8,♦J | Pair
-"
-"♠5,♠J,♥4,♦9,♦J | Pair
-"
-"♠5,♠J,♥4,♠6,♦J | Pair
-"
-"♠5,♠J,♠K,♦8,♦J | Pair
-"
-"♠5,♠J,♠K,♦9,♦J | Pair
-"
-"♠5,♠J,♠K,♠6,♦J | Pair
-"
-"♠5,♠J,♦8,♦9,♦J | Pair
-"
-"♠5,♠J,♦8,♠6,♦J | Pair
-"
-"♠5,♠J,♦9,♠6,♦J | Pair
-"
-"♠J,♥4,♠K,♦8,♦J | Pair
-"
-"♠J,♥4,♠K,♦9,♦J | Pair
-"
-"♠J,♥4,♠K,♠6,♦J | Pair
-"
-"♠J,♥4,♦8,♦9,♦J | Pair
-"
-"♠J,♥4,♦8,♠6,♦J | Pair
-"
-"♠J,♥4,♦9,♠6,♦J | Pair
-"
-"♠J,♠K,♦8,♦9,♦J | Pair
-"
-"♠J,♠K,♦8,♠6,♦J | Pair
-"
-"♠J,♠K,♦9,♠6,♦J | Pair
-"
-"♠J,♦8,♦9,♠6,♦J | Pair
+"♣K,♠K,♦8,♦9,♠5 | Pair
 "
 "
 "
