@@ -9,7 +9,6 @@ import (
 	"gonum.org/v1/gonum/stat/combin"
 	"log"
 	"os"
-	"regexp"
 	"sync"
 )
 
@@ -131,44 +130,45 @@ func combsToStrings(cardsCombs [][]card.Card) [][]string {
 	var res [][]string
 	for _, comb := range cardsCombs {
 		combName := checkCombinations(comb)
-		if combName == "" {
+		if len(combName) == 0 {
 			continue
 		}
-		combLst := []string{combName}
-		res = append(res, combLst)
+		//combLst := []string{combName}
+		//res = append(res, combLst)
+		res = append(res, combName)
 	}
 	return res
 }
 
-func checkCombinations(cards []card.Card) (combString string) {
-	combString = structToString(cards)
+func checkCombinations(cards []card.Card) (combStrings []string) {
+	combStrings = append(combStrings, structToString(cards))
 	switch true {
 	case combinations.GetStraightFlush(cards):
-		combString += " | Straight Flush"
+		combStrings = append(combStrings, " | Straight Flush")
 		return
 	case combinations.GetFourOfAKind(cards):
-		combString += " | Four Of A Kind"
+		combStrings = append(combStrings, " | Four Of A Kind")
 		return
 	case combinations.GetFullHouse(cards):
-		combString += " | Full House"
+		combStrings = append(combStrings, " | Full House")
 		return
 	case combinations.GetFlush(cards):
-		combString += " | Flush"
+		combStrings = append(combStrings, " | Flush")
 		return
 	case combinations.GetStraight(cards):
-		combString += " | Straight"
+		combStrings = append(combStrings, " | Straight")
 		return
 	case combinations.GetThreeOfAKind(cards):
-		combString += " | Three Of A Kind"
+		combStrings = append(combStrings, " | Three Of A Kind")
 		return
 	case combinations.GetTwoPairs(cards):
-		combString += " | Two Pairs"
+		combStrings = append(combStrings, " | Two Pairs")
 		return
 	case combinations.GetPair(cards):
-		combString += " | Pair"
+		combStrings = append(combStrings, " | Pair")
 		return
 	default:
-		return ""
+		return []string{}
 	}
 }
 
@@ -183,18 +183,18 @@ func structToString(comb []card.Card) string {
 	return res
 }
 
-func removeQuotes(filename string) error {
-	input2, err := os.ReadFile(filename)
-	if err != nil {
-		return err
-	}
-	output2 := regexp.MustCompile(`"`).ReplaceAll(input2, []byte(""))
-
-	if err = os.WriteFile(filename, output2, 0666); err != nil {
-		return err
-	}
-	return nil
-}
+//func removeQuotes(filename string) error {
+//	input2, err := os.ReadFile(filename)
+//	if err != nil {
+//		return err
+//	}
+//	output2 := regexp.MustCompile(`"`).ReplaceAll(input2, []byte(""))
+//
+//	if err = os.WriteFile(filename, output2, 0666); err != nil {
+//		return err
+//	}
+//	return nil
+//}
 
 func Pipeline(num string, group *sync.WaitGroup) {
 	dataset, err := openCSV("./dataset/dat" + num + ".csv")
@@ -207,10 +207,10 @@ func Pipeline(num string, group *sync.WaitGroup) {
 	combStringLst := combsToStrings(combStructLst)
 	filename := "./results/dat" + num + ".csv"
 	writeCSV(filename, combStringLst)
-	err = removeQuotes(filename)
-	if err != nil {
-		log.Fatalln("failed to remove quotes from file:", filename)
-	}
+	//err = removeQuotes(filename)
+	//if err != nil {
+	//	log.Fatalln("failed to remove quotes from file:", filename)
+	//}
 	//fmt.Println(combStringLst)
 	group.Done()
 }

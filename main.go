@@ -21,8 +21,8 @@ func main() {
 	for i := 0; i < 100; i++ {
 		group.Add(1)
 		go pipeline.Pipeline(strconv.Itoa(i), &group)
-		group.Wait()
 	}
+	group.Wait()
 }
 
 // Khambar's main function
