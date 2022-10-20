@@ -1,13 +1,8 @@
 package main
 
 import (
-	"encoding/csv"
-	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/samber/lo"
-	"log"
-	"math/rand"
-	"os"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -18,7 +13,7 @@ func cardsToRepresentations(cards []card.Card) []string {
 	return representations
 }
 
-func main() {
+/*func main() {
 	var seed int64 = 1665694295623135151
 	randomSource := rand.NewSource(seed)
 	random := rand.New(randomSource)
@@ -50,4 +45,4 @@ func main() {
 		writer.Flush()
 		_ = file.Close()
 	}
-}
+}*/
