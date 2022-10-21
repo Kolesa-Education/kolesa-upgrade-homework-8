@@ -42,7 +42,7 @@ func getBinaryCombinations(n int, k int)[]string {
     cnt := 0
     for i:=0;i<operationLength;i++{
         binaryValue := strconv.FormatInt(int64(i), 2)
-        if strings.Count(binaryValue, "1") != 3{
+        if strings.Count(binaryValue, "1") != k{
             continue
         }
         for len(binaryValue) < n{
@@ -60,6 +60,18 @@ func getStringFromMask(str string, mask string)string{
         if mask[i] == '1' {
             res += string(str[i])
         }
+    }
+    return res
+}
+
+func makeCombinationsFromMasks(inputStr string)[]string {
+    n := len(inputStr)
+	combinations := getBinaryCombinations(n, 5)
+	res := make([]string, len(combinations))
+	cnt := 0
+    for i:=0; i< len(combinations); i++ {
+        res[cnt] = getStringFromMask(inputStr, combinations[i])
+        cnt++
     }
     return res
 }
