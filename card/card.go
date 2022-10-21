@@ -32,7 +32,7 @@ const (
 	Face7     = "7"
 	Face8     = "8"
 	Face9     = "9"
-	Face10    = "10"
+	Face10    = "T"
 	FaceJack  = "J"
 	FaceQueen = "Q"
 	FaceKing  = "K"
