@@ -1,5 +1,11 @@
 package main
 
+import (
+    "strconv"
+    "strings"
+    "math"
+    )
+
 func getFactorial(n int) int {
 	var res int = 1
 	for i := 1; i <= n; i++ {
@@ -27,3 +33,34 @@ func makeCombinations(cardsSlice []string) string {
 	//fmt.Println(res)
 	return res
 }
+
+
+func getBinaryCombinations(n int, k int)[]string {
+    resLength := getFactorial(n) / (getFactorial(k) * getFactorial(n-k))
+    res := make([]string, resLength)
+    operationLength := int(math.Pow(2, float64(n)))
+    cnt := 0
+    for i:=0;i<operationLength;i++{
+        binaryValue := strconv.FormatInt(int64(i), 2)
+        if strings.Count(binaryValue, "1") != 3{
+            continue
+        }
+        for len(binaryValue) < n{
+            binaryValue = "0"+binaryValue
+        }
+        res[cnt] = binaryValue
+        cnt++
+    }
+    return res
+}
+
+func getStringFromMask(str string, mask string)string{
+    var res string = ""
+    for i:=0; i< len(mask); i++ {
+        if mask[i] == '1' {
+            res += string(str[i])
+        }
+    }
+    return res
+}
+
