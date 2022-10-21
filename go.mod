@@ -1,6 +1,6 @@
 module github.com/Kolesa-Education/kolesa-upgrade-homework-8
 
-go 1.19
+go 1.18
 
 require (
 	github.com/samber/lo v1.32.0
