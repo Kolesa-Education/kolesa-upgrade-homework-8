@@ -48,6 +48,6 @@ func main() {
 		}
 
 		writer.Flush()
-		_ = file.Close()
+		//_ = file.Close()
 	}
 }
