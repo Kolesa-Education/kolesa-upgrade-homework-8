@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/samber/lo"
@@ -35,17 +34,15 @@ func main() {
 		dataSlice := getDataFromCSV("dataset/" + fileName)
 		dataMap := getCardMapFromSlice(dataSlice)
 		dataSlice = getUniqueValuesFromDataMap(dataMap, -1)
-		cardCombinations := strings.Split(makeCombinations(dataSlice), ";")
+		cardCombinations := makeCombinationsFromMasks(dataSlice, 5)
 		var combinations []string = make([]string, len(cardCombinations))
 		pos := 0
 		for i := 0; i < len(cardCombinations); i++ {
-			//combination := ""
-			dataSlice = strings.Split(cardCombinations[i], ",")
-			if len(dataSlice) == 1 {
+			if len(cardCombinations) == 1 {
 				continue
 			}
 			channel := make(chan string)
-			go findCombination(dataSlice, channel)
+			go findCombination(cardCombinations[i], channel)
 			res := <-channel
 			if res == "" {
 				continue
