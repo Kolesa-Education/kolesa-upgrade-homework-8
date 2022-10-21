@@ -34,6 +34,7 @@ func GetAnswerPokerCombination(filepath string, ch chan Answer) {
 			continue
 		}
 		cardCombinationAnswer += fmt.Sprintf("%s|%s\n", getCardsToStr(cards), cardComb.name)
+		//fmt.Println(cardCombinationAnswer)
 	}
 
 	answer := Answer{
@@ -48,6 +49,7 @@ func getCardsToStr(cards []card.Card) string {
 
 	for i := range cards {
 		result += fmt.Sprintf("%s%s", cards[i].Suit, cards[i].Face)
+
 	}
 
 	return result

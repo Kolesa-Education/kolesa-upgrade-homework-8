@@ -1,470 +1,679 @@
-♦Q♣5♠A♦8♠Q|Pair
-♦Q♣5♠A♣K♠Q|Pair
-♦Q♣5♦8♣K♠Q|Pair
-♦Q♠A♦8♣K♠Q|Pair
-♦Q♣5♠A♣0♠Q|Pair
-♦Q♣5♦8♣0♠Q|Pair
-♦Q♠A♦8♣0♠Q|Pair
-♦Q♣5♣K♣0♠Q|Pair
-♦Q♠A♣K♣0♠Q|Pair
-♦Q♦8♣K♣0♠Q|Pair
-♦Q♣5♠A♠Q♣6|Pair
-♦Q♣5♦8♠Q♣6|Pair
-♦Q♠A♦8♠Q♣6|Pair
-♦Q♣5♣K♠Q♣6|Pair
-♦Q♠A♣K♠Q♣6|Pair
-♦Q♦8♣K♠Q♣6|Pair
-♦Q♣5♣0♠Q♣6|Pair
-♦Q♠A♣0♠Q♣6|Pair
-♦Q♦8♣0♠Q♣6|Pair
-♦Q♣K♣0♠Q♣6|Pair
-♦Q♣5♠A♠Q♦7|Pair
-♦Q♣5♦8♠Q♦7|Pair
-♦Q♠A♦8♠Q♦7|Pair
-♦Q♣5♣K♠Q♦7|Pair
-♦Q♠A♣K♠Q♦7|Pair
-♦Q♦8♣K♠Q♦7|Pair
-♦Q♣5♣0♠Q♦7|Pair
-♦Q♠A♣0♠Q♦7|Pair
-♦Q♦8♣0♠Q♦7|Pair
-♦Q♣K♣0♠Q♦7|Pair
-♦Q♣5♠Q♣6♦7|Pair
-♦Q♠A♠Q♣6♦7|Pair
-♦Q♦8♠Q♣6♦7|Pair
-♦Q♣K♠Q♣6♦7|Pair
-♦Q♣0♠Q♣6♦7|Pair
-♦Q♣5♠A♠Q♦3|Pair
-♦Q♣5♦8♠Q♦3|Pair
-♦Q♠A♦8♠Q♦3|Pair
-♦Q♣5♣K♠Q♦3|Pair
-♦Q♠A♣K♠Q♦3|Pair
-♦Q♦8♣K♠Q♦3|Pair
-♦Q♣5♣0♠Q♦3|Pair
-♦Q♠A♣0♠Q♦3|Pair
-♦Q♦8♣0♠Q♦3|Pair
-♦Q♣K♣0♠Q♦3|Pair
-♦Q♣5♠Q♣6♦3|Pair
-♦Q♠A♠Q♣6♦3|Pair
-♦Q♦8♠Q♣6♦3|Pair
-♦Q♣K♠Q♣6♦3|Pair
-♦Q♣0♠Q♣6♦3|Pair
-♦Q♣5♠Q♦7♦3|Pair
-♦Q♠A♠Q♦7♦3|Pair
-♦Q♦8♠Q♦7♦3|Pair
-♦Q♣K♠Q♦7♦3|Pair
-♦Q♣0♠Q♦7♦3|Pair
-♦Q♠Q♣6♦7♦3|Pair
-♦Q♣5♠A♦8♥8|Pair
-♦Q♣5♦8♣K♥8|Pair
-♦Q♠A♦8♣K♥8|Pair
-♣5♠A♦8♣K♥8|Pair
-♦Q♣5♦8♣0♥8|Pair
-♦Q♠A♦8♣0♥8|Pair
-♣5♠A♦8♣0♥8|Pair
-♦Q♦8♣K♣0♥8|Pair
-♣5♦8♣K♣0♥8|Pair
-♠A♦8♣K♣0♥8|Pair
-♦Q♣5♠A♠Q♥8|Pair
-♦Q♣5♦8♠Q♥8|Two Pairs
-♦Q♠A♦8♠Q♥8|Two Pairs
-♣5♠A♦8♠Q♥8|Pair
-♦Q♣5♣K♠Q♥8|Pair
-♦Q♠A♣K♠Q♥8|Pair
-♦Q♦8♣K♠Q♥8|Two Pairs
-♣5♦8♣K♠Q♥8|Pair
-♠A♦8♣K♠Q♥8|Pair
-♦Q♣5♣0♠Q♥8|Pair
-♦Q♠A♣0♠Q♥8|Pair
-♦Q♦8♣0♠Q♥8|Two Pairs
-♣5♦8♣0♠Q♥8|Pair
-♠A♦8♣0♠Q♥8|Pair
-♦Q♣K♣0♠Q♥8|Pair
-♦8♣K♣0♠Q♥8|Pair
-♦Q♣5♦8♣6♥8|Pair
-♦Q♠A♦8♣6♥8|Pair
-♣5♠A♦8♣6♥8|Pair
-♦Q♦8♣K♣6♥8|Pair
-♣5♦8♣K♣6♥8|Pair
-♠A♦8♣K♣6♥8|Pair
-♦Q♦8♣0♣6♥8|Pair
-♣5♦8♣0♣6♥8|Pair
-♠A♦8♣0♣6♥8|Pair
-♦8♣K♣0♣6♥8|Pair
-♦Q♣5♠Q♣6♥8|Pair
-♦Q♠A♠Q♣6♥8|Pair
-♦Q♦8♠Q♣6♥8|Two Pairs
-♣5♦8♠Q♣6♥8|Pair
-♠A♦8♠Q♣6♥8|Pair
-♦Q♣K♠Q♣6♥8|Pair
-♦8♣K♠Q♣6♥8|Pair
-♦Q♣0♠Q♣6♥8|Pair
-♦8♣0♠Q♣6♥8|Pair
-♦Q♣5♦8♦7♥8|Pair
-♦Q♠A♦8♦7♥8|Pair
-♣5♠A♦8♦7♥8|Pair
-♦Q♦8♣K♦7♥8|Pair
-♣5♦8♣K♦7♥8|Pair
-♠A♦8♣K♦7♥8|Pair
-♦Q♦8♣0♦7♥8|Pair
-♣5♦8♣0♦7♥8|Pair
-♠A♦8♣0♦7♥8|Pair
-♦8♣K♣0♦7♥8|Pair
-♦Q♣5♠Q♦7♥8|Pair
-♦Q♠A♠Q♦7♥8|Pair
-♦Q♦8♠Q♦7♥8|Two Pairs
-♣5♦8♠Q♦7♥8|Pair
-♠A♦8♠Q♦7♥8|Pair
-♦Q♣K♠Q♦7♥8|Pair
-♦8♣K♠Q♦7♥8|Pair
-♦Q♣0♠Q♦7♥8|Pair
-♦8♣0♠Q♦7♥8|Pair
-♦Q♦8♣6♦7♥8|Pair
-♣5♦8♣6♦7♥8|Pair
-♠A♦8♣6♦7♥8|Pair
-♦8♣K♣6♦7♥8|Pair
-♦8♣0♣6♦7♥8|Pair
-♦Q♠Q♣6♦7♥8|Pair
-♦8♠Q♣6♦7♥8|Pair
-♦Q♣5♦8♦3♥8|Pair
-♦Q♠A♦8♦3♥8|Pair
-♣5♠A♦8♦3♥8|Pair
-♦Q♦8♣K♦3♥8|Pair
-♣5♦8♣K♦3♥8|Pair
-♠A♦8♣K♦3♥8|Pair
-♦Q♦8♣0♦3♥8|Pair
-♣5♦8♣0♦3♥8|Pair
-♠A♦8♣0♦3♥8|Pair
-♦8♣K♣0♦3♥8|Pair
-♦Q♣5♠Q♦3♥8|Pair
-♦Q♠A♠Q♦3♥8|Pair
-♦Q♦8♠Q♦3♥8|Two Pairs
-♣5♦8♠Q♦3♥8|Pair
-♠A♦8♠Q♦3♥8|Pair
-♦Q♣K♠Q♦3♥8|Pair
-♦8♣K♠Q♦3♥8|Pair
-♦Q♣0♠Q♦3♥8|Pair
-♦8♣0♠Q♦3♥8|Pair
-♦Q♦8♣6♦3♥8|Pair
-♣5♦8♣6♦3♥8|Pair
-♠A♦8♣6♦3♥8|Pair
-♦8♣K♣6♦3♥8|Pair
-♦8♣0♣6♦3♥8|Pair
-♦Q♠Q♣6♦3♥8|Pair
-♦8♠Q♣6♦3♥8|Pair
-♦Q♦8♦7♦3♥8|Pair
-♣5♦8♦7♦3♥8|Pair
-♠A♦8♦7♦3♥8|Pair
-♦8♣K♦7♦3♥8|Pair
-♦8♣0♦7♦3♥8|Pair
-♦Q♠Q♦7♦3♥8|Pair
-♦8♠Q♦7♦3♥8|Pair
-♦8♣6♦7♦3♥8|Pair
-♦Q♣5♠A♣0♥0|Pair
-♦Q♣5♦8♣0♥0|Pair
-♦Q♠A♦8♣0♥0|Pair
-♣5♠A♦8♣0♥0|Pair
-♦Q♣5♣K♣0♥0|Pair
-♦Q♠A♣K♣0♥0|Pair
-♣5♠A♣K♣0♥0|Pair
-♦Q♦8♣K♣0♥0|Pair
-♣5♦8♣K♣0♥0|Pair
-♠A♦8♣K♣0♥0|Pair
-♦Q♣5♠A♠Q♥0|Pair
-♦Q♣5♦8♠Q♥0|Pair
-♦Q♠A♦8♠Q♥0|Pair
-♦Q♣5♣K♠Q♥0|Pair
-♦Q♠A♣K♠Q♥0|Pair
-♦Q♦8♣K♠Q♥0|Pair
-♦Q♣5♣0♠Q♥0|Two Pairs
-♦Q♠A♣0♠Q♥0|Two Pairs
-♣5♠A♣0♠Q♥0|Pair
-♦Q♦8♣0♠Q♥0|Two Pairs
-♣5♦8♣0♠Q♥0|Pair
-♠A♦8♣0♠Q♥0|Pair
-♦Q♣K♣0♠Q♥0|Two Pairs
-♣5♣K♣0♠Q♥0|Pair
-♠A♣K♣0♠Q♥0|Pair
-♦8♣K♣0♠Q♥0|Pair
-♦Q♣5♣0♣6♥0|Pair
-♦Q♠A♣0♣6♥0|Pair
-♣5♠A♣0♣6♥0|Pair
-♦Q♦8♣0♣6♥0|Pair
-♣5♦8♣0♣6♥0|Pair
-♠A♦8♣0♣6♥0|Pair
-♦Q♣K♣0♣6♥0|Pair
-♣5♣K♣0♣6♥0|Pair
-♠A♣K♣0♣6♥0|Pair
-♦8♣K♣0♣6♥0|Pair
-♦Q♣5♠Q♣6♥0|Pair
-♦Q♠A♠Q♣6♥0|Pair
-♦Q♦8♠Q♣6♥0|Pair
-♦Q♣K♠Q♣6♥0|Pair
-♦Q♣0♠Q♣6♥0|Two Pairs
-♣5♣0♠Q♣6♥0|Pair
-♠A♣0♠Q♣6♥0|Pair
-♦8♣0♠Q♣6♥0|Pair
-♣K♣0♠Q♣6♥0|Pair
-♦Q♣5♣0♦7♥0|Pair
-♦Q♠A♣0♦7♥0|Pair
-♣5♠A♣0♦7♥0|Pair
-♦Q♦8♣0♦7♥0|Pair
-♣5♦8♣0♦7♥0|Pair
-♠A♦8♣0♦7♥0|Pair
-♦Q♣K♣0♦7♥0|Pair
-♣5♣K♣0♦7♥0|Pair
-♠A♣K♣0♦7♥0|Pair
-♦8♣K♣0♦7♥0|Pair
-♦Q♣5♠Q♦7♥0|Pair
-♦Q♠A♠Q♦7♥0|Pair
-♦Q♦8♠Q♦7♥0|Pair
-♦Q♣K♠Q♦7♥0|Pair
-♦Q♣0♠Q♦7♥0|Two Pairs
-♣5♣0♠Q♦7♥0|Pair
-♠A♣0♠Q♦7♥0|Pair
-♦8♣0♠Q♦7♥0|Pair
-♣K♣0♠Q♦7♥0|Pair
-♦Q♣0♣6♦7♥0|Pair
-♣5♣0♣6♦7♥0|Pair
-♠A♣0♣6♦7♥0|Pair
-♦8♣0♣6♦7♥0|Pair
-♣K♣0♣6♦7♥0|Pair
-♦Q♠Q♣6♦7♥0|Pair
-♣0♠Q♣6♦7♥0|Pair
-♦Q♣5♣0♦3♥0|Pair
-♦Q♠A♣0♦3♥0|Pair
-♣5♠A♣0♦3♥0|Pair
-♦Q♦8♣0♦3♥0|Pair
-♣5♦8♣0♦3♥0|Pair
-♠A♦8♣0♦3♥0|Pair
-♦Q♣K♣0♦3♥0|Pair
-♣5♣K♣0♦3♥0|Pair
-♠A♣K♣0♦3♥0|Pair
-♦8♣K♣0♦3♥0|Pair
-♦Q♣5♠Q♦3♥0|Pair
-♦Q♠A♠Q♦3♥0|Pair
-♦Q♦8♠Q♦3♥0|Pair
-♦Q♣K♠Q♦3♥0|Pair
-♦Q♣0♠Q♦3♥0|Two Pairs
-♣5♣0♠Q♦3♥0|Pair
-♠A♣0♠Q♦3♥0|Pair
-♦8♣0♠Q♦3♥0|Pair
-♣K♣0♠Q♦3♥0|Pair
-♦Q♣0♣6♦3♥0|Pair
-♣5♣0♣6♦3♥0|Pair
-♠A♣0♣6♦3♥0|Pair
-♦8♣0♣6♦3♥0|Pair
-♣K♣0♣6♦3♥0|Pair
-♦Q♠Q♣6♦3♥0|Pair
-♣0♠Q♣6♦3♥0|Pair
-♦Q♣0♦7♦3♥0|Pair
-♣5♣0♦7♦3♥0|Pair
-♠A♣0♦7♦3♥0|Pair
-♦8♣0♦7♦3♥0|Pair
-♣K♣0♦7♦3♥0|Pair
-♦Q♠Q♦7♦3♥0|Pair
-♣0♠Q♦7♦3♥0|Pair
-♣0♣6♦7♦3♥0|Pair
-♦Q♣5♦8♥8♥0|Pair
-♦Q♠A♦8♥8♥0|Pair
-♣5♠A♦8♥8♥0|Pair
-♦Q♦8♣K♥8♥0|Pair
-♣5♦8♣K♥8♥0|Pair
-♠A♦8♣K♥8♥0|Pair
-♦Q♣5♣0♥8♥0|Pair
-♦Q♠A♣0♥8♥0|Pair
-♣5♠A♣0♥8♥0|Pair
-♦Q♦8♣0♥8♥0|Two Pairs
-♣5♦8♣0♥8♥0|Two Pairs
-♠A♦8♣0♥8♥0|Two Pairs
-♦Q♣K♣0♥8♥0|Pair
-♣5♣K♣0♥8♥0|Pair
-♠A♣K♣0♥8♥0|Pair
-♦8♣K♣0♥8♥0|Two Pairs
-♦Q♣5♠Q♥8♥0|Pair
-♦Q♠A♠Q♥8♥0|Pair
-♦Q♦8♠Q♥8♥0|Two Pairs
-♣5♦8♠Q♥8♥0|Pair
-♠A♦8♠Q♥8♥0|Pair
-♦Q♣K♠Q♥8♥0|Pair
-♦8♣K♠Q♥8♥0|Pair
-♦Q♣0♠Q♥8♥0|Two Pairs
-♣5♣0♠Q♥8♥0|Pair
-♠A♣0♠Q♥8♥0|Pair
-♦8♣0♠Q♥8♥0|Two Pairs
-♣K♣0♠Q♥8♥0|Pair
-♦Q♦8♣6♥8♥0|Pair
-♣5♦8♣6♥8♥0|Pair
-♠A♦8♣6♥8♥0|Pair
-♦8♣K♣6♥8♥0|Pair
-♦Q♣0♣6♥8♥0|Pair
-♣5♣0♣6♥8♥0|Pair
-♠A♣0♣6♥8♥0|Pair
-♦8♣0♣6♥8♥0|Two Pairs
-♣K♣0♣6♥8♥0|Pair
-♦Q♠Q♣6♥8♥0|Pair
-♦8♠Q♣6♥8♥0|Pair
-♣0♠Q♣6♥8♥0|Pair
-♦Q♦8♦7♥8♥0|Pair
-♣5♦8♦7♥8♥0|Pair
-♠A♦8♦7♥8♥0|Pair
-♦8♣K♦7♥8♥0|Pair
-♦Q♣0♦7♥8♥0|Pair
-♣5♣0♦7♥8♥0|Pair
-♠A♣0♦7♥8♥0|Pair
-♦8♣0♦7♥8♥0|Two Pairs
-♣K♣0♦7♥8♥0|Pair
-♦Q♠Q♦7♥8♥0|Pair
-♦8♠Q♦7♥8♥0|Pair
-♣0♠Q♦7♥8♥0|Pair
-♦8♣6♦7♥8♥0|Pair
-♣0♣6♦7♥8♥0|Pair
-♦Q♦8♦3♥8♥0|Pair
-♣5♦8♦3♥8♥0|Pair
-♠A♦8♦3♥8♥0|Pair
-♦8♣K♦3♥8♥0|Pair
-♦Q♣0♦3♥8♥0|Pair
-♣5♣0♦3♥8♥0|Pair
-♠A♣0♦3♥8♥0|Pair
-♦8♣0♦3♥8♥0|Two Pairs
-♣K♣0♦3♥8♥0|Pair
-♦Q♠Q♦3♥8♥0|Pair
-♦8♠Q♦3♥8♥0|Pair
-♣0♠Q♦3♥8♥0|Pair
-♦8♣6♦3♥8♥0|Pair
-♣0♣6♦3♥8♥0|Pair
-♦8♦7♦3♥8♥0|Pair
-♣0♦7♦3♥8♥0|Pair
-♦Q♣5♠A♠Q♥9|Pair
-♦Q♣5♦8♠Q♥9|Pair
-♦Q♠A♦8♠Q♥9|Pair
-♦Q♣5♣K♠Q♥9|Pair
-♦Q♠A♣K♠Q♥9|Pair
-♦Q♦8♣K♠Q♥9|Pair
-♦Q♣5♣0♠Q♥9|Pair
-♦Q♠A♣0♠Q♥9|Pair
-♦Q♦8♣0♠Q♥9|Pair
-♦Q♣K♣0♠Q♥9|Pair
-♦Q♣5♠Q♣6♥9|Pair
-♦Q♠A♠Q♣6♥9|Pair
-♦Q♦8♠Q♣6♥9|Pair
-♦Q♣K♠Q♣6♥9|Pair
-♦Q♣0♠Q♣6♥9|Pair
-♦Q♣5♠Q♦7♥9|Pair
-♦Q♠A♠Q♦7♥9|Pair
-♦Q♦8♠Q♦7♥9|Pair
-♦Q♣K♠Q♦7♥9|Pair
-♦Q♣0♠Q♦7♥9|Pair
-♣5♦8♣6♦7♥9|Straight
-♦Q♠Q♣6♦7♥9|Pair
-♦Q♣5♠Q♦3♥9|Pair
-♦Q♠A♠Q♦3♥9|Pair
-♦Q♦8♠Q♦3♥9|Pair
-♦Q♣K♠Q♦3♥9|Pair
-♦Q♣0♠Q♦3♥9|Pair
-♦Q♠Q♣6♦3♥9|Pair
-♦Q♠Q♦7♦3♥9|Pair
-♦Q♣5♦8♥8♥9|Pair
-♦Q♠A♦8♥8♥9|Pair
-♣5♠A♦8♥8♥9|Pair
-♦Q♦8♣K♥8♥9|Pair
-♣5♦8♣K♥8♥9|Pair
-♠A♦8♣K♥8♥9|Pair
-♦Q♦8♣0♥8♥9|Pair
-♣5♦8♣0♥8♥9|Pair
-♠A♦8♣0♥8♥9|Pair
-♦8♣K♣0♥8♥9|Pair
-♦Q♣5♠Q♥8♥9|Pair
-♦Q♠A♠Q♥8♥9|Pair
-♦Q♦8♠Q♥8♥9|Two Pairs
-♣5♦8♠Q♥8♥9|Pair
-♠A♦8♠Q♥8♥9|Pair
-♦Q♣K♠Q♥8♥9|Pair
-♦8♣K♠Q♥8♥9|Pair
-♦Q♣0♠Q♥8♥9|Pair
-♦8♣0♠Q♥8♥9|Pair
-♦Q♦8♣6♥8♥9|Pair
-♣5♦8♣6♥8♥9|Pair
-♠A♦8♣6♥8♥9|Pair
-♦8♣K♣6♥8♥9|Pair
-♦8♣0♣6♥8♥9|Pair
-♦Q♠Q♣6♥8♥9|Pair
-♦8♠Q♣6♥8♥9|Pair
-♦Q♦8♦7♥8♥9|Pair
-♣5♦8♦7♥8♥9|Pair
-♠A♦8♦7♥8♥9|Pair
-♦8♣K♦7♥8♥9|Pair
-♦8♣0♦7♥8♥9|Pair
-♦Q♠Q♦7♥8♥9|Pair
-♦8♠Q♦7♥8♥9|Pair
-♣5♣6♦7♥8♥9|Straight
-♦8♣6♦7♥8♥9|Pair
-♦Q♦8♦3♥8♥9|Pair
-♣5♦8♦3♥8♥9|Pair
-♠A♦8♦3♥8♥9|Pair
-♦8♣K♦3♥8♥9|Pair
-♦8♣0♦3♥8♥9|Pair
-♦Q♠Q♦3♥8♥9|Pair
-♦8♠Q♦3♥8♥9|Pair
-♦8♣6♦3♥8♥9|Pair
-♦8♦7♦3♥8♥9|Pair
-♦Q♣5♣0♥0♥9|Pair
-♦Q♠A♣0♥0♥9|Pair
-♣5♠A♣0♥0♥9|Pair
-♦Q♦8♣0♥0♥9|Pair
-♣5♦8♣0♥0♥9|Pair
-♠A♦8♣0♥0♥9|Pair
-♦Q♣K♣0♥0♥9|Pair
-♣5♣K♣0♥0♥9|Pair
-♠A♣K♣0♥0♥9|Pair
-♦8♣K♣0♥0♥9|Pair
-♦Q♣5♠Q♥0♥9|Pair
-♦Q♠A♠Q♥0♥9|Pair
-♦Q♦8♠Q♥0♥9|Pair
-♦Q♣K♠Q♥0♥9|Pair
-♦Q♣0♠Q♥0♥9|Two Pairs
-♣5♣0♠Q♥0♥9|Pair
-♠A♣0♠Q♥0♥9|Pair
-♦8♣0♠Q♥0♥9|Pair
-♣K♣0♠Q♥0♥9|Pair
-♦Q♣0♣6♥0♥9|Pair
-♣5♣0♣6♥0♥9|Pair
-♠A♣0♣6♥0♥9|Pair
-♦8♣0♣6♥0♥9|Pair
-♣K♣0♣6♥0♥9|Pair
-♦Q♠Q♣6♥0♥9|Pair
-♣0♠Q♣6♥0♥9|Pair
-♦Q♣0♦7♥0♥9|Pair
-♣5♣0♦7♥0♥9|Pair
-♠A♣0♦7♥0♥9|Pair
-♦8♣0♦7♥0♥9|Pair
-♣K♣0♦7♥0♥9|Pair
-♦Q♠Q♦7♥0♥9|Pair
-♣0♠Q♦7♥0♥9|Pair
-♣0♣6♦7♥0♥9|Pair
-♦Q♣0♦3♥0♥9|Pair
-♣5♣0♦3♥0♥9|Pair
-♠A♣0♦3♥0♥9|Pair
-♦8♣0♦3♥0♥9|Pair
-♣K♣0♦3♥0♥9|Pair
-♦Q♠Q♦3♥0♥9|Pair
-♣0♠Q♦3♥0♥9|Pair
-♣0♣6♦3♥0♥9|Pair
-♣0♦7♦3♥0♥9|Pair
-♦Q♦8♥8♥0♥9|Pair
-♣5♦8♥8♥0♥9|Pair
-♠A♦8♥8♥0♥9|Pair
-♦8♣K♥8♥0♥9|Pair
-♦Q♣0♥8♥0♥9|Pair
-♣5♣0♥8♥0♥9|Pair
-♠A♣0♥8♥0♥9|Pair
-♦8♣0♥8♥0♥9|Two Pairs
-♣K♣0♥8♥0♥9|Pair
-♦Q♠Q♥8♥0♥9|Pair
-♦8♠Q♥8♥0♥9|Pair
-♣0♠Q♥8♥0♥9|Pair
-♦8♣6♥8♥0♥9|Pair
-♣0♣6♥8♥0♥9|Pair
-♦8♦7♥8♥0♥9|Pair
-♣0♦7♥8♥0♥9|Pair
-♦8♦3♥8♥0♥9|Pair
-♣0♦3♥8♥0♥9|Pair
+♠5♣J♣2♣6♦2|Pair
+♠5♣J♣2♥K♦2|Pair
+♠5♣2♣6♥K♦2|Pair
+♣J♣2♣6♥K♦2|Pair
+♠5♣J♣2♦2♦3|Pair
+♠5♣2♣6♦2♦3|Pair
+♣J♣2♣6♦2♦3|Pair
+♠5♣2♥K♦2♦3|Pair
+♣J♣2♥K♦2♦3|Pair
+♣2♣6♥K♦2♦3|Pair
+♠5♣J♣2♦2♣9|Pair
+♠5♣2♣6♦2♣9|Pair
+♣J♣2♣6♦2♣9|Pair
+♠5♣2♥K♦2♣9|Pair
+♣J♣2♥K♦2♣9|Pair
+♣2♣6♥K♦2♣9|Pair
+♠5♣2♦2♦3♣9|Pair
+♣J♣2♦2♦3♣9|Pair
+♣2♣6♦2♦3♣9|Pair
+♣2♥K♦2♦3♣9|Pair
+♠5♣J♣2♦2♠9|Pair
+♠5♣2♣6♦2♠9|Pair
+♣J♣2♣6♦2♠9|Pair
+♠5♣2♥K♦2♠9|Pair
+♣J♣2♥K♦2♠9|Pair
+♣2♣6♥K♦2♠9|Pair
+♠5♣2♦2♦3♠9|Pair
+♣J♣2♦2♦3♠9|Pair
+♣2♣6♦2♦3♠9|Pair
+♣2♥K♦2♦3♠9|Pair
+♠5♣J♣2♣9♠9|Pair
+♠5♣J♣6♣9♠9|Pair
+♠5♣2♣6♣9♠9|Pair
+♣J♣2♣6♣9♠9|Pair
+♠5♣J♥K♣9♠9|Pair
+♠5♣2♥K♣9♠9|Pair
+♣J♣2♥K♣9♠9|Pair
+♠5♣6♥K♣9♠9|Pair
+♣J♣6♥K♣9♠9|Pair
+♣2♣6♥K♣9♠9|Pair
+♠5♣J♦2♣9♠9|Pair
+♠5♣2♦2♣9♠9|Two Pairs
+♣J♣2♦2♣9♠9|Two Pairs
+♠5♣6♦2♣9♠9|Pair
+♣J♣6♦2♣9♠9|Pair
+♣2♣6♦2♣9♠9|Two Pairs
+♠5♥K♦2♣9♠9|Pair
+♣J♥K♦2♣9♠9|Pair
+♣2♥K♦2♣9♠9|Two Pairs
+♣6♥K♦2♣9♠9|Pair
+♠5♣J♦3♣9♠9|Pair
+♠5♣2♦3♣9♠9|Pair
+♣J♣2♦3♣9♠9|Pair
+♠5♣6♦3♣9♠9|Pair
+♣J♣6♦3♣9♠9|Pair
+♣2♣6♦3♣9♠9|Pair
+♠5♥K♦3♣9♠9|Pair
+♣J♥K♦3♣9♠9|Pair
+♣2♥K♦3♣9♠9|Pair
+♣6♥K♦3♣9♠9|Pair
+♠5♦2♦3♣9♠9|Pair
+♣J♦2♦3♣9♠9|Pair
+♣2♦2♦3♣9♠9|Two Pairs
+♣6♦2♦3♣9♠9|Pair
+♥K♦2♦3♣9♠9|Pair
+♠5♣J♣2♥K♠K|Pair
+♠5♣J♣6♥K♠K|Pair
+♠5♣2♣6♥K♠K|Pair
+♣J♣2♣6♥K♠K|Pair
+♠5♣J♣2♦2♠K|Pair
+♠5♣2♣6♦2♠K|Pair
+♣J♣2♣6♦2♠K|Pair
+♠5♣J♥K♦2♠K|Pair
+♠5♣2♥K♦2♠K|Two Pairs
+♣J♣2♥K♦2♠K|Two Pairs
+♠5♣6♥K♦2♠K|Pair
+♣J♣6♥K♦2♠K|Pair
+♣2♣6♥K♦2♠K|Two Pairs
+♠5♣J♥K♦3♠K|Pair
+♠5♣2♥K♦3♠K|Pair
+♣J♣2♥K♦3♠K|Pair
+♠5♣6♥K♦3♠K|Pair
+♣J♣6♥K♦3♠K|Pair
+♣2♣6♥K♦3♠K|Pair
+♠5♣2♦2♦3♠K|Pair
+♣J♣2♦2♦3♠K|Pair
+♣2♣6♦2♦3♠K|Pair
+♠5♥K♦2♦3♠K|Pair
+♣J♥K♦2♦3♠K|Pair
+♣2♥K♦2♦3♠K|Two Pairs
+♣6♥K♦2♦3♠K|Pair
+♠5♣J♥K♣9♠K|Pair
+♠5♣2♥K♣9♠K|Pair
+♣J♣2♥K♣9♠K|Pair
+♠5♣6♥K♣9♠K|Pair
+♣J♣6♥K♣9♠K|Pair
+♣2♣6♥K♣9♠K|Pair
+♠5♣2♦2♣9♠K|Pair
+♣J♣2♦2♣9♠K|Pair
+♣2♣6♦2♣9♠K|Pair
+♠5♥K♦2♣9♠K|Pair
+♣J♥K♦2♣9♠K|Pair
+♣2♥K♦2♣9♠K|Two Pairs
+♣6♥K♦2♣9♠K|Pair
+♠5♥K♦3♣9♠K|Pair
+♣J♥K♦3♣9♠K|Pair
+♣2♥K♦3♣9♠K|Pair
+♣6♥K♦3♣9♠K|Pair
+♣2♦2♦3♣9♠K|Pair
+♥K♦2♦3♣9♠K|Pair
+♠5♣J♥K♠9♠K|Pair
+♠5♣2♥K♠9♠K|Pair
+♣J♣2♥K♠9♠K|Pair
+♠5♣6♥K♠9♠K|Pair
+♣J♣6♥K♠9♠K|Pair
+♣2♣6♥K♠9♠K|Pair
+♠5♣2♦2♠9♠K|Pair
+♣J♣2♦2♠9♠K|Pair
+♣2♣6♦2♠9♠K|Pair
+♠5♥K♦2♠9♠K|Pair
+♣J♥K♦2♠9♠K|Pair
+♣2♥K♦2♠9♠K|Two Pairs
+♣6♥K♦2♠9♠K|Pair
+♠5♥K♦3♠9♠K|Pair
+♣J♥K♦3♠9♠K|Pair
+♣2♥K♦3♠9♠K|Pair
+♣6♥K♦3♠9♠K|Pair
+♣2♦2♦3♠9♠K|Pair
+♥K♦2♦3♠9♠K|Pair
+♠5♣J♣9♠9♠K|Pair
+♠5♣2♣9♠9♠K|Pair
+♣J♣2♣9♠9♠K|Pair
+♠5♣6♣9♠9♠K|Pair
+♣J♣6♣9♠9♠K|Pair
+♣2♣6♣9♠9♠K|Pair
+♠5♥K♣9♠9♠K|Two Pairs
+♣J♥K♣9♠9♠K|Two Pairs
+♣2♥K♣9♠9♠K|Two Pairs
+♣6♥K♣9♠9♠K|Two Pairs
+♠5♦2♣9♠9♠K|Pair
+♣J♦2♣9♠9♠K|Pair
+♣2♦2♣9♠9♠K|Two Pairs
+♣6♦2♣9♠9♠K|Pair
+♥K♦2♣9♠9♠K|Two Pairs
+♠5♦3♣9♠9♠K|Pair
+♣J♦3♣9♠9♠K|Pair
+♣2♦3♣9♠9♠K|Pair
+♣6♦3♣9♠9♠K|Pair
+♥K♦3♣9♠9♠K|Two Pairs
+♦2♦3♣9♠9♠K|Pair
+♠5♣J♣2♦2♠0|Pair
+♠5♣2♣6♦2♠0|Pair
+♣J♣2♣6♦2♠0|Pair
+♠5♣2♥K♦2♠0|Pair
+♣J♣2♥K♦2♠0|Pair
+♣2♣6♥K♦2♠0|Pair
+♠5♣2♦2♦3♠0|Pair
+♣J♣2♦2♦3♠0|Pair
+♣2♣6♦2♦3♠0|Pair
+♣2♥K♦2♦3♠0|Pair
+♠5♣2♦2♣9♠0|Pair
+♣J♣2♦2♣9♠0|Pair
+♣2♣6♦2♣9♠0|Pair
+♣2♥K♦2♣9♠0|Pair
+♣2♦2♦3♣9♠0|Pair
+♠5♣2♦2♠9♠0|Pair
+♣J♣2♦2♠9♠0|Pair
+♣2♣6♦2♠9♠0|Pair
+♣2♥K♦2♠9♠0|Pair
+♣2♦2♦3♠9♠0|Pair
+♠5♣J♣9♠9♠0|Pair
+♠5♣2♣9♠9♠0|Pair
+♣J♣2♣9♠9♠0|Pair
+♠5♣6♣9♠9♠0|Pair
+♣J♣6♣9♠9♠0|Pair
+♣2♣6♣9♠9♠0|Pair
+♠5♥K♣9♠9♠0|Pair
+♣J♥K♣9♠9♠0|Pair
+♣2♥K♣9♠9♠0|Pair
+♣6♥K♣9♠9♠0|Pair
+♠5♦2♣9♠9♠0|Pair
+♣J♦2♣9♠9♠0|Pair
+♣2♦2♣9♠9♠0|Two Pairs
+♣6♦2♣9♠9♠0|Pair
+♥K♦2♣9♠9♠0|Pair
+♠5♦3♣9♠9♠0|Pair
+♣J♦3♣9♠9♠0|Pair
+♣2♦3♣9♠9♠0|Pair
+♣6♦3♣9♠9♠0|Pair
+♥K♦3♣9♠9♠0|Pair
+♦2♦3♣9♠9♠0|Pair
+♠5♣J♥K♠K♠0|Pair
+♠5♣2♥K♠K♠0|Pair
+♣J♣2♥K♠K♠0|Pair
+♠5♣6♥K♠K♠0|Pair
+♣J♣6♥K♠K♠0|Pair
+♣2♣6♥K♠K♠0|Pair
+♠5♣2♦2♠K♠0|Pair
+♣J♣2♦2♠K♠0|Pair
+♣2♣6♦2♠K♠0|Pair
+♠5♥K♦2♠K♠0|Pair
+♣J♥K♦2♠K♠0|Pair
+♣2♥K♦2♠K♠0|Two Pairs
+♣6♥K♦2♠K♠0|Pair
+♠5♥K♦3♠K♠0|Pair
+♣J♥K♦3♠K♠0|Pair
+♣2♥K♦3♠K♠0|Pair
+♣6♥K♦3♠K♠0|Pair
+♣2♦2♦3♠K♠0|Pair
+♥K♦2♦3♠K♠0|Pair
+♠5♥K♣9♠K♠0|Pair
+♣J♥K♣9♠K♠0|Pair
+♣2♥K♣9♠K♠0|Pair
+♣6♥K♣9♠K♠0|Pair
+♣2♦2♣9♠K♠0|Pair
+♥K♦2♣9♠K♠0|Pair
+♥K♦3♣9♠K♠0|Pair
+♠5♥K♠9♠K♠0|Pair
+♣J♥K♠9♠K♠0|Pair
+♣2♥K♠9♠K♠0|Pair
+♣6♥K♠9♠K♠0|Pair
+♣2♦2♠9♠K♠0|Pair
+♥K♦2♠9♠K♠0|Pair
+♥K♦3♠9♠K♠0|Pair
+♠5♣9♠9♠K♠0|Pair
+♣J♣9♠9♠K♠0|Pair
+♣2♣9♠9♠K♠0|Pair
+♣6♣9♠9♠K♠0|Pair
+♥K♣9♠9♠K♠0|Two Pairs
+♦2♣9♠9♠K♠0|Pair
+♦3♣9♠9♠K♠0|Pair
+♠5♣J♣2♦2♠4|Pair
+♠5♣2♣6♦2♠4|Pair
+♣J♣2♣6♦2♠4|Pair
+♠5♣2♥K♦2♠4|Pair
+♣J♣2♥K♦2♠4|Pair
+♣2♣6♥K♦2♠4|Pair
+♠5♣2♣6♦3♠4|Straight
+♠5♣2♦2♦3♠4|Pair
+♣J♣2♦2♦3♠4|Pair
+♠5♣6♦2♦3♠4|Straight
+♣2♣6♦2♦3♠4|Pair
+♣2♥K♦2♦3♠4|Pair
+♠5♣2♦2♣9♠4|Pair
+♣J♣2♦2♣9♠4|Pair
+♣2♣6♦2♣9♠4|Pair
+♣2♥K♦2♣9♠4|Pair
+♣2♦2♦3♣9♠4|Pair
+♠5♣2♦2♠9♠4|Pair
+♣J♣2♦2♠9♠4|Pair
+♣2♣6♦2♠9♠4|Pair
+♣2♥K♦2♠9♠4|Pair
+♣2♦2♦3♠9♠4|Pair
+♠5♣J♣9♠9♠4|Pair
+♠5♣2♣9♠9♠4|Pair
+♣J♣2♣9♠9♠4|Pair
+♠5♣6♣9♠9♠4|Pair
+♣J♣6♣9♠9♠4|Pair
+♣2♣6♣9♠9♠4|Pair
+♠5♥K♣9♠9♠4|Pair
+♣J♥K♣9♠9♠4|Pair
+♣2♥K♣9♠9♠4|Pair
+♣6♥K♣9♠9♠4|Pair
+♠5♦2♣9♠9♠4|Pair
+♣J♦2♣9♠9♠4|Pair
+♣2♦2♣9♠9♠4|Two Pairs
+♣6♦2♣9♠9♠4|Pair
+♥K♦2♣9♠9♠4|Pair
+♠5♦3♣9♠9♠4|Pair
+♣J♦3♣9♠9♠4|Pair
+♣2♦3♣9♠9♠4|Pair
+♣6♦3♣9♠9♠4|Pair
+♥K♦3♣9♠9♠4|Pair
+♦2♦3♣9♠9♠4|Pair
+♠5♣J♥K♠K♠4|Pair
+♠5♣2♥K♠K♠4|Pair
+♣J♣2♥K♠K♠4|Pair
+♠5♣6♥K♠K♠4|Pair
+♣J♣6♥K♠K♠4|Pair
+♣2♣6♥K♠K♠4|Pair
+♠5♣2♦2♠K♠4|Pair
+♣J♣2♦2♠K♠4|Pair
+♣2♣6♦2♠K♠4|Pair
+♠5♥K♦2♠K♠4|Pair
+♣J♥K♦2♠K♠4|Pair
+♣2♥K♦2♠K♠4|Two Pairs
+♣6♥K♦2♠K♠4|Pair
+♠5♥K♦3♠K♠4|Pair
+♣J♥K♦3♠K♠4|Pair
+♣2♥K♦3♠K♠4|Pair
+♣6♥K♦3♠K♠4|Pair
+♣2♦2♦3♠K♠4|Pair
+♥K♦2♦3♠K♠4|Pair
+♠5♥K♣9♠K♠4|Pair
+♣J♥K♣9♠K♠4|Pair
+♣2♥K♣9♠K♠4|Pair
+♣6♥K♣9♠K♠4|Pair
+♣2♦2♣9♠K♠4|Pair
+♥K♦2♣9♠K♠4|Pair
+♥K♦3♣9♠K♠4|Pair
+♠5♥K♠9♠K♠4|Pair
+♣J♥K♠9♠K♠4|Pair
+♣2♥K♠9♠K♠4|Pair
+♣6♥K♠9♠K♠4|Pair
+♣2♦2♠9♠K♠4|Pair
+♥K♦2♠9♠K♠4|Pair
+♥K♦3♠9♠K♠4|Pair
+♠5♣9♠9♠K♠4|Pair
+♣J♣9♠9♠K♠4|Pair
+♣2♣9♠9♠K♠4|Pair
+♣6♣9♠9♠K♠4|Pair
+♥K♣9♠9♠K♠4|Two Pairs
+♦2♣9♠9♠K♠4|Pair
+♦3♣9♠9♠K♠4|Pair
+♠5♣2♦2♠0♠4|Pair
+♣J♣2♦2♠0♠4|Pair
+♣2♣6♦2♠0♠4|Pair
+♣2♥K♦2♠0♠4|Pair
+♣2♦2♦3♠0♠4|Pair
+♣2♦2♣9♠0♠4|Pair
+♣2♦2♠9♠0♠4|Pair
+♠5♣9♠9♠0♠4|Pair
+♣J♣9♠9♠0♠4|Pair
+♣2♣9♠9♠0♠4|Pair
+♣6♣9♠9♠0♠4|Pair
+♥K♣9♠9♠0♠4|Pair
+♦2♣9♠9♠0♠4|Pair
+♦3♣9♠9♠0♠4|Pair
+♠5♥K♠K♠0♠4|Pair
+♣J♥K♠K♠0♠4|Pair
+♣2♥K♠K♠0♠4|Pair
+♣6♥K♠K♠0♠4|Pair
+♣2♦2♠K♠0♠4|Pair
+♥K♦2♠K♠0♠4|Pair
+♥K♦3♠K♠0♠4|Pair
+♥K♣9♠K♠0♠4|Pair
+♥K♠9♠K♠0♠4|Pair
+♣9♠9♠K♠0♠4|Pair
+♠5♣J♣2♣6♥2|Pair
+♠5♣J♣2♥K♥2|Pair
+♠5♣2♣6♥K♥2|Pair
+♣J♣2♣6♥K♥2|Pair
+♠5♣J♣2♦2♥2|Three Of A Kind
+♠5♣J♣6♦2♥2|Pair
+♠5♣2♣6♦2♥2|Three Of A Kind
+♣J♣2♣6♦2♥2|Three Of A Kind
+♠5♣J♥K♦2♥2|Pair
+♠5♣2♥K♦2♥2|Three Of A Kind
+♣J♣2♥K♦2♥2|Three Of A Kind
+♠5♣6♥K♦2♥2|Pair
+♣J♣6♥K♦2♥2|Pair
+♣2♣6♥K♦2♥2|Three Of A Kind
+♠5♣J♣2♦3♥2|Pair
+♠5♣2♣6♦3♥2|Pair
+♣J♣2♣6♦3♥2|Pair
+♠5♣2♥K♦3♥2|Pair
+♣J♣2♥K♦3♥2|Pair
+♣2♣6♥K♦3♥2|Pair
+♠5♣J♦2♦3♥2|Pair
+♠5♣2♦2♦3♥2|Three Of A Kind
+♣J♣2♦2♦3♥2|Three Of A Kind
+♠5♣6♦2♦3♥2|Pair
+♣J♣6♦2♦3♥2|Pair
+♣2♣6♦2♦3♥2|Three Of A Kind
+♠5♥K♦2♦3♥2|Pair
+♣J♥K♦2♦3♥2|Pair
+♣2♥K♦2♦3♥2|Three Of A Kind
+♣6♥K♦2♦3♥2|Pair
+♠5♣J♣2♣9♥2|Pair
+♠5♣2♣6♣9♥2|Pair
+♣J♣2♣6♣9♥2|Pair
+♠5♣2♥K♣9♥2|Pair
+♣J♣2♥K♣9♥2|Pair
+♣2♣6♥K♣9♥2|Pair
+♠5♣J♦2♣9♥2|Pair
+♠5♣2♦2♣9♥2|Three Of A Kind
+♣J♣2♦2♣9♥2|Three Of A Kind
+♠5♣6♦2♣9♥2|Pair
+♣J♣6♦2♣9♥2|Pair
+♣2♣6♦2♣9♥2|Three Of A Kind
+♠5♥K♦2♣9♥2|Pair
+♣J♥K♦2♣9♥2|Pair
+♣2♥K♦2♣9♥2|Three Of A Kind
+♣6♥K♦2♣9♥2|Pair
+♠5♣2♦3♣9♥2|Pair
+♣J♣2♦3♣9♥2|Pair
+♣2♣6♦3♣9♥2|Pair
+♣2♥K♦3♣9♥2|Pair
+♠5♦2♦3♣9♥2|Pair
+♣J♦2♦3♣9♥2|Pair
+♣2♦2♦3♣9♥2|Three Of A Kind
+♣6♦2♦3♣9♥2|Pair
+♥K♦2♦3♣9♥2|Pair
+♠5♣J♣2♠9♥2|Pair
+♠5♣2♣6♠9♥2|Pair
+♣J♣2♣6♠9♥2|Pair
+♠5♣2♥K♠9♥2|Pair
+♣J♣2♥K♠9♥2|Pair
+♣2♣6♥K♠9♥2|Pair
+♠5♣J♦2♠9♥2|Pair
+♠5♣2♦2♠9♥2|Three Of A Kind
+♣J♣2♦2♠9♥2|Three Of A Kind
+♠5♣6♦2♠9♥2|Pair
+♣J♣6♦2♠9♥2|Pair
+♣2♣6♦2♠9♥2|Three Of A Kind
+♠5♥K♦2♠9♥2|Pair
+♣J♥K♦2♠9♥2|Pair
+♣2♥K♦2♠9♥2|Three Of A Kind
+♣6♥K♦2♠9♥2|Pair
+♠5♣2♦3♠9♥2|Pair
+♣J♣2♦3♠9♥2|Pair
+♣2♣6♦3♠9♥2|Pair
+♣2♥K♦3♠9♥2|Pair
+♠5♦2♦3♠9♥2|Pair
+♣J♦2♦3♠9♥2|Pair
+♣2♦2♦3♠9♥2|Three Of A Kind
+♣6♦2♦3♠9♥2|Pair
+♥K♦2♦3♠9♥2|Pair
+♠5♣J♣9♠9♥2|Pair
+♠5♣2♣9♠9♥2|Two Pairs
+♣J♣2♣9♠9♥2|Two Pairs
+♠5♣6♣9♠9♥2|Pair
+♣J♣6♣9♠9♥2|Pair
+♣2♣6♣9♠9♥2|Two Pairs
+♠5♥K♣9♠9♥2|Pair
+♣J♥K♣9♠9♥2|Pair
+♣2♥K♣9♠9♥2|Two Pairs
+♣6♥K♣9♠9♥2|Pair
+♠5♦2♣9♠9♥2|Two Pairs
+♣J♦2♣9♠9♥2|Two Pairs
+♣2♦2♣9♠9♥2|Three Of A Kind
+♣6♦2♣9♠9♥2|Two Pairs
+♥K♦2♣9♠9♥2|Two Pairs
+♠5♦3♣9♠9♥2|Pair
+♣J♦3♣9♠9♥2|Pair
+♣2♦3♣9♠9♥2|Two Pairs
+♣6♦3♣9♠9♥2|Pair
+♥K♦3♣9♠9♥2|Pair
+♦2♦3♣9♠9♥2|Two Pairs
+♠5♣J♣2♠K♥2|Pair
+♠5♣2♣6♠K♥2|Pair
+♣J♣2♣6♠K♥2|Pair
+♠5♣J♥K♠K♥2|Pair
+♠5♣2♥K♠K♥2|Two Pairs
+♣J♣2♥K♠K♥2|Two Pairs
+♠5♣6♥K♠K♥2|Pair
+♣J♣6♥K♠K♥2|Pair
+♣2♣6♥K♠K♥2|Two Pairs
+♠5♣J♦2♠K♥2|Pair
+♠5♣2♦2♠K♥2|Three Of A Kind
+♣J♣2♦2♠K♥2|Three Of A Kind
+♠5♣6♦2♠K♥2|Pair
+♣J♣6♦2♠K♥2|Pair
+♣2♣6♦2♠K♥2|Three Of A Kind
+♠5♥K♦2♠K♥2|Two Pairs
+♣J♥K♦2♠K♥2|Two Pairs
+♣2♥K♦2♠K♥2|Three Of A Kind
+♣6♥K♦2♠K♥2|Two Pairs
+♠5♣2♦3♠K♥2|Pair
+♣J♣2♦3♠K♥2|Pair
+♣2♣6♦3♠K♥2|Pair
+♠5♥K♦3♠K♥2|Pair
+♣J♥K♦3♠K♥2|Pair
+♣2♥K♦3♠K♥2|Two Pairs
+♣6♥K♦3♠K♥2|Pair
+♠5♦2♦3♠K♥2|Pair
+♣J♦2♦3♠K♥2|Pair
+♣2♦2♦3♠K♥2|Three Of A Kind
+♣6♦2♦3♠K♥2|Pair
+♥K♦2♦3♠K♥2|Two Pairs
+♠5♣2♣9♠K♥2|Pair
+♣J♣2♣9♠K♥2|Pair
+♣2♣6♣9♠K♥2|Pair
+♠5♥K♣9♠K♥2|Pair
+♣J♥K♣9♠K♥2|Pair
+♣2♥K♣9♠K♥2|Two Pairs
+♣6♥K♣9♠K♥2|Pair
+♠5♦2♣9♠K♥2|Pair
+♣J♦2♣9♠K♥2|Pair
+♣2♦2♣9♠K♥2|Three Of A Kind
+♣6♦2♣9♠K♥2|Pair
+♥K♦2♣9♠K♥2|Two Pairs
+♣2♦3♣9♠K♥2|Pair
+♥K♦3♣9♠K♥2|Pair
+♦2♦3♣9♠K♥2|Pair
+♠5♣2♠9♠K♥2|Pair
+♣J♣2♠9♠K♥2|Pair
+♣2♣6♠9♠K♥2|Pair
+♠5♥K♠9♠K♥2|Pair
+♣J♥K♠9♠K♥2|Pair
+♣2♥K♠9♠K♥2|Two Pairs
+♣6♥K♠9♠K♥2|Pair
+♠5♦2♠9♠K♥2|Pair
+♣J♦2♠9♠K♥2|Pair
+♣2♦2♠9♠K♥2|Three Of A Kind
+♣6♦2♠9♠K♥2|Pair
+♥K♦2♠9♠K♥2|Two Pairs
+♣2♦3♠9♠K♥2|Pair
+♥K♦3♠9♠K♥2|Pair
+♦2♦3♠9♠K♥2|Pair
+♠5♣9♠9♠K♥2|Pair
+♣J♣9♠9♠K♥2|Pair
+♣2♣9♠9♠K♥2|Two Pairs
+♣6♣9♠9♠K♥2|Pair
+♥K♣9♠9♠K♥2|Two Pairs
+♦2♣9♠9♠K♥2|Two Pairs
+♦3♣9♠9♠K♥2|Pair
+♠5♣J♣2♠0♥2|Pair
+♠5♣2♣6♠0♥2|Pair
+♣J♣2♣6♠0♥2|Pair
+♠5♣2♥K♠0♥2|Pair
+♣J♣2♥K♠0♥2|Pair
+♣2♣6♥K♠0♥2|Pair
+♠5♣J♦2♠0♥2|Pair
+♠5♣2♦2♠0♥2|Three Of A Kind
+♣J♣2♦2♠0♥2|Three Of A Kind
+♠5♣6♦2♠0♥2|Pair
+♣J♣6♦2♠0♥2|Pair
+♣2♣6♦2♠0♥2|Three Of A Kind
+♠5♥K♦2♠0♥2|Pair
+♣J♥K♦2♠0♥2|Pair
+♣2♥K♦2♠0♥2|Three Of A Kind
+♣6♥K♦2♠0♥2|Pair
+♠5♣2♦3♠0♥2|Pair
+♣J♣2♦3♠0♥2|Pair
+♣2♣6♦3♠0♥2|Pair
+♣2♥K♦3♠0♥2|Pair
+♠5♦2♦3♠0♥2|Pair
+♣J♦2♦3♠0♥2|Pair
+♣2♦2♦3♠0♥2|Three Of A Kind
+♣6♦2♦3♠0♥2|Pair
+♥K♦2♦3♠0♥2|Pair
+♠5♣2♣9♠0♥2|Pair
+♣J♣2♣9♠0♥2|Pair
+♣2♣6♣9♠0♥2|Pair
+♣2♥K♣9♠0♥2|Pair
+♠5♦2♣9♠0♥2|Pair
+♣J♦2♣9♠0♥2|Pair
+♣2♦2♣9♠0♥2|Three Of A Kind
+♣6♦2♣9♠0♥2|Pair
+♥K♦2♣9♠0♥2|Pair
+♣2♦3♣9♠0♥2|Pair
+♦2♦3♣9♠0♥2|Pair
+♠5♣2♠9♠0♥2|Pair
+♣J♣2♠9♠0♥2|Pair
+♣2♣6♠9♠0♥2|Pair
+♣2♥K♠9♠0♥2|Pair
+♠5♦2♠9♠0♥2|Pair
+♣J♦2♠9♠0♥2|Pair
+♣2♦2♠9♠0♥2|Three Of A Kind
+♣6♦2♠9♠0♥2|Pair
+♥K♦2♠9♠0♥2|Pair
+♣2♦3♠9♠0♥2|Pair
+♦2♦3♠9♠0♥2|Pair
+♠5♣9♠9♠0♥2|Pair
+♣J♣9♠9♠0♥2|Pair
+♣2♣9♠9♠0♥2|Two Pairs
+♣6♣9♠9♠0♥2|Pair
+♥K♣9♠9♠0♥2|Pair
+♦2♣9♠9♠0♥2|Two Pairs
+♦3♣9♠9♠0♥2|Pair
+♠5♣2♠K♠0♥2|Pair
+♣J♣2♠K♠0♥2|Pair
+♣2♣6♠K♠0♥2|Pair
+♠5♥K♠K♠0♥2|Pair
+♣J♥K♠K♠0♥2|Pair
+♣2♥K♠K♠0♥2|Two Pairs
+♣6♥K♠K♠0♥2|Pair
+♠5♦2♠K♠0♥2|Pair
+♣J♦2♠K♠0♥2|Pair
+♣2♦2♠K♠0♥2|Three Of A Kind
+♣6♦2♠K♠0♥2|Pair
+♥K♦2♠K♠0♥2|Two Pairs
+♣2♦3♠K♠0♥2|Pair
+♥K♦3♠K♠0♥2|Pair
+♦2♦3♠K♠0♥2|Pair
+♣2♣9♠K♠0♥2|Pair
+♥K♣9♠K♠0♥2|Pair
+♦2♣9♠K♠0♥2|Pair
+♣2♠9♠K♠0♥2|Pair
+♥K♠9♠K♠0♥2|Pair
+♦2♠9♠K♠0♥2|Pair
+♣9♠9♠K♠0♥2|Pair
+♠5♣J♣2♠4♥2|Pair
+♠5♣2♣6♠4♥2|Pair
+♣J♣2♣6♠4♥2|Pair
+♠5♣2♥K♠4♥2|Pair
+♣J♣2♥K♠4♥2|Pair
+♣2♣6♥K♠4♥2|Pair
+♠5♣J♦2♠4♥2|Pair
+♠5♣2♦2♠4♥2|Three Of A Kind
+♣J♣2♦2♠4♥2|Three Of A Kind
+♠5♣6♦2♠4♥2|Pair
+♣J♣6♦2♠4♥2|Pair
+♣2♣6♦2♠4♥2|Three Of A Kind
+♠5♥K♦2♠4♥2|Pair
+♣J♥K♦2♠4♥2|Pair
+♣2♥K♦2♠4♥2|Three Of A Kind
+♣6♥K♦2♠4♥2|Pair
+♠5♣2♦3♠4♥2|Pair
+♣J♣2♦3♠4♥2|Pair
+♠5♣6♦3♠4♥2|Straight
+♣2♣6♦3♠4♥2|Pair
+♣2♥K♦3♠4♥2|Pair
+♠5♦2♦3♠4♥2|Pair
+♣J♦2♦3♠4♥2|Pair
+♣2♦2♦3♠4♥2|Three Of A Kind
+♣6♦2♦3♠4♥2|Pair
+♥K♦2♦3♠4♥2|Pair
+♠5♣2♣9♠4♥2|Pair
+♣J♣2♣9♠4♥2|Pair
+♣2♣6♣9♠4♥2|Pair
+♣2♥K♣9♠4♥2|Pair
+♠5♦2♣9♠4♥2|Pair
+♣J♦2♣9♠4♥2|Pair
+♣2♦2♣9♠4♥2|Three Of A Kind
+♣6♦2♣9♠4♥2|Pair
+♥K♦2♣9♠4♥2|Pair
+♣2♦3♣9♠4♥2|Pair
+♦2♦3♣9♠4♥2|Pair
+♠5♣2♠9♠4♥2|Pair
+♣J♣2♠9♠4♥2|Pair
+♣2♣6♠9♠4♥2|Pair
+♣2♥K♠9♠4♥2|Pair
+♠5♦2♠9♠4♥2|Pair
+♣J♦2♠9♠4♥2|Pair
+♣2♦2♠9♠4♥2|Three Of A Kind
+♣6♦2♠9♠4♥2|Pair
+♥K♦2♠9♠4♥2|Pair
+♣2♦3♠9♠4♥2|Pair
+♦2♦3♠9♠4♥2|Pair
+♠5♣9♠9♠4♥2|Pair
+♣J♣9♠9♠4♥2|Pair
+♣2♣9♠9♠4♥2|Two Pairs
+♣6♣9♠9♠4♥2|Pair
+♥K♣9♠9♠4♥2|Pair
+♦2♣9♠9♠4♥2|Two Pairs
+♦3♣9♠9♠4♥2|Pair
+♠5♣2♠K♠4♥2|Pair
+♣J♣2♠K♠4♥2|Pair
+♣2♣6♠K♠4♥2|Pair
+♠5♥K♠K♠4♥2|Pair
+♣J♥K♠K♠4♥2|Pair
+♣2♥K♠K♠4♥2|Two Pairs
+♣6♥K♠K♠4♥2|Pair
+♠5♦2♠K♠4♥2|Pair
+♣J♦2♠K♠4♥2|Pair
+♣2♦2♠K♠4♥2|Three Of A Kind
+♣6♦2♠K♠4♥2|Pair
+♥K♦2♠K♠4♥2|Two Pairs
+♣2♦3♠K♠4♥2|Pair
+♥K♦3♠K♠4♥2|Pair
+♦2♦3♠K♠4♥2|Pair
+♣2♣9♠K♠4♥2|Pair
+♥K♣9♠K♠4♥2|Pair
+♦2♣9♠K♠4♥2|Pair
+♣2♠9♠K♠4♥2|Pair
+♥K♠9♠K♠4♥2|Pair
+♦2♠9♠K♠4♥2|Pair
+♣9♠9♠K♠4♥2|Pair
+♠5♣2♠0♠4♥2|Pair
+♣J♣2♠0♠4♥2|Pair
+♣2♣6♠0♠4♥2|Pair
+♣2♥K♠0♠4♥2|Pair
+♠5♦2♠0♠4♥2|Pair
+♣J♦2♠0♠4♥2|Pair
+♣2♦2♠0♠4♥2|Three Of A Kind
+♣6♦2♠0♠4♥2|Pair
+♥K♦2♠0♠4♥2|Pair
+♣2♦3♠0♠4♥2|Pair
+♦2♦3♠0♠4♥2|Pair
+♣2♣9♠0♠4♥2|Pair
+♦2♣9♠0♠4♥2|Pair
+♣2♠9♠0♠4♥2|Pair
+♦2♠9♠0♠4♥2|Pair
+♣9♠9♠0♠4♥2|Pair
+♣2♠K♠0♠4♥2|Pair
+♥K♠K♠0♠4♥2|Pair
+♦2♠K♠0♠4♥2|Pair

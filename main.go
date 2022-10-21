@@ -6,6 +6,7 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"sync"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/service"
@@ -56,19 +57,24 @@ func main() {
 	answerChan := make(chan service.Answer, 1)
 	for i := 0; i < 100; i++ {
 		go service.GetAnswerPokerCombination(fmt.Sprintf("dataset/dat%d.csv", i), answerChan)
+		//fmt.Println("sdsdlk")
 
 	}
+	var wg sync.WaitGroup
 
 	for i := 0; i < 100; i++ {
+		wg.Add(1)
 		answer := <-answerChan
 		go func() {
 			csvFile, err := os.Create(fmt.Sprintf("result/dat%d.csv", i))
 			if err != nil {
 				log.Fatalf("failed creating file: %s", err)
 			}
+			defer wg.Done()
 			defer csvFile.Close()
 			csvFile.Write([]byte(answer.GetAnswer()))
 		}()
 	}
+	wg.Wait()
 
 }

@@ -1,432 +1,231 @@
-♠Q♠2♥2♣K♣8|Pair
-♠Q♠2♥2♣K♥A|Pair
-♠Q♠2♥2♣8♥A|Pair
-♠2♥2♣K♣8♥A|Pair
-♠Q♠2♥2♣K♥K|Two Pairs
-♠Q♠2♥2♣8♥K|Pair
-♠Q♠2♣K♣8♥K|Pair
-♠Q♥2♣K♣8♥K|Pair
-♠2♥2♣K♣8♥K|Two Pairs
-♠Q♠2♥2♥A♥K|Pair
-♠Q♠2♣K♥A♥K|Pair
-♠Q♥2♣K♥A♥K|Pair
-♠2♥2♣K♥A♥K|Two Pairs
-♠2♥2♣8♥A♥K|Pair
-♠Q♣K♣8♥A♥K|Pair
-♠2♣K♣8♥A♥K|Pair
-♥2♣K♣8♥A♥K|Pair
-♠Q♠2♥2♣K♠6|Pair
-♠Q♠2♥2♣8♠6|Pair
-♠2♥2♣K♣8♠6|Pair
-♠Q♠2♥2♥A♠6|Pair
-♠2♥2♣K♥A♠6|Pair
-♠2♥2♣8♥A♠6|Pair
-♠Q♠2♥2♥K♠6|Pair
-♠Q♠2♣K♥K♠6|Pair
-♠Q♥2♣K♥K♠6|Pair
-♠2♥2♣K♥K♠6|Two Pairs
-♠2♥2♣8♥K♠6|Pair
-♠Q♣K♣8♥K♠6|Pair
-♠2♣K♣8♥K♠6|Pair
-♥2♣K♣8♥K♠6|Pair
-♠2♥2♥A♥K♠6|Pair
-♠Q♣K♥A♥K♠6|Pair
-♠2♣K♥A♥K♠6|Pair
-♥2♣K♥A♥K♠6|Pair
-♣K♣8♥A♥K♠6|Pair
-♠Q♠2♥2♣K♦7|Pair
-♠Q♠2♥2♣8♦7|Pair
-♠2♥2♣K♣8♦7|Pair
-♠Q♠2♥2♥A♦7|Pair
-♠2♥2♣K♥A♦7|Pair
-♠2♥2♣8♥A♦7|Pair
-♠Q♠2♥2♥K♦7|Pair
-♠Q♠2♣K♥K♦7|Pair
-♠Q♥2♣K♥K♦7|Pair
-♠2♥2♣K♥K♦7|Two Pairs
-♠2♥2♣8♥K♦7|Pair
-♠Q♣K♣8♥K♦7|Pair
-♠2♣K♣8♥K♦7|Pair
-♥2♣K♣8♥K♦7|Pair
-♠2♥2♥A♥K♦7|Pair
-♠Q♣K♥A♥K♦7|Pair
-♠2♣K♥A♥K♦7|Pair
-♥2♣K♥A♥K♦7|Pair
-♣K♣8♥A♥K♦7|Pair
-♠Q♠2♥2♠6♦7|Pair
-♠2♥2♣K♠6♦7|Pair
-♠2♥2♣8♠6♦7|Pair
-♠2♥2♥A♠6♦7|Pair
-♠2♥2♥K♠6♦7|Pair
-♠Q♣K♥K♠6♦7|Pair
-♠2♣K♥K♠6♦7|Pair
-♥2♣K♥K♠6♦7|Pair
-♣K♣8♥K♠6♦7|Pair
-♣K♥A♥K♠6♦7|Pair
-♠Q♠2♥2♣K♥5|Pair
-♠Q♠2♥2♣8♥5|Pair
-♠2♥2♣K♣8♥5|Pair
-♠Q♠2♥2♥A♥5|Pair
-♠2♥2♣K♥A♥5|Pair
-♠2♥2♣8♥A♥5|Pair
-♠Q♠2♥2♥K♥5|Pair
-♠Q♠2♣K♥K♥5|Pair
-♠Q♥2♣K♥K♥5|Pair
-♠2♥2♣K♥K♥5|Two Pairs
-♠2♥2♣8♥K♥5|Pair
-♠Q♣K♣8♥K♥5|Pair
-♠2♣K♣8♥K♥5|Pair
-♥2♣K♣8♥K♥5|Pair
-♠2♥2♥A♥K♥5|Pair
-♠Q♣K♥A♥K♥5|Pair
-♠2♣K♥A♥K♥5|Pair
-♥2♣K♥A♥K♥5|Pair
-♣K♣8♥A♥K♥5|Pair
-♠Q♠2♥2♠6♥5|Pair
-♠2♥2♣K♠6♥5|Pair
-♠2♥2♣8♠6♥5|Pair
-♠2♥2♥A♠6♥5|Pair
-♠2♥2♥K♠6♥5|Pair
-♠Q♣K♥K♠6♥5|Pair
-♠2♣K♥K♠6♥5|Pair
-♥2♣K♥K♠6♥5|Pair
-♣K♣8♥K♠6♥5|Pair
-♣K♥A♥K♠6♥5|Pair
-♠Q♠2♥2♦7♥5|Pair
-♠2♥2♣K♦7♥5|Pair
-♠2♥2♣8♦7♥5|Pair
-♠2♥2♥A♦7♥5|Pair
-♠2♥2♥K♦7♥5|Pair
-♠Q♣K♥K♦7♥5|Pair
-♠2♣K♥K♦7♥5|Pair
-♥2♣K♥K♦7♥5|Pair
-♣K♣8♥K♦7♥5|Pair
-♣K♥A♥K♦7♥5|Pair
-♠2♥2♠6♦7♥5|Pair
-♣K♥K♠6♦7♥5|Pair
-♠Q♠2♥2♣K♣6|Pair
-♠Q♠2♥2♣8♣6|Pair
-♠2♥2♣K♣8♣6|Pair
-♠Q♠2♥2♥A♣6|Pair
-♠2♥2♣K♥A♣6|Pair
-♠2♥2♣8♥A♣6|Pair
-♠Q♠2♥2♥K♣6|Pair
-♠Q♠2♣K♥K♣6|Pair
-♠Q♥2♣K♥K♣6|Pair
-♠2♥2♣K♥K♣6|Two Pairs
-♠2♥2♣8♥K♣6|Pair
-♠Q♣K♣8♥K♣6|Pair
-♠2♣K♣8♥K♣6|Pair
-♥2♣K♣8♥K♣6|Pair
-♠2♥2♥A♥K♣6|Pair
-♠Q♣K♥A♥K♣6|Pair
-♠2♣K♥A♥K♣6|Pair
-♥2♣K♥A♥K♣6|Pair
-♣K♣8♥A♥K♣6|Pair
-♠Q♠2♥2♠6♣6|Two Pairs
-♠Q♠2♣K♠6♣6|Pair
-♠Q♥2♣K♠6♣6|Pair
-♠2♥2♣K♠6♣6|Two Pairs
-♠Q♠2♣8♠6♣6|Pair
-♠Q♥2♣8♠6♣6|Pair
-♠2♥2♣8♠6♣6|Two Pairs
-♠Q♣K♣8♠6♣6|Pair
-♠2♣K♣8♠6♣6|Pair
-♥2♣K♣8♠6♣6|Pair
-♠Q♠2♥A♠6♣6|Pair
-♠Q♥2♥A♠6♣6|Pair
-♠2♥2♥A♠6♣6|Two Pairs
-♠Q♣K♥A♠6♣6|Pair
-♠2♣K♥A♠6♣6|Pair
-♥2♣K♥A♠6♣6|Pair
-♠Q♣8♥A♠6♣6|Pair
-♠2♣8♥A♠6♣6|Pair
-♥2♣8♥A♠6♣6|Pair
-♣K♣8♥A♠6♣6|Pair
-♠Q♠2♥K♠6♣6|Pair
-♠Q♥2♥K♠6♣6|Pair
-♠2♥2♥K♠6♣6|Two Pairs
-♠Q♣K♥K♠6♣6|Two Pairs
-♠2♣K♥K♠6♣6|Two Pairs
-♥2♣K♥K♠6♣6|Two Pairs
-♠Q♣8♥K♠6♣6|Pair
-♠2♣8♥K♠6♣6|Pair
-♥2♣8♥K♠6♣6|Pair
-♣K♣8♥K♠6♣6|Two Pairs
-♠Q♥A♥K♠6♣6|Pair
-♠2♥A♥K♠6♣6|Pair
-♥2♥A♥K♠6♣6|Pair
-♣K♥A♥K♠6♣6|Two Pairs
-♣8♥A♥K♠6♣6|Pair
-♠Q♠2♥2♦7♣6|Pair
-♠2♥2♣K♦7♣6|Pair
-♠2♥2♣8♦7♣6|Pair
-♠2♥2♥A♦7♣6|Pair
-♠2♥2♥K♦7♣6|Pair
-♠Q♣K♥K♦7♣6|Pair
-♠2♣K♥K♦7♣6|Pair
-♥2♣K♥K♦7♣6|Pair
-♣K♣8♥K♦7♣6|Pair
-♣K♥A♥K♦7♣6|Pair
-♠Q♠2♠6♦7♣6|Pair
-♠Q♥2♠6♦7♣6|Pair
-♠2♥2♠6♦7♣6|Two Pairs
-♠Q♣K♠6♦7♣6|Pair
-♠2♣K♠6♦7♣6|Pair
-♥2♣K♠6♦7♣6|Pair
-♠Q♣8♠6♦7♣6|Pair
-♠2♣8♠6♦7♣6|Pair
-♥2♣8♠6♦7♣6|Pair
-♣K♣8♠6♦7♣6|Pair
-♠Q♥A♠6♦7♣6|Pair
-♠2♥A♠6♦7♣6|Pair
-♥2♥A♠6♦7♣6|Pair
-♣K♥A♠6♦7♣6|Pair
-♣8♥A♠6♦7♣6|Pair
-♠Q♥K♠6♦7♣6|Pair
-♠2♥K♠6♦7♣6|Pair
-♥2♥K♠6♦7♣6|Pair
-♣K♥K♠6♦7♣6|Two Pairs
-♣8♥K♠6♦7♣6|Pair
-♥A♥K♠6♦7♣6|Pair
-♠Q♠2♥2♥5♣6|Pair
-♠2♥2♣K♥5♣6|Pair
-♠2♥2♣8♥5♣6|Pair
-♠2♥2♥A♥5♣6|Pair
-♠2♥2♥K♥5♣6|Pair
-♠Q♣K♥K♥5♣6|Pair
-♠2♣K♥K♥5♣6|Pair
-♥2♣K♥K♥5♣6|Pair
-♣K♣8♥K♥5♣6|Pair
-♣K♥A♥K♥5♣6|Pair
-♠Q♠2♠6♥5♣6|Pair
-♠Q♥2♠6♥5♣6|Pair
-♠2♥2♠6♥5♣6|Two Pairs
-♠Q♣K♠6♥5♣6|Pair
-♠2♣K♠6♥5♣6|Pair
-♥2♣K♠6♥5♣6|Pair
-♠Q♣8♠6♥5♣6|Pair
-♠2♣8♠6♥5♣6|Pair
-♥2♣8♠6♥5♣6|Pair
-♣K♣8♠6♥5♣6|Pair
-♠Q♥A♠6♥5♣6|Pair
-♠2♥A♠6♥5♣6|Pair
-♥2♥A♠6♥5♣6|Pair
-♣K♥A♠6♥5♣6|Pair
-♣8♥A♠6♥5♣6|Pair
-♠Q♥K♠6♥5♣6|Pair
-♠2♥K♠6♥5♣6|Pair
-♥2♥K♠6♥5♣6|Pair
-♣K♥K♠6♥5♣6|Two Pairs
-♣8♥K♠6♥5♣6|Pair
-♥A♥K♠6♥5♣6|Pair
-♠2♥2♦7♥5♣6|Pair
-♣K♥K♦7♥5♣6|Pair
-♠Q♠6♦7♥5♣6|Pair
-♠2♠6♦7♥5♣6|Pair
-♥2♠6♦7♥5♣6|Pair
-♣K♠6♦7♥5♣6|Pair
-♣8♠6♦7♥5♣6|Pair
-♥A♠6♦7♥5♣6|Pair
-♥K♠6♦7♥5♣6|Pair
-♠Q♠2♥2♣K♥7|Pair
-♠Q♠2♥2♣8♥7|Pair
-♠2♥2♣K♣8♥7|Pair
-♠Q♠2♥2♥A♥7|Pair
-♠2♥2♣K♥A♥7|Pair
-♠2♥2♣8♥A♥7|Pair
-♠Q♠2♥2♥K♥7|Pair
-♠Q♠2♣K♥K♥7|Pair
-♠Q♥2♣K♥K♥7|Pair
-♠2♥2♣K♥K♥7|Two Pairs
-♠2♥2♣8♥K♥7|Pair
-♠Q♣K♣8♥K♥7|Pair
-♠2♣K♣8♥K♥7|Pair
-♥2♣K♣8♥K♥7|Pair
-♠2♥2♥A♥K♥7|Pair
-♠Q♣K♥A♥K♥7|Pair
-♠2♣K♥A♥K♥7|Pair
-♥2♣K♥A♥K♥7|Pair
-♣K♣8♥A♥K♥7|Pair
-♠Q♠2♥2♠6♥7|Pair
-♠2♥2♣K♠6♥7|Pair
-♠2♥2♣8♠6♥7|Pair
-♠2♥2♥A♠6♥7|Pair
-♠2♥2♥K♠6♥7|Pair
-♠Q♣K♥K♠6♥7|Pair
-♠2♣K♥K♠6♥7|Pair
-♥2♣K♥K♠6♥7|Pair
-♣K♣8♥K♠6♥7|Pair
-♣K♥A♥K♠6♥7|Pair
-♠Q♠2♥2♦7♥7|Two Pairs
-♠Q♠2♣K♦7♥7|Pair
-♠Q♥2♣K♦7♥7|Pair
-♠2♥2♣K♦7♥7|Two Pairs
-♠Q♠2♣8♦7♥7|Pair
-♠Q♥2♣8♦7♥7|Pair
-♠2♥2♣8♦7♥7|Two Pairs
-♠Q♣K♣8♦7♥7|Pair
-♠2♣K♣8♦7♥7|Pair
-♥2♣K♣8♦7♥7|Pair
-♠Q♠2♥A♦7♥7|Pair
-♠Q♥2♥A♦7♥7|Pair
-♠2♥2♥A♦7♥7|Two Pairs
-♠Q♣K♥A♦7♥7|Pair
-♠2♣K♥A♦7♥7|Pair
-♥2♣K♥A♦7♥7|Pair
-♠Q♣8♥A♦7♥7|Pair
-♠2♣8♥A♦7♥7|Pair
-♥2♣8♥A♦7♥7|Pair
-♣K♣8♥A♦7♥7|Pair
-♠Q♠2♥K♦7♥7|Pair
-♠Q♥2♥K♦7♥7|Pair
-♠2♥2♥K♦7♥7|Two Pairs
-♠Q♣K♥K♦7♥7|Two Pairs
-♠2♣K♥K♦7♥7|Two Pairs
-♥2♣K♥K♦7♥7|Two Pairs
-♠Q♣8♥K♦7♥7|Pair
-♠2♣8♥K♦7♥7|Pair
-♥2♣8♥K♦7♥7|Pair
-♣K♣8♥K♦7♥7|Two Pairs
-♠Q♥A♥K♦7♥7|Pair
-♠2♥A♥K♦7♥7|Pair
-♥2♥A♥K♦7♥7|Pair
-♣K♥A♥K♦7♥7|Two Pairs
-♣8♥A♥K♦7♥7|Pair
-♠Q♠2♠6♦7♥7|Pair
-♠Q♥2♠6♦7♥7|Pair
-♠2♥2♠6♦7♥7|Two Pairs
-♠Q♣K♠6♦7♥7|Pair
-♠2♣K♠6♦7♥7|Pair
-♥2♣K♠6♦7♥7|Pair
-♠Q♣8♠6♦7♥7|Pair
-♠2♣8♠6♦7♥7|Pair
-♥2♣8♠6♦7♥7|Pair
-♣K♣8♠6♦7♥7|Pair
-♠Q♥A♠6♦7♥7|Pair
-♠2♥A♠6♦7♥7|Pair
-♥2♥A♠6♦7♥7|Pair
-♣K♥A♠6♦7♥7|Pair
-♣8♥A♠6♦7♥7|Pair
-♠Q♥K♠6♦7♥7|Pair
-♠2♥K♠6♦7♥7|Pair
-♥2♥K♠6♦7♥7|Pair
-♣K♥K♠6♦7♥7|Two Pairs
-♣8♥K♠6♦7♥7|Pair
-♥A♥K♠6♦7♥7|Pair
-♠Q♠2♥2♥5♥7|Pair
-♠2♥2♣K♥5♥7|Pair
-♠2♥2♣8♥5♥7|Pair
-♠2♥2♥A♥5♥7|Pair
-♠2♥2♥K♥5♥7|Pair
-♠Q♣K♥K♥5♥7|Pair
-♠2♣K♥K♥5♥7|Pair
-♥2♣K♥K♥5♥7|Pair
-♣K♣8♥K♥5♥7|Pair
-♣K♥A♥K♥5♥7|Pair
-♠2♥2♠6♥5♥7|Pair
-♣K♥K♠6♥5♥7|Pair
-♠Q♠2♦7♥5♥7|Pair
-♠Q♥2♦7♥5♥7|Pair
-♠2♥2♦7♥5♥7|Two Pairs
-♠Q♣K♦7♥5♥7|Pair
-♠2♣K♦7♥5♥7|Pair
-♥2♣K♦7♥5♥7|Pair
-♠Q♣8♦7♥5♥7|Pair
-♠2♣8♦7♥5♥7|Pair
-♥2♣8♦7♥5♥7|Pair
-♣K♣8♦7♥5♥7|Pair
-♠Q♥A♦7♥5♥7|Pair
-♠2♥A♦7♥5♥7|Pair
-♥2♥A♦7♥5♥7|Pair
-♣K♥A♦7♥5♥7|Pair
-♣8♥A♦7♥5♥7|Pair
-♠Q♥K♦7♥5♥7|Pair
-♠2♥K♦7♥5♥7|Pair
-♥2♥K♦7♥5♥7|Pair
-♣K♥K♦7♥5♥7|Two Pairs
-♣8♥K♦7♥5♥7|Pair
-♥A♥K♦7♥5♥7|Pair
-♠Q♠6♦7♥5♥7|Pair
-♠2♠6♦7♥5♥7|Pair
-♥2♠6♦7♥5♥7|Pair
-♣K♠6♦7♥5♥7|Pair
-♣8♠6♦7♥5♥7|Pair
-♥A♠6♦7♥5♥7|Pair
-♥K♠6♦7♥5♥7|Pair
-♠Q♠2♥2♣6♥7|Pair
-♠2♥2♣K♣6♥7|Pair
-♠2♥2♣8♣6♥7|Pair
-♠2♥2♥A♣6♥7|Pair
-♠2♥2♥K♣6♥7|Pair
-♠Q♣K♥K♣6♥7|Pair
-♠2♣K♥K♣6♥7|Pair
-♥2♣K♥K♣6♥7|Pair
-♣K♣8♥K♣6♥7|Pair
-♣K♥A♥K♣6♥7|Pair
-♠Q♠2♠6♣6♥7|Pair
-♠Q♥2♠6♣6♥7|Pair
-♠2♥2♠6♣6♥7|Two Pairs
-♠Q♣K♠6♣6♥7|Pair
-♠2♣K♠6♣6♥7|Pair
-♥2♣K♠6♣6♥7|Pair
-♠Q♣8♠6♣6♥7|Pair
-♠2♣8♠6♣6♥7|Pair
-♥2♣8♠6♣6♥7|Pair
-♣K♣8♠6♣6♥7|Pair
-♠Q♥A♠6♣6♥7|Pair
-♠2♥A♠6♣6♥7|Pair
-♥2♥A♠6♣6♥7|Pair
-♣K♥A♠6♣6♥7|Pair
-♣8♥A♠6♣6♥7|Pair
-♠Q♥K♠6♣6♥7|Pair
-♠2♥K♠6♣6♥7|Pair
-♥2♥K♠6♣6♥7|Pair
-♣K♥K♠6♣6♥7|Two Pairs
-♣8♥K♠6♣6♥7|Pair
-♥A♥K♠6♣6♥7|Pair
-♠Q♠2♦7♣6♥7|Pair
-♠Q♥2♦7♣6♥7|Pair
-♠2♥2♦7♣6♥7|Two Pairs
-♠Q♣K♦7♣6♥7|Pair
-♠2♣K♦7♣6♥7|Pair
-♥2♣K♦7♣6♥7|Pair
-♠Q♣8♦7♣6♥7|Pair
-♠2♣8♦7♣6♥7|Pair
-♥2♣8♦7♣6♥7|Pair
-♣K♣8♦7♣6♥7|Pair
-♠Q♥A♦7♣6♥7|Pair
-♠2♥A♦7♣6♥7|Pair
-♥2♥A♦7♣6♥7|Pair
-♣K♥A♦7♣6♥7|Pair
-♣8♥A♦7♣6♥7|Pair
-♠Q♥K♦7♣6♥7|Pair
-♠2♥K♦7♣6♥7|Pair
-♥2♥K♦7♣6♥7|Pair
-♣K♥K♦7♣6♥7|Two Pairs
-♣8♥K♦7♣6♥7|Pair
-♥A♥K♦7♣6♥7|Pair
-♠Q♠6♦7♣6♥7|Two Pairs
-♠2♠6♦7♣6♥7|Two Pairs
-♥2♠6♦7♣6♥7|Two Pairs
-♣K♠6♦7♣6♥7|Two Pairs
-♣8♠6♦7♣6♥7|Two Pairs
-♥A♠6♦7♣6♥7|Two Pairs
-♥K♠6♦7♣6♥7|Two Pairs
-♠2♥2♥5♣6♥7|Pair
-♣K♥K♥5♣6♥7|Pair
-♠Q♠6♥5♣6♥7|Pair
-♠2♠6♥5♣6♥7|Pair
-♥2♠6♥5♣6♥7|Pair
-♣K♠6♥5♣6♥7|Pair
-♣8♠6♥5♣6♥7|Pair
-♥A♠6♥5♣6♥7|Pair
-♥K♠6♥5♣6♥7|Pair
-♠Q♦7♥5♣6♥7|Pair
-♠2♦7♥5♣6♥7|Pair
-♥2♦7♥5♣6♥7|Pair
-♣K♦7♥5♣6♥7|Pair
-♣8♦7♥5♣6♥7|Pair
-♥A♦7♥5♣6♥7|Pair
-♥K♦7♥5♣6♥7|Pair
-♠6♦7♥5♣6♥7|Two Pairs
+♠Q♥6♠J♥3♠3|Pair
+♠Q♥6♦A♥3♠3|Pair
+♠Q♠J♦A♥3♠3|Pair
+♥6♠J♦A♥3♠3|Pair
+♠Q♥6♥3♠3♦4|Pair
+♠Q♠J♥3♠3♦4|Pair
+♥6♠J♥3♠3♦4|Pair
+♠Q♦A♥3♠3♦4|Pair
+♥6♦A♥3♠3♦4|Pair
+♠J♦A♥3♠3♦4|Pair
+♠Q♥6♠J♦A♣6|Pair
+♠Q♥6♠J♥3♣6|Pair
+♠Q♥6♦A♥3♣6|Pair
+♥6♠J♦A♥3♣6|Pair
+♠Q♥6♠J♠3♣6|Pair
+♠Q♥6♦A♠3♣6|Pair
+♥6♠J♦A♠3♣6|Pair
+♠Q♥6♥3♠3♣6|Two Pairs
+♠Q♠J♥3♠3♣6|Pair
+♥6♠J♥3♠3♣6|Two Pairs
+♠Q♦A♥3♠3♣6|Pair
+♥6♦A♥3♠3♣6|Two Pairs
+♠J♦A♥3♠3♣6|Pair
+♠Q♥6♠J♦4♣6|Pair
+♠Q♥6♦A♦4♣6|Pair
+♥6♠J♦A♦4♣6|Pair
+♠Q♥6♥3♦4♣6|Pair
+♥6♠J♥3♦4♣6|Pair
+♥6♦A♥3♦4♣6|Pair
+♠Q♥6♠3♦4♣6|Pair
+♥6♠J♠3♦4♣6|Pair
+♥6♦A♠3♦4♣6|Pair
+♠Q♥3♠3♦4♣6|Pair
+♥6♥3♠3♦4♣6|Two Pairs
+♠J♥3♠3♦4♣6|Pair
+♦A♥3♠3♦4♣6|Pair
+♠Q♥6♥3♠3♦2|Pair
+♠Q♠J♥3♠3♦2|Pair
+♥6♠J♥3♠3♦2|Pair
+♠Q♦A♥3♠3♦2|Pair
+♥6♦A♥3♠3♦2|Pair
+♠J♦A♥3♠3♦2|Pair
+♠Q♥3♠3♦4♦2|Pair
+♥6♥3♠3♦4♦2|Pair
+♠J♥3♠3♦4♦2|Pair
+♦A♥3♠3♦4♦2|Pair
+♠Q♥6♠J♣6♦2|Pair
+♠Q♥6♦A♣6♦2|Pair
+♥6♠J♦A♣6♦2|Pair
+♠Q♥6♥3♣6♦2|Pair
+♥6♠J♥3♣6♦2|Pair
+♥6♦A♥3♣6♦2|Pair
+♠Q♥6♠3♣6♦2|Pair
+♥6♠J♠3♣6♦2|Pair
+♥6♦A♠3♣6♦2|Pair
+♠Q♥3♠3♣6♦2|Pair
+♥6♥3♠3♣6♦2|Two Pairs
+♠J♥3♠3♣6♦2|Pair
+♦A♥3♠3♣6♦2|Pair
+♠Q♥6♦4♣6♦2|Pair
+♥6♠J♦4♣6♦2|Pair
+♥6♦A♦4♣6♦2|Pair
+♥6♥3♦4♣6♦2|Pair
+♥6♠3♦4♣6♦2|Pair
+♥3♠3♦4♣6♦2|Pair
+♠Q♥6♠J♦A♥A|Pair
+♠Q♥6♦A♥3♥A|Pair
+♠Q♠J♦A♥3♥A|Pair
+♥6♠J♦A♥3♥A|Pair
+♠Q♥6♦A♠3♥A|Pair
+♠Q♠J♦A♠3♥A|Pair
+♥6♠J♦A♠3♥A|Pair
+♠Q♥6♥3♠3♥A|Pair
+♠Q♠J♥3♠3♥A|Pair
+♥6♠J♥3♠3♥A|Pair
+♠Q♦A♥3♠3♥A|Two Pairs
+♥6♦A♥3♠3♥A|Two Pairs
+♠J♦A♥3♠3♥A|Two Pairs
+♠Q♥6♦A♦4♥A|Pair
+♠Q♠J♦A♦4♥A|Pair
+♥6♠J♦A♦4♥A|Pair
+♠Q♦A♥3♦4♥A|Pair
+♥6♦A♥3♦4♥A|Pair
+♠J♦A♥3♦4♥A|Pair
+♠Q♦A♠3♦4♥A|Pair
+♥6♦A♠3♦4♥A|Pair
+♠J♦A♠3♦4♥A|Pair
+♠Q♥3♠3♦4♥A|Pair
+♥6♥3♠3♦4♥A|Pair
+♠J♥3♠3♦4♥A|Pair
+♦A♥3♠3♦4♥A|Two Pairs
+♠Q♥6♠J♣6♥A|Pair
+♠Q♥6♦A♣6♥A|Two Pairs
+♠Q♠J♦A♣6♥A|Pair
+♥6♠J♦A♣6♥A|Two Pairs
+♠Q♥6♥3♣6♥A|Pair
+♥6♠J♥3♣6♥A|Pair
+♠Q♦A♥3♣6♥A|Pair
+♥6♦A♥3♣6♥A|Two Pairs
+♠J♦A♥3♣6♥A|Pair
+♠Q♥6♠3♣6♥A|Pair
+♥6♠J♠3♣6♥A|Pair
+♠Q♦A♠3♣6♥A|Pair
+♥6♦A♠3♣6♥A|Two Pairs
+♠J♦A♠3♣6♥A|Pair
+♠Q♥3♠3♣6♥A|Pair
+♥6♥3♠3♣6♥A|Two Pairs
+♠J♥3♠3♣6♥A|Pair
+♦A♥3♠3♣6♥A|Two Pairs
+♠Q♥6♦4♣6♥A|Pair
+♥6♠J♦4♣6♥A|Pair
+♠Q♦A♦4♣6♥A|Pair
+♥6♦A♦4♣6♥A|Two Pairs
+♠J♦A♦4♣6♥A|Pair
+♥6♥3♦4♣6♥A|Pair
+♦A♥3♦4♣6♥A|Pair
+♥6♠3♦4♣6♥A|Pair
+♦A♠3♦4♣6♥A|Pair
+♥3♠3♦4♣6♥A|Pair
+♠Q♥6♦A♦2♥A|Pair
+♠Q♠J♦A♦2♥A|Pair
+♥6♠J♦A♦2♥A|Pair
+♠Q♦A♥3♦2♥A|Pair
+♥6♦A♥3♦2♥A|Pair
+♠J♦A♥3♦2♥A|Pair
+♠Q♦A♠3♦2♥A|Pair
+♥6♦A♠3♦2♥A|Pair
+♠J♦A♠3♦2♥A|Pair
+♠Q♥3♠3♦2♥A|Pair
+♥6♥3♠3♦2♥A|Pair
+♠J♥3♠3♦2♥A|Pair
+♦A♥3♠3♦2♥A|Two Pairs
+♠Q♦A♦4♦2♥A|Pair
+♥6♦A♦4♦2♥A|Pair
+♠J♦A♦4♦2♥A|Pair
+♦A♥3♦4♦2♥A|Pair
+♦A♠3♦4♦2♥A|Pair
+♥3♠3♦4♦2♥A|Pair
+♠Q♥6♣6♦2♥A|Pair
+♥6♠J♣6♦2♥A|Pair
+♠Q♦A♣6♦2♥A|Pair
+♥6♦A♣6♦2♥A|Two Pairs
+♠J♦A♣6♦2♥A|Pair
+♥6♥3♣6♦2♥A|Pair
+♦A♥3♣6♦2♥A|Pair
+♥6♠3♣6♦2♥A|Pair
+♦A♠3♣6♦2♥A|Pair
+♥3♠3♣6♦2♥A|Pair
+♥6♦4♣6♦2♥A|Pair
+♦A♦4♣6♦2♥A|Pair
+♠Q♥6♥3♠3♥K|Pair
+♠Q♠J♥3♠3♥K|Pair
+♥6♠J♥3♠3♥K|Pair
+♠Q♦A♥3♠3♥K|Pair
+♥6♦A♥3♠3♥K|Pair
+♠J♦A♥3♠3♥K|Pair
+♠Q♥3♠3♦4♥K|Pair
+♥6♥3♠3♦4♥K|Pair
+♠J♥3♠3♦4♥K|Pair
+♦A♥3♠3♦4♥K|Pair
+♠Q♥6♠J♣6♥K|Pair
+♠Q♥6♦A♣6♥K|Pair
+♥6♠J♦A♣6♥K|Pair
+♠Q♥6♥3♣6♥K|Pair
+♥6♠J♥3♣6♥K|Pair
+♥6♦A♥3♣6♥K|Pair
+♠Q♥6♠3♣6♥K|Pair
+♥6♠J♠3♣6♥K|Pair
+♥6♦A♠3♣6♥K|Pair
+♠Q♥3♠3♣6♥K|Pair
+♥6♥3♠3♣6♥K|Two Pairs
+♠J♥3♠3♣6♥K|Pair
+♦A♥3♠3♣6♥K|Pair
+♠Q♥6♦4♣6♥K|Pair
+♥6♠J♦4♣6♥K|Pair
+♥6♦A♦4♣6♥K|Pair
+♥6♥3♦4♣6♥K|Pair
+♥6♠3♦4♣6♥K|Pair
+♥3♠3♦4♣6♥K|Pair
+♠Q♥3♠3♦2♥K|Pair
+♥6♥3♠3♦2♥K|Pair
+♠J♥3♠3♦2♥K|Pair
+♦A♥3♠3♦2♥K|Pair
+♥3♠3♦4♦2♥K|Pair
+♠Q♥6♣6♦2♥K|Pair
+♥6♠J♣6♦2♥K|Pair
+♥6♦A♣6♦2♥K|Pair
+♥6♥3♣6♦2♥K|Pair
+♥6♠3♣6♦2♥K|Pair
+♥3♠3♣6♦2♥K|Pair
+♥6♦4♣6♦2♥K|Pair
+♠Q♥6♦A♥A♥K|Pair
+♠Q♠J♦A♥A♥K|Pair
+♥6♠J♦A♥A♥K|Pair
+♠Q♦A♥3♥A♥K|Pair
+♥6♦A♥3♥A♥K|Pair
+♠J♦A♥3♥A♥K|Pair
+♠Q♦A♠3♥A♥K|Pair
+♥6♦A♠3♥A♥K|Pair
+♠J♦A♠3♥A♥K|Pair
+♠Q♥3♠3♥A♥K|Pair
+♥6♥3♠3♥A♥K|Pair
+♠J♥3♠3♥A♥K|Pair
+♦A♥3♠3♥A♥K|Two Pairs
+♠Q♦A♦4♥A♥K|Pair
+♥6♦A♦4♥A♥K|Pair
+♠J♦A♦4♥A♥K|Pair
+♦A♥3♦4♥A♥K|Pair
+♦A♠3♦4♥A♥K|Pair
+♥3♠3♦4♥A♥K|Pair
+♠Q♥6♣6♥A♥K|Pair
+♥6♠J♣6♥A♥K|Pair
+♠Q♦A♣6♥A♥K|Pair
+♥6♦A♣6♥A♥K|Two Pairs
+♠J♦A♣6♥A♥K|Pair
+♥6♥3♣6♥A♥K|Pair
+♦A♥3♣6♥A♥K|Pair
+♥6♠3♣6♥A♥K|Pair
+♦A♠3♣6♥A♥K|Pair
+♥3♠3♣6♥A♥K|Pair
+♥6♦4♣6♥A♥K|Pair
+♦A♦4♣6♥A♥K|Pair
+♠Q♦A♦2♥A♥K|Pair
+♥6♦A♦2♥A♥K|Pair
+♠J♦A♦2♥A♥K|Pair
+♦A♥3♦2♥A♥K|Pair
+♦A♠3♦2♥A♥K|Pair
+♥3♠3♦2♥A♥K|Pair
+♦A♦4♦2♥A♥K|Pair
+♥6♣6♦2♥A♥K|Pair
+♦A♣6♦2♥A♥K|Pair
