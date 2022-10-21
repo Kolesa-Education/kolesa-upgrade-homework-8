@@ -3,11 +3,12 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
-	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
-	"github.com/samber/lo"
 	"log"
 	"math/rand"
 	"os"
+
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/samber/lo"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -16,6 +17,63 @@ func cardsToRepresentations(cards []card.Card) []string {
 		return r
 	})
 	return representations
+}
+
+func readCsvFile(filePath string) []string {
+	f, err := os.Open(filePath)
+	if err != nil {
+		log.Fatal("Unable to read input file "+filePath, err)
+	}
+	defer f.Close()
+
+	csvReader := csv.NewReader(f)
+	records, err := csvReader.Read()
+	if err != nil {
+		log.Fatal("Unable to parse file as CSV for "+filePath, err)
+	}
+
+	return records
+}
+
+func writeCsvFile(records []string, i int) {
+	f, err := os.Create(fmt.Sprintf("results/data%d.csv", i))
+	defer f.Close()
+
+	if err != nil {
+
+		log.Fatalln("failed to open file", err)
+	}
+
+	w := csv.NewWriter(f)
+	defer w.Flush()
+
+	if err := w.Write(records); err != nil {
+		log.Fatalln("error writing record to file", err)
+	}
+}
+
+func removeDuplicates(records []string) []string {
+	allKeys := make(map[string]bool)
+	var distinctCards []string
+	for _, i := range records {
+		if _, value := allKeys[i]; !value {
+			allKeys[i] = true
+			distinctCards = append(distinctCards, i)
+		}
+	}
+	return distinctCards
+}
+
+func getCardCombinations(chnl chan int) {
+	for i := 0; i < 100; i++ {
+		records := readCsvFile(fmt.Sprintf("dataset/dat%d.csv", i))
+		fmt.Println(removeDuplicates(records))
+		distinctrecords := removeDuplicates(records)
+		writeCsvFile(distinctrecords, i)
+
+		chnl <- i
+	}
+	close(chnl)
 }
 
 func main() {
@@ -49,5 +107,11 @@ func main() {
 
 		writer.Flush()
 		_ = file.Close()
+	}
+
+	done := make(chan int)
+	go getCardCombinations(done)
+	for v := range done {
+		fmt.Println("Received ", v+1)
 	}
 }
