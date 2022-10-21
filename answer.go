@@ -84,7 +84,7 @@ func readCards(folderName string) []CardList {
 
 		cardlist = append(cardlist, CardList{card, ""})
 		card = []Card{}
-
+		writeFile(filename)
 		f.Close()
 
 	}
@@ -235,16 +235,16 @@ func main() {
 	// writeFile(filename)
 }
 
-// func writeFile(filename []string) {
-// 	for i := 0; i < len(filename); i++ {
-// 		file, err := os.Create(fmt.Sprintf("results/result%d.csv", i))
-// 		if err != nil {
-// 			panic(err)
-// 		}
-// 		defer file.Close()
-// 		_, err = file.WriteString("hi")
-// 		if err != nil {
-// 			panic(err)
-// 		}
-// 	}
-// }
+func writeFile(filename []string) {
+	for i := 0; i < len(filename); i++ {
+		file, err := os.Create(fmt.Sprintf("results/result%d.csv", i))
+		if err != nil {
+			panic(err)
+		}
+		defer file.Close()
+		_, err = file.WriteString("hi")
+		if err != nil {
+			panic(err)
+		}
+	}
+}
