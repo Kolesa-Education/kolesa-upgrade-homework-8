@@ -5,10 +5,18 @@ import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/solution/utility"
 )
 
+/* Рекурсивная функция который обработывает комбинаций
+inputArr ---> Входной слайс с картами
+outputArr ---> Временный массив с размером 5 карт для хранения текущей комбинации
+start & end ---> Начальный и конечный индексы inputArr
+index ---> Текущий индекс в outputArr
+r ---> Размер комбинации
+*/
+
 func Combinations(inputArr []card.Card, outputArr [5]card.Card,
 	start, end, index, r int, outputFile string) {
 	if index == r {
-		Process(outputArr, outputFile)
+		Process(outputArr, outputFile) // Обработка одной комбинации
 		return
 	}
 
@@ -18,24 +26,30 @@ func Combinations(inputArr []card.Card, outputArr [5]card.Card,
 	}
 }
 
+// Проверяет карты на покерую комбинацию с наиболее сильной комбинаций
+
 func Process(cards [5]card.Card, filename string) {
+	var handType = ""
 	if IsStraightFlush(cards) {
-		utility.ToFile(cards, "straight flush", filename)
+		handType = "straight flush"
 	} else if IsFourKind(cards) {
-		utility.ToFile(cards, "four kind", filename)
+		handType = "four kind"
 	} else if IsFullHouse(cards) {
-		utility.ToFile(cards, "full house", filename)
+		handType = "full house"
 	} else if IsFlush(cards) {
-		utility.ToFile(cards, "flush", filename)
+		handType = "flush"
 	} else if IsStraight(cards) {
-		utility.ToFile(cards, "straight", filename)
+		handType = "straight"
 	} else if IsThreeKind(cards) {
-		utility.ToFile(cards, "three kind", filename)
+		handType = "three kind"
 	} else if IsTwoPairs(cards) {
-		utility.ToFile(cards, "two pairs", filename)
+		handType = "two pairs"
 	} else if IsPair(cards) {
-		utility.ToFile(cards, "pair", filename)
+		handType = "pair"
 	} else {
 		return
+	}
+	if handType != "" {
+		utility.ToFile(cards, handType, filename) // Записывает в файл
 	}
 }

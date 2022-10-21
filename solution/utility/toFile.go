@@ -23,7 +23,7 @@ func ToFile(cards [5]card.Card, handType string, fileName string) {
 		log.Fatal(err)
 	}
 	if _, err := f.Write([]byte(str + "\n")); err != nil {
-		f.Close() // ignore error; Write error takes precedence
+		f.Close()
 		log.Fatal(err)
 	}
 	if err := f.Close(); err != nil {

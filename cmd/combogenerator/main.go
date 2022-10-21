@@ -28,29 +28,35 @@ func main() {
 		wg.Add(1)
 		fileName := file.Name()
 
-		go func(filename string) {
+		go func(filename string) { // Здесь начинаем новую горутину для обработку файлов
 			defer wg.Done()
 			handleFile(filename)
 		}(fileName)
 	}
 
 	wg.Wait()
-
 }
 
 func handleFile(fileName string) {
 	content, err := os.ReadFile(DatasetDir + "/" + fileName)
 	if err != nil {
-		log.Fatalln("Content of this file cannot read", err)
+		log.Printf("content of this %s file cannot read: %s\n", fileName, err.Error())
+		return
 	}
 
-	cards, err := utility.ConvertCards(strings.TrimSpace(string(content)))
+	//Конвертируем контент файла в структуры карты
+	cards, err := utility.ConvertToCards(strings.TrimSpace(string(content)))
+
+	//Убираем дубликаты карт
+	cards = utility.UniqueCards(cards)
 	if err != nil {
-		log.Fatalln(err)
+		log.Printf("cannot convert to cards: %s\n", err.Error())
+		return
 	}
 
 	var output [5]card.Card
 	length := len(cards)
 
+	//Находить все комбинаций и обрабатывает каждую из них
 	combinations.Combinations(cards, output, 0, length-1, 0, 5, ResultDir+"/"+fileName)
 }
