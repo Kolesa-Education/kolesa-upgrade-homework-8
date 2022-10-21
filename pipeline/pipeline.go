@@ -3,7 +3,6 @@ package pipeline
 import (
 	"encoding/csv"
 	"errors"
-	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/combinations"
 	"gonum.org/v1/gonum/stat/combin"
@@ -133,68 +132,48 @@ func combsToStrings(cardsCombs [][]card.Card) [][]string {
 		if len(combName) == 0 {
 			continue
 		}
-		//combLst := []string{combName}
-		//res = append(res, combLst)
 		res = append(res, combName)
 	}
 	return res
 }
 
-func checkCombinations(cards []card.Card) (combStrings []string) {
-	combStrings = append(combStrings, structToString(cards))
+func checkCombinations(cards []card.Card) (combSlice []string) {
+	var combName string
 	switch true {
 	case combinations.GetStraightFlush(cards):
-		combStrings = append(combStrings, " | Straight Flush")
-		return
+		combName = " | Straight Flush"
 	case combinations.GetFourOfAKind(cards):
-		combStrings = append(combStrings, " | Four Of A Kind")
-		return
+		combName = " | Four Of A Kind"
 	case combinations.GetFullHouse(cards):
-		combStrings = append(combStrings, " | Full House")
-		return
+		combName = " | Full House"
 	case combinations.GetFlush(cards):
-		combStrings = append(combStrings, " | Flush")
-		return
+		combName = " | Flush"
 	case combinations.GetStraight(cards):
-		combStrings = append(combStrings, " | Straight")
-		return
+		combName = " | Straight"
 	case combinations.GetThreeOfAKind(cards):
-		combStrings = append(combStrings, " | Three Of A Kind")
-		return
+		combName = " | Three Of A Kind"
 	case combinations.GetTwoPairs(cards):
-		combStrings = append(combStrings, " | Two Pairs")
-		return
+		combName = " | Two Pairs"
 	case combinations.GetPair(cards):
-		combStrings = append(combStrings, " | Pair")
-		return
+		combName = " | Pair"
 	default:
+		combName = ""
+	}
+	if combName == "" {
 		return []string{}
 	}
+	combSlice = structToSlice(cards)
+	combSlice[4] += combName
+	return combSlice
 }
 
-func structToString(comb []card.Card) string {
-	var res string
-	for i, cardItem := range comb {
-		res += fmt.Sprintf("%s%s", cardItem.Suit, cardItem.Face)
-		if i != len(comb)-1 {
-			res += ","
-		}
+func structToSlice(comb []card.Card) []string {
+	var res []string
+	for _, cardItem := range comb {
+		res = append(res, cardItem.Suit+cardItem.Face)
 	}
 	return res
 }
-
-//func removeQuotes(filename string) error {
-//	input2, err := os.ReadFile(filename)
-//	if err != nil {
-//		return err
-//	}
-//	output2 := regexp.MustCompile(`"`).ReplaceAll(input2, []byte(""))
-//
-//	if err = os.WriteFile(filename, output2, 0666); err != nil {
-//		return err
-//	}
-//	return nil
-//}
 
 func Pipeline(num string, group *sync.WaitGroup) {
 	dataset, err := openCSV("./dataset/dat" + num + ".csv")
