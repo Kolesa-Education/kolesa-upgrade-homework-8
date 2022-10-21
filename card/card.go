@@ -44,7 +44,7 @@ type Card struct {
 	Face string
 }
 
-func isValidSuit(suit string) bool {
+func IsValidSuit(suit string) bool {
 	switch suit {
 	case SuitClubs, SuitDiamonds, SuitHearts, SuitSpades:
 		return true
@@ -101,7 +101,7 @@ func (c Card) ShortRepresentation() (string, error) {
 }
 
 func New(suit string, face string) (*Card, error) {
-	if isValidSuit(suit) && isValidFace(face) {
+	if IsValidSuit(suit) && isValidFace(face) {
 		return &Card{
 			Suit: suit,
 			Face: face,

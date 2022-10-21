@@ -2,20 +2,21 @@ package card
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 	"math/rand"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isValidSuit(t *testing.T) {
-	assert.True(t, isValidSuit(SuitDiamonds))
-	assert.True(t, isValidSuit(SuitSpades))
-	assert.True(t, isValidSuit(SuitClubs))
-	assert.True(t, isValidSuit(SuitHearts))
+	assert.True(t, IsValidSuit(SuitDiamonds))
+	assert.True(t, IsValidSuit(SuitSpades))
+	assert.True(t, IsValidSuit(SuitClubs))
+	assert.True(t, IsValidSuit(SuitHearts))
 
-	assert.False(t, isValidSuit("Invalid"))
+	assert.False(t, IsValidSuit("Invalid"))
 }
 
 func Test_isValidFace(t *testing.T) {

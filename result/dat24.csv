@@ -1,0 +1,150 @@
+♠A♥J♦5♦7♦A|Pair
+♠A♥J♦5♦A♥K|Pair
+♠A♥J♦7♦A♥K|Pair
+♠A♦5♦7♦A♥K|Pair
+♠A♥J♦5♦A♦9|Pair
+♠A♥J♦7♦A♦9|Pair
+♠A♦5♦7♦A♦9|Pair
+♠A♥J♦A♥K♦9|Pair
+♠A♦5♦A♥K♦9|Pair
+♠A♦7♦A♥K♦9|Pair
+♠A♥J♦5♦A♦0|Pair
+♠A♥J♦7♦A♦0|Pair
+♠A♦5♦7♦A♦0|Pair
+♠A♥J♦A♥K♦0|Pair
+♠A♦5♦A♥K♦0|Pair
+♠A♦7♦A♥K♦0|Pair
+♠A♥J♦A♦9♦0|Pair
+♠A♦5♦A♦9♦0|Pair
+♠A♦7♦A♦9♦0|Pair
+♠A♦A♥K♦9♦0|Pair
+♠A♥J♦5♦7♥7|Pair
+♠A♥J♦5♦A♥7|Pair
+♠A♥J♦7♦A♥7|Two Pairs
+♠A♦5♦7♦A♥7|Two Pairs
+♥J♦5♦7♦A♥7|Pair
+♠A♥J♦7♥K♥7|Pair
+♠A♦5♦7♥K♥7|Pair
+♥J♦5♦7♥K♥7|Pair
+♠A♥J♦A♥K♥7|Pair
+♠A♦5♦A♥K♥7|Pair
+♠A♦7♦A♥K♥7|Two Pairs
+♥J♦7♦A♥K♥7|Pair
+♦5♦7♦A♥K♥7|Pair
+♠A♥J♦7♦9♥7|Pair
+♠A♦5♦7♦9♥7|Pair
+♥J♦5♦7♦9♥7|Pair
+♠A♥J♦A♦9♥7|Pair
+♠A♦5♦A♦9♥7|Pair
+♠A♦7♦A♦9♥7|Two Pairs
+♥J♦7♦A♦9♥7|Pair
+♦5♦7♦A♦9♥7|Pair
+♠A♦7♥K♦9♥7|Pair
+♥J♦7♥K♦9♥7|Pair
+♦5♦7♥K♦9♥7|Pair
+♠A♦A♥K♦9♥7|Pair
+♦7♦A♥K♦9♥7|Pair
+♠A♥J♦7♦0♥7|Pair
+♠A♦5♦7♦0♥7|Pair
+♥J♦5♦7♦0♥7|Pair
+♠A♥J♦A♦0♥7|Pair
+♠A♦5♦A♦0♥7|Pair
+♠A♦7♦A♦0♥7|Two Pairs
+♥J♦7♦A♦0♥7|Pair
+♦5♦7♦A♦0♥7|Pair
+♠A♦7♥K♦0♥7|Pair
+♥J♦7♥K♦0♥7|Pair
+♦5♦7♥K♦0♥7|Pair
+♠A♦A♥K♦0♥7|Pair
+♦7♦A♥K♦0♥7|Pair
+♠A♦7♦9♦0♥7|Pair
+♥J♦7♦9♦0♥7|Pair
+♦5♦7♦9♦0♥7|Pair
+♠A♦A♦9♦0♥7|Pair
+♦7♦A♦9♦0♥7|Pair
+♦7♥K♦9♦0♥7|Pair
+♠A♥J♦5♦A♣0|Pair
+♠A♥J♦7♦A♣0|Pair
+♠A♦5♦7♦A♣0|Pair
+♠A♥J♦A♥K♣0|Pair
+♠A♦5♦A♥K♣0|Pair
+♠A♦7♦A♥K♣0|Pair
+♠A♥J♦A♦9♣0|Pair
+♠A♦5♦A♦9♣0|Pair
+♠A♦7♦A♦9♣0|Pair
+♠A♦A♥K♦9♣0|Pair
+♠A♥J♦5♦0♣0|Pair
+♠A♥J♦7♦0♣0|Pair
+♠A♦5♦7♦0♣0|Pair
+♥J♦5♦7♦0♣0|Pair
+♠A♥J♦A♦0♣0|Two Pairs
+♠A♦5♦A♦0♣0|Two Pairs
+♥J♦5♦A♦0♣0|Pair
+♠A♦7♦A♦0♣0|Two Pairs
+♥J♦7♦A♦0♣0|Pair
+♦5♦7♦A♦0♣0|Pair
+♠A♥J♥K♦0♣0|Pair
+♠A♦5♥K♦0♣0|Pair
+♥J♦5♥K♦0♣0|Pair
+♠A♦7♥K♦0♣0|Pair
+♥J♦7♥K♦0♣0|Pair
+♦5♦7♥K♦0♣0|Pair
+♠A♦A♥K♦0♣0|Two Pairs
+♥J♦A♥K♦0♣0|Pair
+♦5♦A♥K♦0♣0|Pair
+♦7♦A♥K♦0♣0|Pair
+♠A♥J♦9♦0♣0|Pair
+♠A♦5♦9♦0♣0|Pair
+♥J♦5♦9♦0♣0|Pair
+♠A♦7♦9♦0♣0|Pair
+♥J♦7♦9♦0♣0|Pair
+♦5♦7♦9♦0♣0|Pair
+♠A♦A♦9♦0♣0|Two Pairs
+♥J♦A♦9♦0♣0|Pair
+♦5♦A♦9♦0♣0|Pair
+♦7♦A♦9♦0♣0|Pair
+♠A♥K♦9♦0♣0|Pair
+♥J♥K♦9♦0♣0|Pair
+♦5♥K♦9♦0♣0|Pair
+♦7♥K♦9♦0♣0|Pair
+♦A♥K♦9♦0♣0|Pair
+♠A♥J♦7♥7♣0|Pair
+♠A♦5♦7♥7♣0|Pair
+♥J♦5♦7♥7♣0|Pair
+♠A♥J♦A♥7♣0|Pair
+♠A♦5♦A♥7♣0|Pair
+♠A♦7♦A♥7♣0|Two Pairs
+♥J♦7♦A♥7♣0|Pair
+♦5♦7♦A♥7♣0|Pair
+♠A♦7♥K♥7♣0|Pair
+♥J♦7♥K♥7♣0|Pair
+♦5♦7♥K♥7♣0|Pair
+♠A♦A♥K♥7♣0|Pair
+♦7♦A♥K♥7♣0|Pair
+♠A♦7♦9♥7♣0|Pair
+♥J♦7♦9♥7♣0|Pair
+♦5♦7♦9♥7♣0|Pair
+♠A♦A♦9♥7♣0|Pair
+♦7♦A♦9♥7♣0|Pair
+♦7♥K♦9♥7♣0|Pair
+♠A♥J♦0♥7♣0|Pair
+♠A♦5♦0♥7♣0|Pair
+♥J♦5♦0♥7♣0|Pair
+♠A♦7♦0♥7♣0|Two Pairs
+♥J♦7♦0♥7♣0|Two Pairs
+♦5♦7♦0♥7♣0|Two Pairs
+♠A♦A♦0♥7♣0|Two Pairs
+♥J♦A♦0♥7♣0|Pair
+♦5♦A♦0♥7♣0|Pair
+♦7♦A♦0♥7♣0|Two Pairs
+♠A♥K♦0♥7♣0|Pair
+♥J♥K♦0♥7♣0|Pair
+♦5♥K♦0♥7♣0|Pair
+♦7♥K♦0♥7♣0|Two Pairs
+♦A♥K♦0♥7♣0|Pair
+♠A♦9♦0♥7♣0|Pair
+♥J♦9♦0♥7♣0|Pair
+♦5♦9♦0♥7♣0|Pair
+♦7♦9♦0♥7♣0|Two Pairs
+♦A♦9♦0♥7♣0|Pair
+♥K♦9♦0♥7♣0|Pair
