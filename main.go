@@ -1,15 +1,14 @@
 package main
 
 import (
-	"encoding/csv"
 	"fmt"
-	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
-	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/services"
-	"github.com/samber/lo"
 	"log"
 	"math/rand"
 	"strconv"
-	"os"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/fileWorker"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/services"
+	"github.com/samber/lo"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -61,19 +60,7 @@ func generateCards() {
 		}
 		log.Printf("Generated cards %s\n", cards)
 		summary := cardsToRepresentations(cards)
-		file, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
-
-		if err != nil {
-			log.Fatalln("failed to open file", err)
-		}
-
-		writer := csv.NewWriter(file)
-		if err = writer.Write(summary); err != nil {
-			log.Fatalln("error writing to a file!")
-		}
-
-		writer.Flush()
-		_ = file.Close()
+		fileWorker.WriteCsv(fmt.Sprintf("dataset/dat%d.csv", i), summary)
 	}
 }
 
