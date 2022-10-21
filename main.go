@@ -208,7 +208,7 @@ func faceEqual(in string) int {
 		return 14
 	case "K":
 		return 13
-	case "QK":
+	case "Q":
 		return 12
 	case "J":
 		return 11
