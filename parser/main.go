@@ -13,24 +13,24 @@ func main() {
 	files, _ := os.ReadDir("dataset")
 	for _, file := range files {
 		waitGroup.Add(1)
-		/*go*/ fileParser("dataset/"+file.Name(), &waitGroup)
+		/*go*/ fileParser(file.Name(), &waitGroup)
 	}
 	waitGroup.Wait()
 }
 
 // Читает файл
 func fileParser(file string, waitGroup *sync.WaitGroup) {
-	dat, err := os.ReadFile(file)
+	dat, err := os.ReadFile("dataset/" + file)
 	if err != nil {
 		println(err.Error())
 		return
 	}
-	cardParser(string(dat))
+	cardParser(string(dat), file)
 	waitGroup.Done()
 }
 
 // Разбивает каждую карту на масть и значение
-func cardParser(pack string) {
+func cardParser(pack string, file string) {
 	//Убираем все лишнее и разбиваем на отдельные карты
 	pack = strings.Replace(pack, "\n", "", -1)
 	cards := strings.Split(pack, ",")
@@ -64,10 +64,11 @@ func cardParser(pack string) {
 		cardsArr = append(cardsArr, newCard)
 	}
 	//Отправляем парситься
-	combinationFinder(cardsArr)
+	combinations := combinationFinder(cardsArr)
+	fileWriter(file, combinations)
 }
 
-func combinationFinder(cards []*card.Card) {
+func combinationFinder(cards []*card.Card) map[string][]*card.Card {
 	var ( //Мапы по одинаковым мастям и номиналам
 		sameSuit = make(map[string][]*card.Card) //map[масть]карта
 		sameFace = make(map[string][]*card.Card) //map[номинал]карта
@@ -76,7 +77,7 @@ func combinationFinder(cards []*card.Card) {
 	//Меньше 5 карт комбинаций нет, так что...
 	if len(cards) < 5 {
 		println("No combination!")
-		return
+		return nil
 	}
 	//Фильтруем по одинаковым мастям и номиналам
 	for _, c := range cards {
@@ -85,16 +86,69 @@ func combinationFinder(cards []*card.Card) {
 		sameSuit[suit] = append(sameSuit[suit], c)
 		sameFace[face] = append(sameFace[face], c)
 	}
+	var combinations = make(map[string][]*card.Card)
 	//Ищем комбинации
-	isStraightFlush(sameSuit)
-	isFourOfAKind(sameFace)
-	isFullHouse(sameFace)
-	isFlush(sameSuit)
-	isStraight(sameFace)
-	isThreeOfAKind(sameFace)
-	isTwoPairs(sameFace)
-	isPair(sameFace)
+	sf := isStraightFlush(sameSuit)
+	if sf != nil {
+		combinations["Straight Flush"] = sf
+	}
+	foak := isFourOfAKind(sameFace)
+	if foak != nil {
+		combinations["Four Of AKind"] = foak
+	}
+	fh := isFullHouse(sameFace)
+	if fh != nil {
+		combinations["Full House"] = fh
+	}
+	f := isFlush(sameSuit)
+	if f != nil {
+		combinations["Flush"] = f
+	}
+	s := isStraight(sameFace)
+	if s != nil {
+		combinations["Straight"] = s
+	}
+	tok := isThreeOfAKind(sameFace)
+	if tok != nil {
+		combinations["Three Of A Kind"] = tok
+	}
+	tp := isTwoPairs(sameFace)
+	if tp != nil {
+		combinations["Two Pairs"] = tp
+	}
+	p := isPair(sameFace)
+	if p != nil {
+		combinations["Pair"] = p
+	}
 	println("\n")
+	//Возвращаем найденные комбинации
+	return combinations
+}
+
+func fileWriter(file string, combinations map[string][]*card.Card) {
+	//Создает файл
+	packFile, err := os.Create("results/" + file)
+	if err != nil {
+		println(err.Error())
+		return
+	}
+	for combName, combination := range combinations {
+		//Генерирует строку комбинации
+		var combString = ""
+		for _, card := range combination {
+			if combString != "" {
+				combString += ","
+			}
+			shortRep, _ := card.ShortRepresentation()
+			combString += shortRep
+		}
+		//Записывает комбинацию в файл
+		_, err2 := packFile.WriteString(combString + " | " + combName + "\n")
+		if err2 != nil {
+			println(err2.Error())
+			continue
+		}
+	}
 }
 
 // Просто жесть, переделать если будет время.
