@@ -4,9 +4,11 @@ import (
 	"encoding/csv"
 	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/services"
 	"github.com/samber/lo"
 	"log"
 	"math/rand"
+	"strconv"
 	"os"
 )
 
@@ -19,6 +21,29 @@ func cardsToRepresentations(cards []card.Card) []string {
 }
 
 func main() {
+	var operation string
+
+	fmt.Println("Enter operation (generate or handle):")
+	_, err := fmt.Scanln(&operation)
+	if err != nil {
+		fmt.Print("Wrong variable type")
+		return
+	}
+
+	switch operation {
+	case "generate":
+		generateCards()
+		break
+	case "handle":
+		handleCombinations()
+		break
+	default:
+		fmt.Println("Wrong operation. Program exited")
+	}
+
+}
+
+func generateCards() {
 	var seed int64 = 1665694295623135151
 	randomSource := rand.NewSource(seed)
 	random := rand.New(randomSource)
@@ -50,4 +75,15 @@ func main() {
 		writer.Flush()
 		_ = file.Close()
 	}
+}
+
+func handleCombinations() {
+	const FileSuffixName = "dat"
+
+	for i := 0; i < 100; i++ {
+		fileName := FileSuffixName + strconv.Itoa(i)
+		services.Handle(fileName)
+	}
+
+	fmt.Println("Operation completed")
 }
