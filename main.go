@@ -3,11 +3,14 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
-	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
-	"github.com/samber/lo"
 	"log"
 	"math/rand"
 	"os"
+	"strconv"
+
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/utils"
+	"github.com/samber/lo"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -26,7 +29,7 @@ func main() {
 
 	fmt.Println("Starting to generate cards...")
 	for i := 0; i < 100; i++ {
-		log.Printf("Iteration %d\n", i)
+		// log.Printf("Iteration %d\n", i)
 		cardsInFile := random.Intn(7) + 10 // [10, 17]
 		cards := make([]card.Card, 0)
 
@@ -34,7 +37,7 @@ func main() {
 			generatedCard, _ := card.Random(*random)
 			cards = append(cards, *generatedCard)
 		}
-		log.Printf("Generated cards %s\n", cards)
+		// log.Printf("Generated cards %s\n", cards)
 		summary := cardsToRepresentations(cards)
 		file, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
 
@@ -49,5 +52,25 @@ func main() {
 
 		writer.Flush()
 		_ = file.Close()
+
 	}
+	fmt.Println("Done.")
+	fmt.Println("Starting check cards...")
+	combs := [][]string{}
+	for i := 0; i < 100; i++ {
+		num := strconv.Itoa(i)
+
+		cardsFromFile, err := utils.OpenCSV("./dataset/dat" + num + ".csv")
+		if err != nil {
+			log.Fatalln("open file:", err)
+		}
+		cards := utils.FormatingCards(cardsFromFile)
+		combs = utils.GetCombinations(cards, 5)
+
+		filename := "./results/dat" + num + ".csv"
+
+		utils.WriteIntoCSV(filename, combs)
+	}
+	fmt.Println("All combinations write in files")
+	// fmt.Println(combs)
 }
