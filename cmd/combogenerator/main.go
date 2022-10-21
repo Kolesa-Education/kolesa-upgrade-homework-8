@@ -21,6 +21,9 @@ func main() {
 	if err != nil {
 		log.Fatalln("cannot read dataset directory")
 	}
+	if err = os.MkdirAll(ResultDir, 0660); err != nil {
+		log.Fatalln("cannot create directory")
+	}
 
 	var wg sync.WaitGroup
 
