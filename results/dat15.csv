@@ -1,0 +1,319 @@
+♥2,♠3,♣3,♥J,♥A | Pair
+♠3,♣3,♠10,♥J,♥A | Pair
+♠3,♣3,♦9,♥J,♥A | Pair
+♠3,♣3,♠7,♥J,♥A | Pair
+♠3,♣3,♥7,♥J,♥A | Pair
+♠3,♣3,♥J,♥A,♣A | Two Pairs
+♠3,♣3,♥J,♥A,♦A | Two Pairs
+♥2,♠3,♣3,♠10,♥A | Pair
+♥2,♠3,♣3,♦9,♥A | Pair
+♥2,♠3,♣3,♠7,♥A | Pair
+♥2,♠3,♣3,♥7,♥A | Pair
+♥2,♠3,♣3,♥A,♣A | Two Pairs
+♥2,♠3,♣3,♥A,♦A | Two Pairs
+♠3,♣3,♦9,♠10,♥A | Pair
+♠3,♣3,♠7,♠10,♥A | Pair
+♠3,♣3,♥7,♠10,♥A | Pair
+♠3,♣3,♠10,♥A,♣A | Two Pairs
+♠3,♣3,♠10,♥A,♦A | Two Pairs
+♠3,♣3,♠7,♦9,♥A | Pair
+♠3,♣3,♥7,♦9,♥A | Pair
+♠3,♣3,♦9,♥A,♣A | Two Pairs
+♠3,♣3,♦9,♥A,♦A | Two Pairs
+♠3,♣3,♠7,♥7,♥A | Two Pairs
+♠3,♣3,♠7,♥A,♣A | Two Pairs
+♠3,♣3,♠7,♥A,♦A | Two Pairs
+♠3,♣3,♥7,♥A,♣A | Two Pairs
+♠3,♣3,♥7,♥A,♦A | Two Pairs
+♠3,♣3,♥A,♣A,♦A | Full House
+♥2,♠3,♥J,♥A,♣A | Pair
+♥2,♠3,♥J,♥A,♦A | Pair
+♠3,♠10,♥J,♥A,♣A | Pair
+♠3,♠10,♥J,♥A,♦A | Pair
+♠3,♦9,♥J,♥A,♣A | Pair
+♠3,♦9,♥J,♥A,♦A | Pair
+♠3,♠7,♥7,♥J,♥A | Pair
+♠3,♠7,♥J,♥A,♣A | Pair
+♠3,♠7,♥J,♥A,♦A | Pair
+♠3,♥7,♥J,♥A,♣A | Pair
+♠3,♥7,♥J,♥A,♦A | Pair
+♠3,♥J,♥A,♣A,♦A | Full House
+♥2,♠3,♠10,♥A,♣A | Pair
+♥2,♠3,♠10,♥A,♦A | Pair
+♥2,♠3,♦9,♥A,♣A | Pair
+♥2,♠3,♦9,♥A,♦A | Pair
+♥2,♠3,♠7,♥7,♥A | Pair
+♥2,♠3,♠7,♥A,♣A | Pair
+♥2,♠3,♠7,♥A,♦A | Pair
+♥2,♠3,♥7,♥A,♣A | Pair
+♥2,♠3,♥7,♥A,♦A | Pair
+♥2,♠3,♥A,♣A,♦A | Full House
+♠3,♦9,♠10,♥A,♣A | Pair
+♠3,♦9,♠10,♥A,♦A | Pair
+♠3,♠7,♥7,♠10,♥A | Pair
+♠3,♠7,♠10,♥A,♣A | Pair
+♠3,♠7,♠10,♥A,♦A | Pair
+♠3,♥7,♠10,♥A,♣A | Pair
+♠3,♥7,♠10,♥A,♦A | Pair
+♠3,♠10,♥A,♣A,♦A | Full House
+♠3,♠7,♥7,♦9,♥A | Pair
+♠3,♠7,♦9,♥A,♣A | Pair
+♠3,♠7,♦9,♥A,♦A | Pair
+♠3,♥7,♦9,♥A,♣A | Pair
+♠3,♥7,♦9,♥A,♦A | Pair
+♠3,♦9,♥A,♣A,♦A | Full House
+♠3,♠7,♥7,♥A,♣A | Two Pairs
+♠3,♠7,♥7,♥A,♦A | Two Pairs
+♠3,♠7,♥A,♣A,♦A | Full House
+♠3,♥7,♥A,♣A,♦A | Full House
+♥2,♣3,♥J,♥A,♣A | Pair
+♥2,♣3,♥J,♥A,♦A | Pair
+♣3,♠10,♥J,♥A,♣A | Pair
+♣3,♠10,♥J,♥A,♦A | Pair
+♣3,♦9,♥J,♥A,♣A | Pair
+♣3,♦9,♥J,♥A,♦A | Pair
+♣3,♠7,♥7,♥J,♥A | Pair
+♣3,♠7,♥J,♥A,♣A | Pair
+♣3,♠7,♥J,♥A,♦A | Pair
+♣3,♥7,♥J,♥A,♣A | Pair
+♣3,♥7,♥J,♥A,♦A | Pair
+♣3,♥J,♥A,♣A,♦A | Full House
+♥2,♣3,♠10,♥A,♣A | Pair
+♥2,♣3,♠10,♥A,♦A | Pair
+♥2,♣3,♦9,♥A,♣A | Pair
+♥2,♣3,♦9,♥A,♦A | Pair
+♥2,♣3,♠7,♥7,♥A | Pair
+♥2,♣3,♠7,♥A,♣A | Pair
+♥2,♣3,♠7,♥A,♦A | Pair
+♥2,♣3,♥7,♥A,♣A | Pair
+♥2,♣3,♥7,♥A,♦A | Pair
+♥2,♣3,♥A,♣A,♦A | Full House
+♣3,♦9,♠10,♥A,♣A | Pair
+♣3,♦9,♠10,♥A,♦A | Pair
+♣3,♠7,♥7,♠10,♥A | Pair
+♣3,♠7,♠10,♥A,♣A | Pair
+♣3,♠7,♠10,♥A,♦A | Pair
+♣3,♥7,♠10,♥A,♣A | Pair
+♣3,♥7,♠10,♥A,♦A | Pair
+♣3,♠10,♥A,♣A,♦A | Full House
+♣3,♠7,♥7,♦9,♥A | Pair
+♣3,♠7,♦9,♥A,♣A | Pair
+♣3,♠7,♦9,♥A,♦A | Pair
+♣3,♥7,♦9,♥A,♣A | Pair
+♣3,♥7,♦9,♥A,♦A | Pair
+♣3,♦9,♥A,♣A,♦A | Full House
+♣3,♠7,♥7,♥A,♣A | Two Pairs
+♣3,♠7,♥7,♥A,♦A | Two Pairs
+♣3,♠7,♥A,♣A,♦A | Full House
+♣3,♥7,♥A,♣A,♦A | Full House
+♥2,♠10,♥J,♥A,♣A | Pair
+♥2,♠10,♥J,♥A,♦A | Pair
+♥2,♦9,♥J,♥A,♣A | Pair
+♥2,♦9,♥J,♥A,♦A | Pair
+♥2,♠7,♥7,♥J,♥A | Pair
+♥2,♠7,♥J,♥A,♣A | Pair
+♥2,♠7,♥J,♥A,♦A | Pair
+♥2,♥7,♥J,♥A,♣A | Pair
+♥2,♥7,♥J,♥A,♦A | Pair
+♥2,♥J,♥A,♣A,♦A | Full House
+♦9,♠10,♥J,♥A,♣A | Pair
+♦9,♠10,♥J,♥A,♦A | Pair
+♠7,♥7,♠10,♥J,♥A | Pair
+♠7,♠10,♥J,♥A,♣A | Pair
+♠7,♠10,♥J,♥A,♦A | Pair
+♥7,♠10,♥J,♥A,♣A | Pair
+♥7,♠10,♥J,♥A,♦A | Pair
+♠10,♥J,♥A,♣A,♦A | Full House
+♠7,♥7,♦9,♥J,♥A | Pair
+♠7,♦9,♥J,♥A,♣A | Pair
+♠7,♦9,♥J,♥A,♦A | Pair
+♥7,♦9,♥J,♥A,♣A | Pair
+♥7,♦9,♥J,♥A,♦A | Pair
+♦9,♥J,♥A,♣A,♦A | Full House
+♠7,♥7,♥J,♥A,♣A | Two Pairs
+♠7,♥7,♥J,♥A,♦A | Two Pairs
+♠7,♥J,♥A,♣A,♦A | Full House
+♥7,♥J,♥A,♣A,♦A | Full House
+♥2,♦9,♠10,♥A,♣A | Pair
+♥2,♦9,♠10,♥A,♦A | Pair
+♥2,♠7,♥7,♠10,♥A | Pair
+♥2,♠7,♠10,♥A,♣A | Pair
+♥2,♠7,♠10,♥A,♦A | Pair
+♥2,♥7,♠10,♥A,♣A | Pair
+♥2,♥7,♠10,♥A,♦A | Pair
+♥2,♠10,♥A,♣A,♦A | Full House
+♥2,♠7,♥7,♦9,♥A | Pair
+♥2,♠7,♦9,♥A,♣A | Pair
+♥2,♠7,♦9,♥A,♦A | Pair
+♥2,♥7,♦9,♥A,♣A | Pair
+♥2,♥7,♦9,♥A,♦A | Pair
+♥2,♦9,♥A,♣A,♦A | Full House
+♥2,♠7,♥7,♥A,♣A | Two Pairs
+♥2,♠7,♥7,♥A,♦A | Two Pairs
+♥2,♠7,♥A,♣A,♦A | Full House
+♥2,♥7,♥A,♣A,♦A | Full House
+♠7,♥7,♦9,♠10,♥A | Pair
+♠7,♦9,♠10,♥A,♣A | Pair
+♠7,♦9,♠10,♥A,♦A | Pair
+♥7,♦9,♠10,♥A,♣A | Pair
+♥7,♦9,♠10,♥A,♦A | Pair
+♦9,♠10,♥A,♣A,♦A | Full House
+♠7,♥7,♠10,♥A,♣A | Two Pairs
+♠7,♥7,♠10,♥A,♦A | Two Pairs
+♠7,♠10,♥A,♣A,♦A | Full House
+♥7,♠10,♥A,♣A,♦A | Full House
+♠7,♥7,♦9,♥A,♣A | Two Pairs
+♠7,♥7,♦9,♥A,♦A | Two Pairs
+♠7,♦9,♥A,♣A,♦A | Full House
+♥7,♦9,♥A,♣A,♦A | Full House
+♠7,♥7,♥A,♣A,♦A | Full House
+♥2,♠3,♣3,♠10,♥J | Pair
+♥2,♠3,♣3,♦9,♥J | Pair
+♥2,♠3,♣3,♠7,♥J | Pair
+♥2,♠3,♣3,♥7,♥J | Pair
+♥2,♠3,♣3,♥J,♣A | Pair
+♥2,♠3,♣3,♥J,♦A | Pair
+♠3,♣3,♦9,♠10,♥J | Pair
+♠3,♣3,♠7,♠10,♥J | Pair
+♠3,♣3,♥7,♠10,♥J | Pair
+♠3,♣3,♠10,♥J,♣A | Pair
+♠3,♣3,♠10,♥J,♦A | Pair
+♠3,♣3,♠7,♦9,♥J | Pair
+♠3,♣3,♥7,♦9,♥J | Pair
+♠3,♣3,♦9,♥J,♣A | Pair
+♠3,♣3,♦9,♥J,♦A | Pair
+♠3,♣3,♠7,♥7,♥J | Two Pairs
+♠3,♣3,♠7,♥J,♣A | Pair
+♠3,♣3,♠7,♥J,♦A | Pair
+♠3,♣3,♥7,♥J,♣A | Pair
+♠3,♣3,♥7,♥J,♦A | Pair
+♠3,♣3,♥J,♣A,♦A | Two Pairs
+♥2,♠3,♣3,♦9,♠10 | Pair
+♥2,♠3,♣3,♠7,♠10 | Pair
+♥2,♠3,♣3,♥7,♠10 | Pair
+♥2,♠3,♣3,♠10,♣A | Pair
+♥2,♠3,♣3,♠10,♦A | Pair
+♥2,♠3,♣3,♠7,♦9 | Pair
+♥2,♠3,♣3,♥7,♦9 | Pair
+♥2,♠3,♣3,♦9,♣A | Pair
+♥2,♠3,♣3,♦9,♦A | Pair
+♥2,♠3,♣3,♠7,♥7 | Two Pairs
+♥2,♠3,♣3,♠7,♣A | Pair
+♥2,♠3,♣3,♠7,♦A | Pair
+♥2,♠3,♣3,♥7,♣A | Pair
+♥2,♠3,♣3,♥7,♦A | Pair
+♥2,♠3,♣3,♣A,♦A | Two Pairs
+♠3,♣3,♠7,♦9,♠10 | Pair
+♠3,♣3,♥7,♦9,♠10 | Pair
+♠3,♣3,♦9,♠10,♣A | Pair
+♠3,♣3,♦9,♠10,♦A | Pair
+♠3,♣3,♠7,♥7,♠10 | Two Pairs
+♠3,♣3,♠7,♠10,♣A | Pair
+♠3,♣3,♠7,♠10,♦A | Pair
+♠3,♣3,♥7,♠10,♣A | Pair
+♠3,♣3,♥7,♠10,♦A | Pair
+♠3,♣3,♠10,♣A,♦A | Two Pairs
+♠3,♣3,♠7,♥7,♦9 | Two Pairs
+♠3,♣3,♠7,♦9,♣A | Pair
+♠3,♣3,♠7,♦9,♦A | Pair
+♠3,♣3,♥7,♦9,♣A | Pair
+♠3,♣3,♥7,♦9,♦A | Pair
+♠3,♣3,♦9,♣A,♦A | Two Pairs
+♠3,♣3,♠7,♥7,♣A | Two Pairs
+♠3,♣3,♠7,♥7,♦A | Two Pairs
+♠3,♣3,♠7,♣A,♦A | Two Pairs
+♠3,♣3,♥7,♣A,♦A | Two Pairs
+♥2,♠3,♠7,♥7,♥J | Pair
+♥2,♠3,♥J,♣A,♦A | Pair
+♠3,♠7,♥7,♠10,♥J | Pair
+♠3,♠10,♥J,♣A,♦A | Pair
+♠3,♠7,♥7,♦9,♥J | Pair
+♠3,♦9,♥J,♣A,♦A | Pair
+♠3,♠7,♥7,♥J,♣A | Pair
+♠3,♠7,♥7,♥J,♦A | Pair
+♠3,♠7,♥J,♣A,♦A | Pair
+♠3,♥7,♥J,♣A,♦A | Pair
+♥2,♠3,♠7,♥7,♠10 | Pair
+♥2,♠3,♠10,♣A,♦A | Pair
+♥2,♠3,♠7,♥7,♦9 | Pair
+♥2,♠3,♦9,♣A,♦A | Pair
+♥2,♠3,♠7,♥7,♣A | Pair
+♥2,♠3,♠7,♥7,♦A | Pair
+♥2,♠3,♠7,♣A,♦A | Pair
+♥2,♠3,♥7,♣A,♦A | Pair
+♠3,♠7,♥7,♦9,♠10 | Pair
+♠3,♦9,♠10,♣A,♦A | Pair
+♠3,♠7,♥7,♠10,♣A | Pair
+♠3,♠7,♥7,♠10,♦A | Pair
+♠3,♠7,♠10,♣A,♦A | Pair
+♠3,♥7,♠10,♣A,♦A | Pair
+♠3,♠7,♥7,♦9,♣A | Pair
+♠3,♠7,♥7,♦9,♦A | Pair
+♠3,♠7,♦9,♣A,♦A | Pair
+♠3,♥7,♦9,♣A,♦A | Pair
+♠3,♠7,♥7,♣A,♦A | Two Pairs
+♥2,♣3,♠7,♥7,♥J | Pair
+♥2,♣3,♥J,♣A,♦A | Pair
+♣3,♠7,♥7,♠10,♥J | Pair
+♣3,♠10,♥J,♣A,♦A | Pair
+♣3,♠7,♥7,♦9,♥J | Pair
+♣3,♦9,♥J,♣A,♦A | Pair
+♣3,♠7,♥7,♥J,♣A | Pair
+♣3,♠7,♥7,♥J,♦A | Pair
+♣3,♠7,♥J,♣A,♦A | Pair
+♣3,♥7,♥J,♣A,♦A | Pair
+♥2,♣3,♠7,♥7,♠10 | Pair
+♥2,♣3,♠10,♣A,♦A | Pair
+♥2,♣3,♠7,♥7,♦9 | Pair
+♥2,♣3,♦9,♣A,♦A | Pair
+♥2,♣3,♠7,♥7,♣A | Pair
+♥2,♣3,♠7,♥7,♦A | Pair
+♥2,♣3,♠7,♣A,♦A | Pair
+♥2,♣3,♥7,♣A,♦A | Pair
+♣3,♠7,♥7,♦9,♠10 | Pair
+♣3,♦9,♠10,♣A,♦A | Pair
+♣3,♠7,♥7,♠10,♣A | Pair
+♣3,♠7,♥7,♠10,♦A | Pair
+♣3,♠7,♠10,♣A,♦A | Pair
+♣3,♥7,♠10,♣A,♦A | Pair
+♣3,♠7,♥7,♦9,♣A | Pair
+♣3,♠7,♥7,♦9,♦A | Pair
+♣3,♠7,♦9,♣A,♦A | Pair
+♣3,♥7,♦9,♣A,♦A | Pair
+♣3,♠7,♥7,♣A,♦A | Two Pairs
+♥2,♠7,♥7,♠10,♥J | Pair
+♥2,♠10,♥J,♣A,♦A | Pair
+♥2,♠7,♥7,♦9,♥J | Pair
+♥2,♦9,♥J,♣A,♦A | Pair
+♥2,♠7,♥7,♥J,♣A | Pair
+♥2,♠7,♥7,♥J,♦A | Pair
+♥2,♠7,♥J,♣A,♦A | Pair
+♥2,♥7,♥J,♣A,♦A | Pair
+♠7,♥7,♦9,♠10,♥J | Pair
+♦9,♠10,♥J,♣A,♦A | Pair
+♠7,♥7,♠10,♥J,♣A | Pair
+♠7,♥7,♠10,♥J,♦A | Pair
+♠7,♠10,♥J,♣A,♦A | Pair
+♥7,♠10,♥J,♣A,♦A | Pair
+♠7,♥7,♦9,♥J,♣A | Pair
+♠7,♥7,♦9,♥J,♦A | Pair
+♠7,♦9,♥J,♣A,♦A | Pair
+♥7,♦9,♥J,♣A,♦A | Pair
+♠7,♥7,♥J,♣A,♦A | Two Pairs
+♥2,♠7,♥7,♦9,♠10 | Pair
+♥2,♦9,♠10,♣A,♦A | Pair
+♥2,♠7,♥7,♠10,♣A | Pair
+♥2,♠7,♥7,♠10,♦A | Pair
+♥2,♠7,♠10,♣A,♦A | Pair
+♥2,♥7,♠10,♣A,♦A | Pair
+♥2,♠7,♥7,♦9,♣A | Pair
+♥2,♠7,♥7,♦9,♦A | Pair
+♥2,♠7,♦9,♣A,♦A | Pair
+♥2,♥7,♦9,♣A,♦A | Pair
+♥2,♠7,♥7,♣A,♦A | Two Pairs
+♠7,♥7,♦9,♠10,♣A | Pair
+♠7,♥7,♦9,♠10,♦A | Pair
+♠7,♦9,♠10,♣A,♦A | Pair
+♥7,♦9,♠10,♣A,♦A | Pair
+♠7,♥7,♠10,♣A,♦A | Two Pairs
+♠7,♥7,♦9,♣A,♦A | Two Pairs
