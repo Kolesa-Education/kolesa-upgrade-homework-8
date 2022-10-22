@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"math/rand"
-	"strconv"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/fileWorker"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/services"
 	"github.com/samber/lo"
+	"log"
+	"math/rand"
+	"strconv"
+	"sync"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -66,11 +67,14 @@ func generateCards() {
 
 func handleCombinations() {
 	const FileSuffixName = "dat"
+	var wg sync.WaitGroup
 
 	for i := 0; i < 100; i++ {
+		wg.Add(1)
 		fileName := FileSuffixName + strconv.Itoa(i)
-		services.Handle(fileName)
+		go services.Handle(fileName, &wg)
 	}
+	wg.Wait()
 
 	fmt.Println("Operation completed")
 }
