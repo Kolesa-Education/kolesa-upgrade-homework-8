@@ -23,8 +23,8 @@ func main() {
 	for i := 0; i < 100; i++ {
 		group.Add(1)
 		go logic.ExecuteMain(strconv.Itoa(i), &group)
-		group.Wait()
 	}
+	group.Wait()
 }
 
 /*

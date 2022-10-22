@@ -40,7 +40,12 @@ func ReadLineCSV(path string) ([]string, error) {
 func WriteAllLinesCSV(path string, data []string) {
 	file, err := os.Create(path)
 	if err != nil {
-		log.Fatalf("CREATION ERROR %s", err)
+		fmt.Println("THE FOLDER WAS CREATED: \"results\"")
+		if err := os.Mkdir("./results", os.ModePerm); err != nil {
+			log.Fatalf("FOLDER CREATION ERROR %s", err)
+		} else {
+			file, _ = os.Create(path)
+		}
 	}
 	defer file.Close()
 
