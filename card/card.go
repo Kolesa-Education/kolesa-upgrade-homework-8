@@ -39,9 +39,26 @@ const (
 	FaceAce   = "A"
 )
 
+const (
+	Power2 = iota
+	Power3
+	Power4
+	Power5
+	Power6
+	Power7
+	Power8
+	Power9
+	Power10
+	PowerJack
+	PowerQueen
+	PowerKing
+	PowerAce
+)
+
 type Card struct {
-	Suit string
-	Face string
+	Suit  string
+	Face  string
+	Power int
 }
 
 func isValidSuit(suit string) bool {

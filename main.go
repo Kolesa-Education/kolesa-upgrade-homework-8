@@ -1,13 +1,12 @@
 package main
 
 import (
-	"encoding/csv"
-	"fmt"
+	"strconv"
+	"sync"
+
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/logic"
 	"github.com/samber/lo"
-	"log"
-	"math/rand"
-	"os"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -17,6 +16,18 @@ func cardsToRepresentations(cards []card.Card) []string {
 	})
 	return representations
 }
+
+func main() {
+
+	var group sync.WaitGroup
+	for i := 0; i < 100; i++ {
+		group.Add(1)
+		go logic.ExecuteMain(strconv.Itoa(i), &group)
+	}
+	group.Wait()
+}
+
+/*
 
 func main() {
 	var seed int64 = 1665694295623135151
@@ -50,4 +61,4 @@ func main() {
 		writer.Flush()
 		_ = file.Close()
 	}
-}
+}*/
