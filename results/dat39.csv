@@ -1,4 +1,7 @@
-♥6,♥K,♥8,♥Q,♥9 | Flush
-♦Q,♥8,♥9,♦10,♣J | Straight
-♣9,♥9,♥6,♦6 | Two Pairs
-♥Q,♦Q | Pair
+♠4,♦4,♣9,♣J,♥Q | Pair
+♠4,♦4,♣9,♥Q,♦Q | Two pairs
+♦4,♣9,♥9,♥Q,♦Q | Two pairs
+♦4,♥6,♣9,♥9,♦Q | Pair
+♥6,♦6,♥9,♦Q,♥K | Pair
+♥6,♦6,♥8,♥9,♥K | Pair
+♥6,♦6,♥8,♦10,♥K | Pair

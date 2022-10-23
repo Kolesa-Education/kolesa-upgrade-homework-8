@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -10,27 +11,63 @@ import (
 
 func main() {
 	var waitGroup sync.WaitGroup
-	files, _ := os.ReadDir("dataset")
+	var dir = "dataset"
+	files, _ := os.ReadDir(dir)
 	for _, file := range files {
 		waitGroup.Add(1)
-		/*go*/ fileParser(file.Name(), &waitGroup)
+		go fileWorker(dir, file.Name(), &waitGroup)
 	}
 	waitGroup.Wait()
 }
 
 // Читает файл
-func fileParser(file string, waitGroup *sync.WaitGroup) {
-	dat, err := os.ReadFile("dataset/" + file)
+func fileWorker(dir string, file string, waitGroup *sync.WaitGroup) {
+	//Чтение файла
+	dat, err := os.ReadFile(dir + "/" + file)
 	if err != nil {
 		println(err.Error())
 		return
 	}
-	cardParser(string(dat), file)
+	//Ищем комбинации
+	result := cardParser(string(dat))
+	//Если комбинации найдены, записываем в файл
+	if result != nil {
+		fileWriter(file, result)
+	}
 	waitGroup.Done()
 }
 
+func fileWriter(file string, combinations []map[string][]*card.Card) {
+	//Создает файл
+	resultFile, err := os.Create("results/" + file)
+	if err != nil {
+		log.Println(err.Error())
+		return
+	}
+	//Проходит по всем комбинациям
+	for _, pockerComb := range combinations {
+		for combName, combination := range pockerComb {
+			//Генерирует строку комбинации
+			var combString = ""
+			for _, card := range combination {
+				if combString != "" {
+					combString += ","
+				}
+				shortRep, _ := card.ShortRepresentation()
+				combString += shortRep
+			}
+			//Записывает комбинацию в файл
+			_, err2 := resultFile.WriteString(combString + " | " + combName + "\n")
+			if err2 != nil {
+				log.Println(err2.Error())
+				continue
+			}
+		}
+	}
+}
+
 // Разбивает каждую карту на масть и значение
-func cardParser(pack string, file string) {
+func cardParser(pack string) []map[string][]*card.Card {
 	//Убираем все лишнее и разбиваем на отдельные карты
 	pack = strings.Replace(pack, "\n", "", -1)
 	cards := strings.Split(pack, ",")
@@ -54,392 +91,268 @@ func cardParser(pack string, file string) {
 		case "\u2660":
 			cardSplitted[0] = "spades"
 		}
-		println(cardSplitted[0], cardSplitted[1]) //Просто для дебага
-		//Создает экземпляр карты и добавляет в массив карт
+		//println(cardSplitted[0], cardSplitted[1]) //Просто для дебага
+		//Создает экземпляр карты
 		newCard, err := card.New(cardSplitted[0], cardSplitted[1])
 		if err != nil {
-			println(err.Error())
-			return
+			log.Println(err.Error())
+			continue
 		}
-		cardsArr = append(cardsArr, newCard)
+		//Добавляет в массив карт, если в нем еще нет такой же карты
+		if !isDuplicate(cardsArr, newCard) {
+			cardsArr = append(cardsArr, newCard)
+		}
 	}
-	//Отправляем парситься
-	combinations := combinationFinder(cardsArr)
-	fileWriter(file, combinations)
+	//Отправляем искать комбинации
+	return combinationParser(cardsArr)
 }
 
-func combinationFinder(cards []*card.Card) map[string][]*card.Card {
-	var ( //Мапы по одинаковым мастям и номиналам
-		sameSuit = make(map[string][]*card.Card) //map[масть]карта
-		sameFace = make(map[string][]*card.Card) //map[номинал]карта
-	)
-
-	//Меньше 5 карт комбинаций нет, так что...
-	if len(cards) < 5 {
-		println("No combination!")
+func combinationParser(cardsArr []*card.Card) []map[string][]*card.Card {
+	var pockerComb = make([]map[string][]*card.Card, 0)
+	cardCombinations := cardSwitcher(cardsArr)
+	if cardCombinations == nil {
 		return nil
 	}
-	//Фильтруем по одинаковым мастям и номиналам
-	for _, c := range cards {
-		suit := c.Suit
-		face := c.Face
-		sameSuit[suit] = append(sameSuit[suit], c)
-		sameFace[face] = append(sameFace[face], c)
+	//Ищем покерные комбинации для каждой комбинации карт
+	for _, cardCombination := range cardCombinations {
+		var combName = ""
+		if isStraightFlush(cardCombination) {
+			combName = "Straight Flush"
+			goto APPENDER
+		}
+		if isFourOfAKind(cardCombination) {
+			combName = "Four of a Kind"
+			goto APPENDER
+		}
+		if isFullHouse(cardCombination) {
+			combName = "Full house"
+			goto APPENDER
+		}
+		if isFlush(cardCombination) {
+			combName = "Flush"
+			goto APPENDER
+		}
+		if isStraight(cardCombination) {
+			combName = "Straight"
+			goto APPENDER
+		}
+		if yes, _ := isThreeOfAKind(cardCombination); yes {
+			combName = "Three of a Kind"
+			goto APPENDER
+		}
+		if yes, _ := isTwoPairs(cardCombination); yes {
+			combName = "Two pairs"
+			goto APPENDER
+		}
+		if yes, _ := isPair(cardCombination); yes {
+			combName = "Pair"
+			goto APPENDER
+		}
+
+	APPENDER:
+		//Если комбинация найдена, добавляем ее в массив комбинаций
+		println(combName)
+		if combName != "" {
+			var comb = make(map[string][]*card.Card)
+			comb[combName] = cardCombination
+			pockerComb = append(pockerComb, comb)
+		}
 	}
-	var combinations = make(map[string][]*card.Card)
-	//Ищем комбинации
-	sf := isStraightFlush(sameSuit)
-	if sf != nil {
-		combinations["Straight Flush"] = sf
-	}
-	foak := isFourOfAKind(sameFace)
-	if foak != nil {
-		combinations["Four Of AKind"] = foak
-	}
-	fh := isFullHouse(sameFace)
-	if fh != nil {
-		combinations["Full House"] = fh
-	}
-	f := isFlush(sameSuit)
-	if f != nil {
-		combinations["Flush"] = f
-	}
-	s := isStraight(sameFace)
-	if s != nil {
-		combinations["Straight"] = s
-	}
-	tok := isThreeOfAKind(sameFace)
-	if tok != nil {
-		combinations["Three Of A Kind"] = tok
-	}
-	tp := isTwoPairs(sameFace)
-	if tp != nil {
-		combinations["Two Pairs"] = tp
-	}
-	p := isPair(sameFace)
-	if p != nil {
-		combinations["Pair"] = p
-	}
-	println("\n")
-	//Возвращаем найденные комбинации
-	return combinations
+	return pockerComb
 }
 
-func fileWriter(file string, combinations map[string][]*card.Card) {
-	//Создает файл
-	packFile, err := os.Create("results/" + file)
-	if err != nil {
-		println(err.Error())
-		return
+func isDuplicate(cardsArr []*card.Card, cardToCheck *card.Card) bool {
+	//Если это первый элемент массива
+	if len(cardsArr) == 0 {
+		return false
 	}
-	for combName, combination := range combinations {
-		//Генерирует строку комбинации
-		var combString = ""
-		for _, card := range combination {
-			if combString != "" {
-				combString += ","
-			}
-			shortRep, _ := card.ShortRepresentation()
-			combString += shortRep
-		}
-		//Записывает комбинацию в файл
-		_, err2 := packFile.WriteString(combString + " | " + combName + "\n")
-		if err2 != nil {
-			println(err2.Error())
-			continue
+	//Проверка на дубликат
+	for _, card := range cardsArr {
+		if card.Suit == cardToCheck.Suit && card.Face == cardToCheck.Face {
+			return true
 		}
 	}
+	return false
 }
 
-// Просто жесть, переделать если будет время.
-func isStraightFlush(suits map[string][]*card.Card) []*card.Card {
-	for _, suit := range suits {
-		//Нужно только 5 карт одной масти
-		if len(suit) < 5 {
-			continue
+// Возвращает массив комбинаций по 5 карт
+// Надо подкумать как переделать. Алгоритм оказался неподходящим по ДЗ
+// Возможно поможет https://pkg.go.dev/gonum.org/v1/gonum/stat/combin#IdxFor
+func cardSwitcher(cardsArr []*card.Card) [][]*card.Card {
+	var cardCombinations = make([][]*card.Card, 0)
+	//Проверка на наличие 5 карт
+	if len(cardsArr) < 5 {
+		log.Println("ERROR: Less than 5 cards!")
+		return nil
+	}
+	//Если карт всего 5, возвращаем их
+	if len(cardsArr) == 5 {
+		return [][]*card.Card{cardsArr}
+	}
+	for i := 0; i < len(cardsArr); i++ { //Сколько свитчей надо чтоб первая карта прошла весь круг
+		for j := 0; j < len(cardsArr)-1; j++ { //Сколько свитчей надо чтоб первая карта оказалась последней
+			cardsArr[j], cardsArr[j+1] = cardsArr[j+1], cardsArr[j]
 		}
-		//Превращаем буквенные номиналы в числовые для упрощения подсчета, попутно отсеиваем дубли
-		var convertedFaces = make(map[int]*card.Card)
-		for _, card := range suit {
-			switch card.Face {
-			case "J":
-				convertedFaces[11] = card
-			case "Q":
-				convertedFaces[12] = card
-			case "K":
-				convertedFaces[13] = card
-			case "A":
-				convertedFaces[14] = card
-			default:
-				var faceInt, _ = strconv.Atoi(card.Face)
-				convertedFaces[faceInt] = card
-			}
-		}
+		//Создаем массив из 5 карт
+		var cardCombination = make([]*card.Card, 5)
+		//Копируем в него первые 5 элементов отсортированного массива
+		copy(cardCombination, cardsArr[:5])
+		//Добавляем полученную комбинацию в массив
+		cardCombinations = append(cardCombinations, cardCombination)
+	}
+	return cardCombinations
+}
 
-		//Если карт без дублей меньше 5 - ищем другие варианты
-		if len(convertedFaces) < 5 {
-			continue
-		}
-		//Проверяем комбинацию карт
-		var comb = make(map[int]*card.Card, 0)
-		for i := 2; i < 15; i++ {
-			//Стоп если комбинация уже собрана
-			if len(comb) == 5 {
+func removeCards(orig []*card.Card, remove []*card.Card) []*card.Card {
+	var result = make([]*card.Card, len(orig))
+	copy(result, orig)
+	//Сравниваем все карты с картами для удаления
+	for i := 0; i < len(result); i++ {
+		for _, card := range remove {
+			if result[i] == card {
+				//При совпадении удаляем карту
+				result = append(result[:i], result[i+1:]...)
+				//Уменьшаем итератор т.к. удалили 1 элемент
+				i--
 				break
 			}
-			//Если есть двойка, можем завершить комбинацию тузом
-			if _, ok := convertedFaces[2]; len(comb) == 4 && ok {
-				//Если есть туз- добавляем его в комбинацию
-				if _, ok1 := convertedFaces[14]; ok1 {
-					comb[14] = convertedFaces[14]
-				}
-			}
-
-			//Если номинал есть в списке карт
-			if cur, ok := convertedFaces[i]; ok {
-				//Если первый элемент- в любом случае добавляем его в комбинацию и ищем дальше
-				if len(comb) == 0 {
-					comb[i] = cur
-					continue
-				}
-				//Если в комбинации есть номинал на 1 меньше, добавляем карту в комбинацию
-				if _, ok1 := comb[i-1]; ok1 {
-					comb[i] = cur
-				} else { //А если нет- обнуляем комбинацию и записываем первый элемент комбинации
-					comb = make(map[int]*card.Card, 0)
-					comb[i] = cur
-					continue
-				}
-			}
-		}
-		//Продолжаем пока не наберется комбинация из 5
-		if len(comb) < 5 {
-			continue
-		}
-		//Приводим в годный для возвращения вид и возвращаем
-		var result = make([]*card.Card, 0)
-		for _, c := range comb {
-			result = append(result, c)
-		}
-		println("STRAIGHT FLUSH!",
-			result[0].Suit, result[0].Face,
-			result[1].Suit, result[1].Face,
-			result[2].Suit, result[2].Face,
-			result[3].Suit, result[3].Face,
-			result[4].Suit, result[4].Face)
-		return result
-	}
-	println("NO STRAIGHT FLUSH!")
-	return nil
-}
-
-func isFourOfAKind(faces map[string][]*card.Card) []*card.Card {
-	for _, face := range faces {
-		//ищем 4 карты одного номинала
-		if len(face) < 4 {
-			continue
-		}
-		println("Four of a Kind!",
-			face[0].Suit, face[0].Face,
-			face[1].Suit, face[1].Face,
-			face[2].Suit, face[2].Face,
-			face[3].Suit, face[3].Face)
-		return []*card.Card{face[0], face[1], face[2], face[3]}
-	}
-	println("No Four of a Kind")
-	return nil
-}
-
-func isFullHouse(faces map[string][]*card.Card) []*card.Card {
-	var result []*card.Card
-	for _, face := range faces {
-		//Меньше 2 карт нам не надо
-		if len(face) < 2 {
-			continue
-		}
-		//Если нашли 3 карты одного номинала
-		if len(face) >= 3 {
-			switch len(result) {
-			case 0, 2: //Если еще нет совпадений или пара - добавляем тройку
-				result = append(result, face[0], face[1], face[2])
-			case 3: //Если уже есть тройка- добавляем пару
-				result = append(result, face[0], face[1])
-			}
-			continue
-			//Пару ищем только если ее еще нет
-		} else if len(face) >= 2 && (len(result) == 3 || len(result) == 0) {
-			result = append(result, face[0], face[1])
-			continue
 		}
 	}
-	//Если нашли меньше 5 карт - увы...
-	if len(result) < 5 {
-		println("NO FULLHOUSE!")
-		return nil
-	}
-	println("FULLHOUSE!",
-		result[0].Suit, result[0].Face,
-		result[1].Suit, result[1].Face,
-		result[2].Suit, result[2].Face,
-		result[3].Suit, result[3].Face,
-		result[4].Suit, result[4].Face)
 	return result
 }
 
-func isFlush(suits map[string][]*card.Card) []*card.Card {
-	for _, suit := range suits {
-		//В поисках 5 карт одной масти...
-		if len(suit) < 5 {
-			continue
-		}
-		println("FLUSH!",
-			suit[0].Suit, suit[0].Face,
-			suit[1].Suit, suit[1].Face,
-			suit[2].Suit, suit[2].Face,
-			suit[3].Suit, suit[3].Face,
-			suit[4].Suit, suit[4].Face)
-		return []*card.Card{suit[0], suit[1], suit[2], suit[3], suit[4]}
+func faceToInt(card *card.Card) int {
+	//Маппинг буквенных номиналов
+	var faceMap = make(map[string]int)
+	faceMap["J"] = 11
+	faceMap["Q"] = 12
+	faceMap["K"] = 13
+	faceMap["A"] = 14
+	result, err1 := strconv.Atoi(card.Face)
+	//Если номинал буквенный, маппим по карте и возвращаем значение
+	if err1 != nil {
+		result = faceMap[card.Face]
 	}
-	println("NO FLUSH!")
-	return nil
-}
-
-// Просто жесть, переделать если будет время.
-func isStraight(faces map[string][]*card.Card) []*card.Card {
-	var convertedFaces = make(map[int]*card.Card)
-	for _, face := range faces {
-		//Превращаем буквенные номиналы в числовые для упрощения подсчета, попутно отсеиваем дубли
-		for _, card := range face {
-			switch card.Face {
-			case "J":
-				convertedFaces[11] = card
-			case "Q":
-				convertedFaces[12] = card
-			case "K":
-				convertedFaces[13] = card
-			case "A":
-				convertedFaces[14] = card
-			default:
-				var faceInt, _ = strconv.Atoi(card.Face)
-				convertedFaces[faceInt] = card
-			}
-		}
-	}
-	//Если карт без дублей меньше 5 - ищем другие варианты
-	if len(convertedFaces) < 5 {
-		println("NO STRAIGHT")
-		return nil
-	}
-	//Проверяем комбинацию карт
-	var comb = make(map[int]*card.Card)
-	for i := 0; i < 15; i++ {
-		//Стоп если комбинация уже собрана
-		if len(comb) == 5 {
-			break
-		}
-		//Если есть двойка, можем завершить комбинацию тузом
-		if _, ok := convertedFaces[2]; len(comb) == 4 && ok {
-			//Если есть туз- добавляем его в комбинацию
-			if _, ok1 := convertedFaces[14]; ok1 {
-				comb[14] = convertedFaces[14]
-				continue
-			}
-		}
-		//Если номинал есть в списке карт
-		if cur, ok := convertedFaces[i]; ok {
-			//Если первый элемент- в любом случае добавляем его в комбинацию и ищем дальше
-			if len(comb) == 0 {
-				comb[i] = cur
-				continue
-			}
-			//Если в комбинации есть номинал на 1 меньше, добавляем карту в комбинацию
-			if _, ok1 := comb[i-1]; ok1 {
-				comb[i] = cur
-				continue
-			} else { //А если нет- обнуляем комбинацию и записываем первый элемент комбинации
-				comb = make(map[int]*card.Card, 0)
-				comb[i] = cur
-				continue
-			}
-		}
-	}
-	//Нет 5 карт в комбинации - нет комбинации
-	if len(comb) < 5 {
-		println("NO STRAIGHT")
-		return nil
-	}
-	//Приводим в годный для возвращения вид и возвращаем
-	var result = make([]*card.Card, 0)
-	for _, c := range comb {
-		result = append(result, c)
-	}
-	println("STRAIGHT!",
-		result[0].Suit, result[0].Face,
-		result[1].Suit, result[1].Face,
-		result[2].Suit, result[2].Face,
-		result[3].Suit, result[3].Face,
-		result[4].Suit, result[4].Face)
 	return result
 }
 
-func isThreeOfAKind(faces map[string][]*card.Card) []*card.Card {
-	for _, face := range faces {
-		//В поисках 3 карт одного номинала...
-		if len(face) < 3 {
-			continue
-		}
-		println("Three of a Kind!",
-			face[0].Suit, face[0].Face,
-			face[1].Suit, face[1].Face,
-			face[2].Suit, face[2].Face)
-		return []*card.Card{face[0], face[1], face[2]}
+func isStraightFlush(cards []*card.Card) bool {
+	if isFlush(cards) && isStraight(cards) {
+		return true
 	}
-	println("No Three of a Kind")
-	return nil
+	return false
 }
 
-func isTwoPairs(faces map[string][]*card.Card) []*card.Card {
-	var pairs []*card.Card
-	//Проходим по каждому номиналу
-	for _, face := range faces {
-		//Если 4 карты одного номинала- бинго
-		if len(face) >= 4 {
-			println("TWO PAIRS!",
-				face[0].Suit, face[0].Face,
-				face[1].Suit, face[1].Face,
-				face[2].Suit, face[2].Face,
-				face[3].Suit, face[3].Face)
-			return []*card.Card{face[0], face[1], face[2], face[3]}
+func isFourOfAKind(cards []*card.Card) bool {
+	hasTwoPairs, twoPairs := isTwoPairs(cards)
+	if !hasTwoPairs {
+		return false
+	}
+	if twoPairs[0].Face == twoPairs[len(twoPairs)-1].Face {
+		return true
+	}
+	return false
+}
+
+func isFullHouse(cards []*card.Card) bool {
+	hasThree, three := isThreeOfAKind(cards)
+	if !hasThree {
+		return false
+	}
+	cards = removeCards(cards, three)
+	hasOnePair, _ := isPair(cards)
+	if !hasOnePair {
+		return false
+	}
+	return true
+}
+
+func isFlush(cards []*card.Card) bool {
+	//Проверяем у всех ли карт одинаковая масть
+	for i := 1; i < len(cards); i++ {
+		if cards[i].Suit != cards[i-1].Suit {
+			return false
 		}
-		//Ищем пары
-		if len(face) >= 2 {
-			pairs = append(pairs, face[0], face[1])
-			//Останавливаемся когда найдено 2 пары
-			if len(pairs) >= 4 {
-				println("TWO PAIRS!",
-					pairs[0].Suit, pairs[0].Face,
-					pairs[1].Suit, pairs[1].Face,
-					pairs[2].Suit, pairs[2].Face,
-					pairs[3].Suit, pairs[3].Face)
-				return pairs
+	}
+	return true
+}
+
+func isStraight(cards []*card.Card) bool {
+	//Сортировка пузырьком
+	for i := 0; i < len(cards)-1; i++ {
+		for j := 0; j < len(cards)-i-1; j++ {
+			//Перевод номинала в int
+			curCard := faceToInt(cards[j])
+			nextCard := faceToInt(cards[j+1])
+			if curCard > nextCard {
+				cards[j], cards[j+1] = cards[j+1], cards[j]
 			}
-			continue
 		}
 	}
-	println("No Two Pairs")
-	return nil
+	//Проверка последовательности карт
+	for i := 0; i < len(cards)-1; i++ {
+		curCard := faceToInt(cards[i])
+		nextCard := faceToInt(cards[i+1])
+		//Если последовательность нарушена
+		if nextCard-curCard != 1 {
+			//Проверка на комбинацию A 2 3 4 5
+			if nextCard != 14 || faceToInt(cards[0]) != 2 {
+				return false
+			}
+		}
+	}
+	return true
 }
 
-func isPair(faces map[string][]*card.Card) []*card.Card {
-	//Просто ищем 2 карты с одинаковым номиналом
-	for _, face := range faces {
-		if len(face) < 2 {
-			continue
-		}
-		//Возвращаем 2 первые карты одинакового номинала
-		println("PAIR!", face[0].Suit, face[0].Face, face[1].Suit, face[1].Face)
-		return []*card.Card{face[0], face[1]}
+func isThreeOfAKind(cards []*card.Card) (bool, []*card.Card) {
+	//Проверяем наличие пары
+	hasOnePair, pair := isPair(cards)
+	if !hasOnePair {
+		return false, nil
 	}
-	println("No pairs")
-	return nil
+	//Удаляем карты, засветившиеся в паре
+	cards = removeCards(cards, pair)
+	//Если в комбинации пара и тройка
+	if cards[0].Face == cards[1].Face && cards[1].Face == cards[2].Face {
+		return true, []*card.Card{cards[0], cards[1], cards[2]}
+	}
+	//Если номинал 1 из оставшихся карт совпадает с номиналом пары, условие выполнено
+	for _, card := range cards {
+		if pair[0].Face == card.Face {
+			return true, append(pair, card)
+		}
+	}
+	return false, nil
+}
+
+func isTwoPairs(cards []*card.Card) (bool, []*card.Card) {
+	//Ищет первую пару
+	hasOnePair, pairs := isPair(cards)
+	//Если не нашел - комбинация не удалась
+	if !hasOnePair {
+		return false, nil
+	}
+	//copy(cards, removeCards(cards, pairs))
+	cards = removeCards(cards, pairs)
+	//Проверяем наличие пары, без карты уже имеющейся в паре
+	if yes, nextPair := isPair(cards); yes {
+		pairs = append(pairs, nextPair[0:]...)
+		return true, pairs
+	}
+	return false, nil
+}
+
+func isPair(cards []*card.Card) (bool, []*card.Card) {
+	var pair = make([]*card.Card, 0)
+	//Сопоставляем каждый элемент массива
+	for i, card := range cards {
+		for i2, cardToCompare := range cards {
+			//Если элементы разные, но совпадает номинал- это пара
+			if i != i2 && card.Face == cardToCompare.Face {
+				pair = append(pair, cards[i], cards[i2])
+				return true, pair
+			}
+		}
+	}
+	return false, nil
 }

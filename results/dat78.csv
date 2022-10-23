@@ -1,6 +1,8 @@
-♠8,♦8 | Pair
-♠J,♣J,♣J,♣J | Four Of AKind
-♥4,♣4,♣4,♠J,♣J | Full House
-♣Q,♣4,♣K,♣J,♣J | Flush
-♥4,♣4,♣4 | Three Of A Kind
-♥6,♠6,♥4,♣4 | Two Pairs
+♥4,♣4,♠8,♥10,♠J | Pair
+♥6,♠6,♠8,♥10,♣K | Pair
+♥6,♠6,♠8,♦8,♣K | Two pairs
+♥6,♠6,♦8,♣J,♣K | Pair
+♥6,♠6,♦8,♦10,♣J | Pair
+♥2,♥4,♣4,♦10,♣Q | Pair
+♥2,♥4,♣4,♠J,♣Q | Pair
+♥4,♣4,♥10,♠J,♣Q | Pair

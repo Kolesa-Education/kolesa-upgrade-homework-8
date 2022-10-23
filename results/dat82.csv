@@ -1,5 +1,7 @@
-♦K,♥K,♠2,♣2,♥2 | Full House
-♥5,♥J,♥K,♥4,♥2 | Flush
-♠2,♣2,♥2 | Three Of A Kind
-♠3,♠3,♦K,♥K | Two Pairs
-♦K,♥K | Pair
+♥5,♠8,♥J,♦K,♥K | Pair
+♣3,♥5,♥J,♦K,♥K | Pair
+♣2,♥2,♣3,♥4,♥K | Pair
+♣2,♥2,♣3,♥4,♦J | Pair
+♣2,♥2,♠2,♥4,♦J | Three of a Kind
+♥2,♠2,♠3,♥4,♦J | Pair
+♥2,♠2,♠3,♠8,♦J | Pair

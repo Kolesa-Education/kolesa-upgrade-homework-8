@@ -1,5 +1,6 @@
-♥Q,♣Q,♠Q | Three Of A Kind
-♥Q,♣Q,♠9,♣9 | Two Pairs
-♥Q,♣Q | Pair
-♠9,♣9,♥Q,♣Q,♠Q | Full House
-♦7,♥8,♣9,♥10,♣J | Straight
+♥2,♠9,♣9,♥10,♣Q | Pair
+♥2,♣9,♥10,♣Q,♠Q | Pair
+♥2,♣9,♥10,♠Q,♥Q | Pair
+♥2,♣9,♣J,♠Q,♥Q | Pair
+♦7,♣9,♣J,♠Q,♥Q | Pair
+♦7,♥8,♣J,♠Q,♥Q | Pair
