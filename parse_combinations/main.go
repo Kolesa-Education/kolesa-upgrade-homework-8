@@ -2,8 +2,9 @@ package main
 
 import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"gonum.org/v1/gonum/stat/combin"
+	"log"
 	"os"
-	"reflect"
 	"strconv"
 	"strings"
 	"sync"
@@ -73,7 +74,7 @@ func cardsParser(pack string, fileName string) {
 	CombinationFinder(cardsArr, fileName)
 }
 
-// Проверяет на дубли комбинаций
+// Проверяет на дубли комбинаций с разным расположением карт
 func combInCombs(combination []*card.Card, combPack [][]*card.Card) bool {
 	match := 0
 	for _, comb := range combPack {
@@ -94,59 +95,55 @@ func combInCombs(combination []*card.Card, combPack [][]*card.Card) bool {
 	return false
 }
 
-// Находит все возможные крмбинации
+// Возвращает массив всех возможных комбинаций по 5 карт
+func cardSwitcher(cardsArr []*card.Card) [][]*card.Card {
+	var cardCombinations = make([][]*card.Card, 0)
+	//Проверка на наличие 5 карт
+	if len(cardsArr) < 5 {
+		log.Println("ERROR: Less than 5 cards!")
+		return nil
+	}
+	//Если карт всего 5, возвращаем их
+	if len(cardsArr) == 5 {
+		return [][]*card.Card{cardsArr}
+	}
+	//Получаем все возможные варианты комбинаций индексов массива карт
+	indexesArr := combin.Combinations(len(cardsArr), 5)
+	//Проходим по каждой комбинации индексов
+	for _, indexes := range indexesArr {
+		//Заполняем переменную combination элементами, находящимися по полученному индексу
+		var combination []*card.Card = nil
+		for i := 0; i < len(indexes); i++ {
+			index := indexes[i]
+			combination = append(combination, cardsArr[index])
+		}
+		//Добавляем комбинацию в массив комбинаций
+		cardCombinations = append(cardCombinations, combination)
+	}
+	return cardCombinations
+}
+
+// Находит все возможные крмбинации из 5 карт
 func CombinationFinder(cards []*card.Card, fileName string) {
-	var (
-		combinations [][]*card.Card
-		combination  []*card.Card
-		samecard     bool
-	)
 
 	if len(cards) < 5 {
 		println("no combinations in " + fileName)
 		return
 	}
 
-	for i := 0; i <= len(cards)-1; i++ {
-		for i1 := 0; i1 <= len(cards)-1; i1++ {
-			for i2 := 0; i2 <= len(cards)-1; i2++ {
-				for i3 := 0; i3 <= len(cards)-1; i3++ {
-					for i4 := 0; i4 <= len(cards)-1; i4++ {
-						combination = append(combination, cards[i], cards[i1], cards[i2], cards[i3], cards[i4])
-						for j := 0; j < len(combination)-1; j++ {
-							for k := j + 1; k <= len(combination)-1; k++ {
-								if combination[k] == combination[j] {
-									combination = nil
-									samecard = true
-								}
-							}
-						}
-						if samecard {
-							samecard = false
-							continue
-						}
-						if !combInCombs(combination, combinations) {
-							combinations = append(combinations, combination)
-						}
-						combination = nil
-					}
-				}
-			}
-		}
-	}
-
-	PokerCombinationFinder(combinations, fileName)
+	PokerCombinationFinder(cardSwitcher(cards), fileName)
 
 }
 
+// Находит покерные комбинации во всех коминациях карт
 func PokerCombinationFinder(combinations [][]*card.Card, fileName string) {
 	var (
 		sameSuit      = make(map[string][]*card.Card)
 		sameFace      = make(map[string][]*card.Card)
-		pokerCombsArr []map[string][]*card.Card //[]*PokerCombinations
+		pokerCombsArr []map[string][]*card.Card
 	)
 
-	pokerComb := make(map[string][]*card.Card) //*PokerCombinations
+	pokerComb := make(map[string][]*card.Card)
 
 	for _, comb := range combinations {
 		for _, c := range comb {
@@ -173,22 +170,20 @@ func PokerCombinationFinder(combinations [][]*card.Card, fileName string) {
 			pokerComb[Pair(sameFace)] = comb
 		}
 		if _, v := pokerComb[""]; !v {
-			for _, pc := range pokerCombsArr {
-				if reflect.DeepEqual(pc, pokerComb) {
-					continue
-				}
-			}
 			pokerCombsArr = append(pokerCombsArr, pokerComb)
 			pokerComb = make(map[string][]*card.Card)
+			sameFace = make(map[string][]*card.Card)
+			sameSuit = make(map[string][]*card.Card)
 		}
 	}
 
 	println("\n")
-
+	//Пишем в комбинации в фалы
 	WriteCombs(fileName, pokerCombsArr)
 
 }
 
+// Пишет комбинации в файлы в директории results
 func WriteCombs(name string, pokerCombinations []map[string][]*card.Card) {
 
 	file, err := os.Create("parse_combinations/results/" + name)
@@ -215,6 +210,7 @@ func WriteCombs(name string, pokerCombinations []map[string][]*card.Card) {
 	file.Close()
 }
 
+// Находит СтритФлеши
 func StraightFlush(suits map[string][]*card.Card) string {
 	s := "straight flush"
 	for _, suit := range suits {
@@ -273,6 +269,7 @@ func StraightFlush(suits map[string][]*card.Card) string {
 	return ""
 }
 
+// Находит сет из 4х карт
 func FourOfKind(faces map[string][]*card.Card) string {
 	s := "four of a kind!"
 	for _, face := range faces {
@@ -285,6 +282,7 @@ func FourOfKind(faces map[string][]*card.Card) string {
 	return ""
 }
 
+// Находит ФуллХаус
 func FullHouse(faces map[string][]*card.Card) string {
 	s := "fullhouse"
 	var result []*card.Card
@@ -313,6 +311,7 @@ func FullHouse(faces map[string][]*card.Card) string {
 	return s
 }
 
+// Находит Флеш
 func Flush(suits map[string][]*card.Card) string {
 	s := "flush"
 	for _, suit := range suits {
@@ -326,6 +325,7 @@ func Flush(suits map[string][]*card.Card) string {
 	return ""
 }
 
+// Находит Стрит
 func Straight(faces map[string][]*card.Card) string {
 	s := "straight"
 	var convertedFaces = make(map[int]*card.Card)
@@ -389,6 +389,7 @@ func Straight(faces map[string][]*card.Card) string {
 	return s
 }
 
+// Находит сет из трех
 func ThreeOfKind(faces map[string][]*card.Card) string {
 	s := "three of a kind"
 	for _, face := range faces {
@@ -402,6 +403,7 @@ func ThreeOfKind(faces map[string][]*card.Card) string {
 	return ""
 }
 
+// Находит две пары
 func TwoPairs(faces map[string][]*card.Card) string {
 	s := "two pairs"
 	var pairs []*card.Card
@@ -423,6 +425,7 @@ func TwoPairs(faces map[string][]*card.Card) string {
 	return ""
 }
 
+// Находит пару
 func Pair(faces map[string][]*card.Card) string {
 	s := "pair"
 	for _, face := range faces {
