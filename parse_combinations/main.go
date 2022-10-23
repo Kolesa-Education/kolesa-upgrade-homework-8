@@ -1,18 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"os"
+	"reflect"
 	"strconv"
 	"strings"
 	"sync"
 )
-
-type PokerCombinations struct {
-	cardsList   []*card.Card
-	combination string
-}
 
 func main() {
 	var waitGroup sync.WaitGroup
@@ -31,8 +26,7 @@ func fileParser(file string, waitGroup *sync.WaitGroup, fileName string) {
 	if err != nil {
 		println(err.Error())
 	}
-	combs := cardsParser(string(pack))
-	WriteCombs(fileName, combs)
+	cardsParser(string(pack), fileName)
 	waitGroup.Done()
 }
 
@@ -47,7 +41,7 @@ func cardInPack(card *card.Card, pack []*card.Card) bool {
 }
 
 // Разбивает каждую карту на масть и значение
-func cardsParser(pack string) []*PokerCombinations {
+func cardsParser(pack string, fileName string) {
 	pack = strings.Replace(pack, "\n", "", -1)
 	cards := strings.Split(pack, ",")
 	var cardsArr = make([]*card.Card, 0)
@@ -67,18 +61,16 @@ func cardsParser(pack string) []*PokerCombinations {
 		case "\u2660":
 			cardsSplit[0] = "spades"
 		}
-		println(cardsSplit[0], cardsSplit[1])
 		newCard, err := card.New(cardsSplit[0], cardsSplit[1])
 		if err != nil {
 			println(err.Error())
-			return nil
 		}
 		if cardInPack(newCard, cardsArr) {
 			continue
 		}
 		cardsArr = append(cardsArr, newCard)
 	}
-	return combinationFinder(cardsArr)
+	CombinationFinder(cardsArr, fileName)
 }
 
 // Проверяет на дубли комбинаций
@@ -87,11 +79,13 @@ func combInCombs(combination []*card.Card, combPack [][]*card.Card) bool {
 	for _, comb := range combPack {
 		for _, c := range comb {
 			for i := 0; i <= len(combination)-1; i++ {
-				if c == combination[i] {
-					match++
-					if match == 5 {
-						return true
+				for j := 0; j <= len(comb)-1; j++ {
+					if c == combination[i] {
+						match++
 					}
+				}
+				if match == 5 {
+					return true
 				}
 			}
 		}
@@ -101,19 +95,16 @@ func combInCombs(combination []*card.Card, combPack [][]*card.Card) bool {
 }
 
 // Находит все возможные крмбинации
-func combinationFinder(cards []*card.Card) []*PokerCombinations {
+func CombinationFinder(cards []*card.Card, fileName string) {
 	var (
-		sameSuit      = make(map[string][]*card.Card)
-		sameFace      = make(map[string][]*card.Card)
-		combinations  [][]*card.Card
-		combination   []*card.Card
-		pokerCombsArr []*PokerCombinations
-		pokerComb     *PokerCombinations
+		combinations [][]*card.Card
+		combination  []*card.Card
+		samecard     bool
 	)
 
 	if len(cards) < 5 {
-		println("No combination!")
-		return nil
+		println("no combinations in " + fileName)
+		return
 	}
 
 	for i := 0; i <= len(cards)-1; i++ {
@@ -122,18 +113,42 @@ func combinationFinder(cards []*card.Card) []*PokerCombinations {
 				for i3 := 0; i3 <= len(cards)-1; i3++ {
 					for i4 := 0; i4 <= len(cards)-1; i4++ {
 						combination = append(combination, cards[i], cards[i1], cards[i2], cards[i3], cards[i4])
-						if combInCombs(combination, combinations) {
+						for j := 0; j < len(combination)-1; j++ {
+							for k := j + 1; k <= len(combination)-1; k++ {
+								if combination[k] == combination[j] {
+									combination = nil
+									samecard = true
+								}
+							}
+						}
+						if samecard {
+							samecard = false
 							continue
 						}
-						combinations = append(combinations, combination)
+						if !combInCombs(combination, combinations) {
+							combinations = append(combinations, combination)
+						}
+						combination = nil
 					}
 				}
 			}
 		}
 	}
 
+	PokerCombinationFinder(combinations, fileName)
+
+}
+
+func PokerCombinationFinder(combinations [][]*card.Card, fileName string) {
+	var (
+		sameSuit      = make(map[string][]*card.Card)
+		sameFace      = make(map[string][]*card.Card)
+		pokerCombsArr []map[string][]*card.Card //[]*PokerCombinations
+	)
+
+	pokerComb := make(map[string][]*card.Card) //*PokerCombinations
+
 	for _, comb := range combinations {
-		pokerComb.cardsList = comb
 		for _, c := range comb {
 			suit := c.Suit
 			face := c.Face
@@ -141,52 +156,67 @@ func combinationFinder(cards []*card.Card) []*PokerCombinations {
 			sameFace[face] = append(sameFace[face], c)
 		}
 		if StraightFlush(sameSuit) != "" {
-			pokerComb.combination = StraightFlush(sameSuit)
+			pokerComb[StraightFlush(sameSuit)] = comb
 		} else if FourOfKind(sameFace) != "" {
-			pokerComb.combination = FourOfKind(sameFace)
+			pokerComb[FourOfKind(sameFace)] = comb
 		} else if FullHouse(sameFace) != "" {
-			pokerComb.combination = FullHouse(sameFace)
+			pokerComb[FullHouse(sameFace)] = comb
 		} else if Flush(sameSuit) != "" {
-			pokerComb.combination = Flush(sameSuit)
+			pokerComb[Flush(sameSuit)] = comb
 		} else if Straight(sameFace) != "" {
-			pokerComb.combination = Straight(sameFace)
+			pokerComb[Straight(sameFace)] = comb
 		} else if ThreeOfKind(sameFace) != "" {
-			pokerComb.combination = ThreeOfKind(sameFace)
+			pokerComb[ThreeOfKind(sameFace)] = comb
 		} else if TwoPairs(sameFace) != "" {
-			pokerComb.combination = TwoPairs(sameFace)
+			pokerComb[TwoPairs(sameFace)] = comb
 		} else if Pair(sameFace) != "" {
-			pokerComb.combination = Pair(sameFace)
+			pokerComb[Pair(sameFace)] = comb
 		}
-		if pokerComb.combination != "" {
+		if _, v := pokerComb[""]; !v {
+			for _, pc := range pokerCombsArr {
+				if reflect.DeepEqual(pc, pokerComb) {
+					continue
+				}
+			}
 			pokerCombsArr = append(pokerCombsArr, pokerComb)
+			pokerComb = make(map[string][]*card.Card)
 		}
 	}
 
 	println("\n")
-	return pokerCombsArr
+
+	WriteCombs(fileName, pokerCombsArr)
+
 }
 
-func WriteCombs(name string, pokerCombinations []*PokerCombinations) {
-	file, err := os.Create("results/" + name)
+func WriteCombs(name string, pokerCombinations []map[string][]*card.Card) {
+
+	file, err := os.Create("parse_combinations/results/" + name)
 	if err != nil {
-		fmt.Println("Unable to create file:", err)
+		println("Unable to create file:", err)
 	}
 
 	s := ""
 
 	for _, pokerComb := range pokerCombinations {
-		for _, c := range pokerComb.cardsList {
-			suite, _ := c.SuitUnicode()
-			s += suite + c.Face + ","
+		for comb, cards := range pokerComb {
+			for i := 0; i <= len(cards)-1; i++ {
+				suite, _ := cards[i].SuitUnicode()
+				if i < len(cards)-1 {
+					s += suite + cards[i].Face + ", "
+				} else {
+					s += suite + cards[i].Face
+				}
+			}
+			s += " | " + comb + "\n"
 		}
-		s += " | " + pokerComb.combination + "\n"
 	}
 	file.WriteString(s)
 	file.Close()
 }
 
 func StraightFlush(suits map[string][]*card.Card) string {
-	s := "STRAIGHT FLUSH!"
+	s := "straight flush"
 	for _, suit := range suits {
 		if len(suit) < 5 {
 			continue
@@ -207,7 +237,6 @@ func StraightFlush(suits map[string][]*card.Card) string {
 				convertedFaces[faceInt] = c
 			}
 		}
-
 		if len(convertedFaces) < 5 {
 			continue
 		}
@@ -221,7 +250,6 @@ func StraightFlush(suits map[string][]*card.Card) string {
 					comb[14] = convertedFaces[14]
 				}
 			}
-
 			if cur, ok := convertedFaces[i]; ok {
 				if len(comb) == 0 {
 					comb[i] = cur
@@ -239,30 +267,26 @@ func StraightFlush(suits map[string][]*card.Card) string {
 		if len(comb) < 5 {
 			continue
 		}
-
-		println(s)
-
 		return s
 	}
-	println("NO STRAIGHT FLUSH!")
+	println("no straight flush!")
 	return ""
 }
 
 func FourOfKind(faces map[string][]*card.Card) string {
-	s := "Four of a Kind!"
+	s := "four of a kind!"
 	for _, face := range faces {
 		if len(face) < 4 {
 			continue
 		}
-		println(s)
 		return s
 	}
-	println("No Four of a Kind")
+	println("no four of a kind")
 	return ""
 }
 
 func FullHouse(faces map[string][]*card.Card) string {
-	s := "FULLHOUSE!"
+	s := "fullhouse"
 	var result []*card.Card
 	for _, face := range faces {
 		if len(face) < 2 {
@@ -282,7 +306,7 @@ func FullHouse(faces map[string][]*card.Card) string {
 		}
 	}
 	if len(result) < 5 {
-		println("NO FULLHOUSE!")
+		println("no fullhouse!")
 		return ""
 	}
 	println(s)
@@ -290,7 +314,7 @@ func FullHouse(faces map[string][]*card.Card) string {
 }
 
 func Flush(suits map[string][]*card.Card) string {
-	s := "FLUSH!"
+	s := "flush"
 	for _, suit := range suits {
 		if len(suit) < 5 {
 			continue
@@ -298,12 +322,12 @@ func Flush(suits map[string][]*card.Card) string {
 		println(s)
 		return s
 	}
-	println("NO FLUSH!")
+	println("no flush")
 	return ""
 }
 
 func Straight(faces map[string][]*card.Card) string {
-	s := "STRAIGHT!"
+	s := "straight"
 	var convertedFaces = make(map[int]*card.Card)
 	for _, face := range faces {
 		for _, c := range face {
@@ -323,7 +347,7 @@ func Straight(faces map[string][]*card.Card) string {
 		}
 	}
 	if len(convertedFaces) < 5 {
-		println("NO STRAIGHT")
+		println("no straight!")
 		return ""
 	}
 	var comb = make(map[int]*card.Card)
@@ -358,7 +382,7 @@ func Straight(faces map[string][]*card.Card) string {
 		result = append(result, c)
 	}
 	if len(result) < 5 {
-		println("NO STRAIGHT")
+		println("no straight!")
 		return ""
 	}
 	println(s)
@@ -366,7 +390,7 @@ func Straight(faces map[string][]*card.Card) string {
 }
 
 func ThreeOfKind(faces map[string][]*card.Card) string {
-	s := "Three of a Kind!"
+	s := "three of a kind"
 	for _, face := range faces {
 		if len(face) < 3 {
 			continue
@@ -374,12 +398,12 @@ func ThreeOfKind(faces map[string][]*card.Card) string {
 		println(s)
 		return s
 	}
-	println("No Three of a Kind")
+	println("no three of a kind!")
 	return ""
 }
 
 func TwoPairs(faces map[string][]*card.Card) string {
-	s := "TWO PAIRS!"
+	s := "two pairs"
 	var pairs []*card.Card
 	for _, face := range faces {
 		if len(face) >= 4 {
@@ -395,12 +419,12 @@ func TwoPairs(faces map[string][]*card.Card) string {
 			continue
 		}
 	}
-	println("No Two Pairs")
+	println("no two pairs!")
 	return ""
 }
 
 func Pair(faces map[string][]*card.Card) string {
-	s := "PAIR!"
+	s := "pair"
 	for _, face := range faces {
 		if len(face) < 2 {
 			continue
@@ -408,6 +432,6 @@ func Pair(faces map[string][]*card.Card) string {
 		println(s)
 		return s
 	}
-	println("No pairs")
+	println("no pairs!")
 	return ""
 }
