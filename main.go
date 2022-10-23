@@ -6,8 +6,11 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"strconv"
+	"sync"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/pipeline"
 	"github.com/samber/lo"
 )
 
@@ -37,18 +40,25 @@ func main() {
 		}
 		log.Printf("Generated cards %s\n", cards)
 		summary := cardsToRepresentations(cards)
-		file1, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
+		file, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
 
 		if err != nil {
 			log.Fatalln("failed to open file", err)
 		}
 
-		writer1 := csv.NewWriter(file1)
-		if err = writer1.Write(summary); err != nil {
+		writer := csv.NewWriter(file)
+		if err = writer.Write(summary); err != nil {
 			log.Fatalln("error writing to a file!")
 		}
 
-		writer1.Flush()
-		_ = file1.Close()
+		writer.Flush()
+		_ = file.Close()
 	}
+
+	var wg sync.WaitGroup
+	for i := 0; i < 100; i++ {
+		wg.Add(1)
+		go pipeline.Pipeline(strconv.Itoa(i), &wg)
+	}
+	wg.Wait()
 }
