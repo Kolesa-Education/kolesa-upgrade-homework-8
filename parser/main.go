@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"gonum.org/v1/gonum/stat/combin"
 	"log"
 	"os"
 	"strconv"
@@ -175,9 +176,7 @@ func isDuplicate(cardsArr []*card.Card, cardToCheck *card.Card) bool {
 	return false
 }
 
-// Возвращает массив комбинаций по 5 карт
-// Надо подкумать как переделать. Алгоритм оказался неподходящим по ДЗ
-// Возможно поможет https://pkg.go.dev/gonum.org/v1/gonum/stat/combin#IdxFor
+// Возвращает массив всех возможных комбинаций по 5 карт
 func cardSwitcher(cardsArr []*card.Card) [][]*card.Card {
 	var cardCombinations = make([][]*card.Card, 0)
 	//Проверка на наличие 5 карт
@@ -189,16 +188,18 @@ func cardSwitcher(cardsArr []*card.Card) [][]*card.Card {
 	if len(cardsArr) == 5 {
 		return [][]*card.Card{cardsArr}
 	}
-	for i := 0; i < len(cardsArr); i++ { //Сколько свитчей надо чтоб первая карта прошла весь круг
-		for j := 0; j < len(cardsArr)-1; j++ { //Сколько свитчей надо чтоб первая карта оказалась последней
-			cardsArr[j], cardsArr[j+1] = cardsArr[j+1], cardsArr[j]
+	//Получаем все возможные варианты комбинаций индексов массива карт
+	indexesArr := combin.Combinations(len(cardsArr), 5) //[[0,1,2,3,4],[1,2,3,4,5]...]
+	//Проходим по каждой комбинации индексов
+	for _, indexes := range indexesArr {
+		//Заполняем переменную combination элементами, находящимися по полученному индексу
+		var combination []*card.Card = nil
+		for i := 0; i < len(indexes); i++ {
+			index := indexes[i]
+			combination = append(combination, cardsArr[index])
 		}
-		//Создаем массив из 5 карт
-		var cardCombination = make([]*card.Card, 5)
-		//Копируем в него первые 5 элементов отсортированного массива
-		copy(cardCombination, cardsArr[:5])
-		//Добавляем полученную комбинацию в массив
-		cardCombinations = append(cardCombinations, cardCombination)
+		//Добавляем комбинацию в массив комбинаций
+		cardCombinations = append(cardCombinations, combination)
 	}
 	return cardCombinations
 }
