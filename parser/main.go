@@ -21,6 +21,31 @@ func main() {
 	waitGroup.Wait()
 }
 
+type pockerCombination struct {
+	cards []*card.Card
+	name  string
+}
+
+func newCombination(cards []*card.Card, name string) *pockerCombination {
+	return &pockerCombination{
+		cards: cards,
+		name:  name,
+	}
+}
+
+func combinationToString(comb *pockerCombination) string {
+	var result = ""
+	for _, card := range comb.cards {
+		if result != "" {
+			result += ","
+		}
+		shortRep, _ := card.ShortRepresentation()
+		result += shortRep
+	}
+	result += " | " + comb.name
+	return result
+}
+
 // Читает файл
 func fileWorker(dir string, file string, waitGroup *sync.WaitGroup) {
 	//Чтение файла
@@ -38,37 +63,25 @@ func fileWorker(dir string, file string, waitGroup *sync.WaitGroup) {
 	waitGroup.Done()
 }
 
-func fileWriter(file string, combinations []map[string][]*card.Card) {
+func fileWriter(file string, combinations []*pockerCombination) {
 	//Создает файл
 	resultFile, err := os.Create("results/" + file)
 	if err != nil {
 		log.Println(err.Error())
 		return
 	}
-	//Проходит по всем комбинациям
-	for _, pockerComb := range combinations {
-		for combName, combination := range pockerComb {
-			//Генерирует строку комбинации
-			var combString = ""
-			for _, card := range combination {
-				if combString != "" {
-					combString += ","
-				}
-				shortRep, _ := card.ShortRepresentation()
-				combString += shortRep
-			}
-			//Записывает комбинацию в файл
-			_, err2 := resultFile.WriteString(combString + " | " + combName + "\n")
-			if err2 != nil {
-				log.Println(err2.Error())
-				continue
-			}
+	//Проходит по всем комбинациям и записываем их
+	for _, combination := range combinations {
+		_, err2 := resultFile.WriteString(combinationToString(combination) + "\n")
+		if err2 != nil {
+			log.Println(err2.Error())
+			continue
 		}
 	}
 }
 
 // Разбивает каждую карту на масть и значение
-func cardParser(pack string) []map[string][]*card.Card {
+func cardParser(pack string) []*pockerCombination {
 	//Убираем все лишнее и разбиваем на отдельные карты
 	pack = strings.Replace(pack, "\n", "", -1)
 	cards := strings.Split(pack, ",")
@@ -92,7 +105,6 @@ func cardParser(pack string) []map[string][]*card.Card {
 		case "\u2660":
 			cardSplitted[0] = "spades"
 		}
-		//println(cardSplitted[0], cardSplitted[1]) //Просто для дебага
 		//Создает экземпляр карты
 		newCard, err := card.New(cardSplitted[0], cardSplitted[1])
 		if err != nil {
@@ -105,61 +117,39 @@ func cardParser(pack string) []map[string][]*card.Card {
 		}
 	}
 	//Отправляем искать комбинации
-	return combinationParser(cardsArr)
+	return combinationGenerator(cardsArr)
 }
 
-func combinationParser(cardsArr []*card.Card) []map[string][]*card.Card {
-	var pockerComb = make([]map[string][]*card.Card, 0)
-	cardCombinations := cardSwitcher(cardsArr)
-	if cardCombinations == nil {
+func combinationParser(cardCombination []*card.Card) *pockerCombination {
+	if cardCombination == nil {
 		return nil
 	}
-	//Ищем покерные комбинации для каждой комбинации карт
-	for _, cardCombination := range cardCombinations {
-		var combName = ""
-		if isStraightFlush(cardCombination) {
-			combName = "Straight Flush"
-			goto APPENDER
-		}
-		if isFourOfAKind(cardCombination) {
-			combName = "Four of a Kind"
-			goto APPENDER
-		}
-		if isFullHouse(cardCombination) {
-			combName = "Full house"
-			goto APPENDER
-		}
-		if isFlush(cardCombination) {
-			combName = "Flush"
-			goto APPENDER
-		}
-		if isStraight(cardCombination) {
-			combName = "Straight"
-			goto APPENDER
-		}
-		if yes, _ := isThreeOfAKind(cardCombination); yes {
-			combName = "Three of a Kind"
-			goto APPENDER
-		}
-		if yes, _ := isTwoPairs(cardCombination); yes {
-			combName = "Two pairs"
-			goto APPENDER
-		}
-		if yes, _ := isPair(cardCombination); yes {
-			combName = "Pair"
-			goto APPENDER
-		}
-
-	APPENDER:
-		//Если комбинация найдена, добавляем ее в массив комбинаций
-		println(combName)
-		if combName != "" {
-			var comb = make(map[string][]*card.Card)
-			comb[combName] = cardCombination
-			pockerComb = append(pockerComb, comb)
-		}
+	//Ищем покерные комбинации
+	if isStraightFlush(cardCombination) {
+		return newCombination(cardCombination, "Straight Flush")
 	}
-	return pockerComb
+	if isFourOfAKind(cardCombination) {
+		return newCombination(cardCombination, "Four of a Kind")
+	}
+	if isFullHouse(cardCombination) {
+		return newCombination(cardCombination, "Full house")
+	}
+	if isFlush(cardCombination) {
+		return newCombination(cardCombination, "Flush")
+	}
+	if isStraight(cardCombination) {
+		return newCombination(cardCombination, "Straight")
+	}
+	if yes, _ := isThreeOfAKind(cardCombination); yes {
+		return newCombination(cardCombination, "Three of a Kind")
+	}
+	if yes, _ := isTwoPairs(cardCombination); yes {
+		return newCombination(cardCombination, "Two pairs")
+	}
+	if yes, _ := isPair(cardCombination); yes {
+		return newCombination(cardCombination, "Pair")
+	}
+	return nil
 }
 
 func isDuplicate(cardsArr []*card.Card, cardToCheck *card.Card) bool {
@@ -176,18 +166,16 @@ func isDuplicate(cardsArr []*card.Card, cardToCheck *card.Card) bool {
 	return false
 }
 
-// Возвращает массив всех возможных комбинаций по 5 карт
-func cardSwitcher(cardsArr []*card.Card) [][]*card.Card {
-	var cardCombinations = make([][]*card.Card, 0)
-	//Проверка на наличие 5 карт
+// Генерирует все возможные комбинации по 5 карт и их силу
+func combinationGenerator(cardsArr []*card.Card) []*pockerCombination {
 	if len(cardsArr) < 5 {
 		log.Println("ERROR: Less than 5 cards!")
 		return nil
 	}
-	//Если карт всего 5, возвращаем их
 	if len(cardsArr) == 5 {
-		return [][]*card.Card{cardsArr}
+		return []*pockerCombination{combinationParser(cardsArr)}
 	}
+	var pockerCombinations = make([]*pockerCombination, 0)
 	//Получаем все возможные варианты комбинаций индексов массива карт
 	indexesArr := combin.Combinations(len(cardsArr), 5) //[[0,1,2,3,4],[1,2,3,4,5]...]
 	//Проходим по каждой комбинации индексов
@@ -198,10 +186,15 @@ func cardSwitcher(cardsArr []*card.Card) [][]*card.Card {
 			index := indexes[i]
 			combination = append(combination, cardsArr[index])
 		}
+		//Определяем силу комбинации
+		combinationResult := combinationParser(combination)
+		if combinationResult == nil {
+			continue
+		}
 		//Добавляем комбинацию в массив комбинаций
-		cardCombinations = append(cardCombinations, combination)
+		pockerCombinations = append(pockerCombinations, combinationResult)
 	}
-	return cardCombinations
+	return pockerCombinations
 }
 
 func removeCards(orig []*card.Card, remove []*card.Card) []*card.Card {
