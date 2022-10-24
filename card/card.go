@@ -40,8 +40,9 @@ const (
 )
 
 type Card struct {
-	Suit string
-	Face string
+	Suit  string
+	Face  string
+	Power int
 }
 
 func isValidSuit(suit string) bool {
