@@ -1,0 +1,103 @@
+♣6,♠8,♦8,♦9,♠J | Pair
+♣6,♠8,♣8,♦9,♠J | Pair
+♣6,♠8,♦9,♣9,♠J | Pair
+♣6,♦8,♣8,♦9,♠J | Pair
+♣6,♦8,♦9,♣9,♠J | Pair
+♣6,♦9,♣9,♠J,♥Q | Pair
+♣6,♦9,♣9,♠10,♠J | Pair
+♣6,♣8,♦9,♣9,♠J | Pair
+♣6,♠8,♦8,♠J,♥Q | Pair
+♣6,♠8,♦8,♠10,♠J | Pair
+♣6,♠8,♦8,♣8,♠J | Three of a Kind
+♣6,♠8,♦8,♣9,♠J | Pair
+♣6,♠8,♣8,♠J,♥Q | Pair
+♣6,♠8,♣8,♠10,♠J | Pair
+♣6,♠8,♣8,♣9,♠J | Pair
+♣6,♦8,♣8,♠J,♥Q | Pair
+♣6,♦8,♣8,♠10,♠J | Pair
+♣6,♦8,♣8,♣9,♠J | Pair
+♠8,♦8,♦9,♠J,♥Q | Pair
+♠8,♦8,♦9,♠10,♠J | Pair
+♠8,♦8,♣8,♦9,♠J | Three of a Kind
+♠8,♦8,♦9,♣9,♠J | Two pairs
+♠8,♦9,♠10,♠J,♥Q | Straight
+♠8,♣8,♦9,♠J,♥Q | Pair
+♠8,♦9,♣9,♠J,♥Q | Pair
+♠8,♣8,♦9,♠10,♠J | Pair
+♠8,♦9,♣9,♠10,♠J | Pair
+♠8,♣8,♦9,♣9,♠J | Two pairs
+♦8,♦9,♠10,♠J,♥Q | Straight
+♦8,♣8,♦9,♠J,♥Q | Pair
+♦8,♦9,♣9,♠J,♥Q | Pair
+♦8,♣8,♦9,♠10,♠J | Pair
+♦8,♦9,♣9,♠10,♠J | Pair
+♦8,♣8,♦9,♣9,♠J | Two pairs
+♣8,♦9,♠10,♠J,♥Q | Straight
+♦9,♣9,♠10,♠J,♥Q | Pair
+♣8,♦9,♣9,♠J,♥Q | Pair
+♣8,♦9,♣9,♠10,♠J | Pair
+♠8,♦8,♠10,♠J,♥Q | Pair
+♠8,♦8,♣8,♠J,♥Q | Three of a Kind
+♠8,♦8,♣9,♠J,♥Q | Pair
+♠8,♦8,♣8,♠10,♠J | Three of a Kind
+♠8,♦8,♣9,♠10,♠J | Pair
+♠8,♦8,♣8,♣9,♠J | Three of a Kind
+♠8,♣8,♠10,♠J,♥Q | Pair
+♠8,♣9,♠10,♠J,♥Q | Straight
+♠8,♣8,♣9,♠J,♥Q | Pair
+♠8,♣8,♣9,♠10,♠J | Pair
+♦8,♣8,♠10,♠J,♥Q | Pair
+♦8,♣9,♠10,♠J,♥Q | Straight
+♦8,♣8,♣9,♠J,♥Q | Pair
+♦8,♣8,♣9,♠10,♠J | Pair
+♣8,♣9,♠10,♠J,♥Q | Straight
+♣6,♠8,♦8,♦9,♥Q | Pair
+♣6,♠8,♦8,♦9,♠10 | Pair
+♣6,♠8,♦8,♣8,♦9 | Three of a Kind
+♣6,♠8,♦8,♦9,♣9 | Two pairs
+♣6,♠8,♣8,♦9,♥Q | Pair
+♣6,♠8,♦9,♣9,♥Q | Pair
+♣6,♠8,♣8,♦9,♠10 | Pair
+♣6,♠8,♦9,♣9,♠10 | Pair
+♣6,♠8,♣8,♦9,♣9 | Two pairs
+♣6,♦8,♣8,♦9,♥Q | Pair
+♣6,♦8,♦9,♣9,♥Q | Pair
+♣6,♦8,♣8,♦9,♠10 | Pair
+♣6,♦8,♦9,♣9,♠10 | Pair
+♣6,♦8,♣8,♦9,♣9 | Two pairs
+♣6,♦9,♣9,♠10,♥Q | Pair
+♣6,♣8,♦9,♣9,♥Q | Pair
+♣6,♣8,♦9,♣9,♠10 | Pair
+♣6,♠8,♦8,♠10,♥Q | Pair
+♣6,♠8,♦8,♣8,♥Q | Three of a Kind
+♣6,♠8,♦8,♣9,♥Q | Pair
+♣6,♠8,♦8,♣8,♠10 | Three of a Kind
+♣6,♠8,♦8,♣9,♠10 | Pair
+♣6,♠8,♦8,♣8,♣9 | Three of a Kind
+♣6,♠8,♣8,♠10,♥Q | Pair
+♣6,♠8,♣8,♣9,♥Q | Pair
+♣6,♠8,♣8,♣9,♠10 | Pair
+♣6,♦8,♣8,♠10,♥Q | Pair
+♣6,♦8,♣8,♣9,♥Q | Pair
+♣6,♦8,♣8,♣9,♠10 | Pair
+♠8,♦8,♦9,♠10,♥Q | Pair
+♠8,♦8,♣8,♦9,♥Q | Three of a Kind
+♠8,♦8,♦9,♣9,♥Q | Two pairs
+♠8,♦8,♣8,♦9,♠10 | Three of a Kind
+♠8,♦8,♦9,♣9,♠10 | Two pairs
+♦9,♠8,♦8,♣8,♣9 | Full house
+♠8,♣8,♦9,♠10,♥Q | Pair
+♠8,♦9,♣9,♠10,♥Q | Pair
+♠8,♣8,♦9,♣9,♥Q | Two pairs
+♠8,♣8,♦9,♣9,♠10 | Two pairs
+♦8,♣8,♦9,♠10,♥Q | Pair
+♦8,♦9,♣9,♠10,♥Q | Pair
+♦8,♣8,♦9,♣9,♥Q | Two pairs
+♦8,♣8,♦9,♣9,♠10 | Two pairs
+♣8,♦9,♣9,♠10,♥Q | Pair
+♠8,♦8,♣8,♠10,♥Q | Three of a Kind
+♠8,♦8,♣9,♠10,♥Q | Pair
+♠8,♦8,♣8,♣9,♥Q | Three of a Kind
+♠8,♦8,♣8,♣9,♠10 | Three of a Kind
+♠8,♣8,♣9,♠10,♥Q | Pair
+♦8,♣8,♣9,♠10,♥Q | Pair
