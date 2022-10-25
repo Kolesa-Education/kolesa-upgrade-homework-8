@@ -2,8 +2,10 @@ package main
 
 import (
 	"encoding/csv"
+	"flag"
 	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/parse_combinations"
 	"github.com/samber/lo"
 	"log"
 	"math/rand"
@@ -18,7 +20,7 @@ func cardsToRepresentations(cards []card.Card) []string {
 	return representations
 }
 
-func main() {
+func WriteGeneratedCardsToFile() {
 	var seed int64 = 1665694295623135151
 	randomSource := rand.NewSource(seed)
 	random := rand.New(randomSource)
@@ -49,5 +51,19 @@ func main() {
 
 		writer.Flush()
 		_ = file.Close()
+	}
+}
+
+func main() {
+	var commandLineFlag string
+	flag.StringVar(&commandLineFlag, "command", "parse", "Calls generate cards and write to files function or parsing poker combination packet")
+	flag.Parse()
+	switch commandLineFlag {
+	case "generate":
+		fmt.Println("Generating cards...")
+		WriteGeneratedCardsToFile()
+	case "parse":
+		fmt.Println("Parsing poker combinations...")
+		parse_combinations.ParseCombinations()
 	}
 }

@@ -1,0 +1,677 @@
+♥7, ♣7, ♥3, ♣8, ♣5 | pair
+♥7, ♣7, ♥3, ♣8, ♥6 | pair
+♥7, ♣7, ♥3, ♣8, ♠J | pair
+♥7, ♣7, ♥3, ♣8, ♥K | pair
+♥7, ♣7, ♥3, ♣8, ♣10 | pair
+♥7, ♣7, ♥3, ♣8, ♦K | pair
+♥7, ♣7, ♥3, ♣8, ♦Q | pair
+♥7, ♣7, ♥3, ♣8, ♠K | pair
+♥7, ♣7, ♥3, ♣8, ♣J | pair
+♥7, ♣7, ♥3, ♣5, ♥6 | pair
+♥7, ♣7, ♥3, ♣5, ♠J | pair
+♥7, ♣7, ♥3, ♣5, ♥K | pair
+♥7, ♣7, ♥3, ♣5, ♣10 | pair
+♥7, ♣7, ♥3, ♣5, ♦K | pair
+♥7, ♣7, ♥3, ♣5, ♦Q | pair
+♥7, ♣7, ♥3, ♣5, ♠K | pair
+♥7, ♣7, ♥3, ♣5, ♣J | pair
+♥7, ♣7, ♥3, ♥6, ♠J | pair
+♥7, ♣7, ♥3, ♥6, ♥K | pair
+♥7, ♣7, ♥3, ♥6, ♣10 | pair
+♥7, ♣7, ♥3, ♥6, ♦K | pair
+♥7, ♣7, ♥3, ♥6, ♦Q | pair
+♥7, ♣7, ♥3, ♥6, ♠K | pair
+♥7, ♣7, ♥3, ♥6, ♣J | pair
+♥7, ♣7, ♥3, ♠J, ♥K | pair
+♥7, ♣7, ♥3, ♠J, ♣10 | pair
+♥7, ♣7, ♥3, ♠J, ♦K | pair
+♥7, ♣7, ♥3, ♠J, ♦Q | pair
+♥7, ♣7, ♥3, ♠J, ♠K | pair
+♥7, ♣7, ♥3, ♠J, ♣J | two pairs
+♥7, ♣7, ♥3, ♥K, ♣10 | pair
+♥7, ♣7, ♥3, ♥K, ♦K | two pairs
+♥7, ♣7, ♥3, ♥K, ♦Q | pair
+♥7, ♣7, ♥3, ♥K, ♠K | two pairs
+♥7, ♣7, ♥3, ♥K, ♣J | pair
+♥7, ♣7, ♥3, ♣10, ♦K | pair
+♥7, ♣7, ♥3, ♣10, ♦Q | pair
+♥7, ♣7, ♥3, ♣10, ♠K | pair
+♥7, ♣7, ♥3, ♣10, ♣J | pair
+♥7, ♣7, ♥3, ♦K, ♦Q | pair
+♥7, ♣7, ♥3, ♦K, ♠K | two pairs
+♥7, ♣7, ♥3, ♦K, ♣J | pair
+♥7, ♣7, ♥3, ♦Q, ♠K | pair
+♥7, ♣7, ♥3, ♦Q, ♣J | pair
+♥7, ♣7, ♥3, ♠K, ♣J | pair
+♥7, ♣7, ♣8, ♣5, ♥6 | pair
+♥7, ♣7, ♣8, ♣5, ♠J | pair
+♥7, ♣7, ♣8, ♣5, ♥K | pair
+♥7, ♣7, ♣8, ♣5, ♣10 | pair
+♥7, ♣7, ♣8, ♣5, ♦K | pair
+♥7, ♣7, ♣8, ♣5, ♦Q | pair
+♥7, ♣7, ♣8, ♣5, ♠K | pair
+♥7, ♣7, ♣8, ♣5, ♣J | pair
+♥7, ♣7, ♣8, ♥6, ♠J | pair
+♥7, ♣7, ♣8, ♥6, ♥K | pair
+♥7, ♣7, ♣8, ♥6, ♣10 | pair
+♥7, ♣7, ♣8, ♥6, ♦K | pair
+♥7, ♣7, ♣8, ♥6, ♦Q | pair
+♥7, ♣7, ♣8, ♥6, ♠K | pair
+♥7, ♣7, ♣8, ♥6, ♣J | pair
+♥7, ♣7, ♣8, ♠J, ♥K | pair
+♥7, ♣7, ♣8, ♠J, ♣10 | pair
+♥7, ♣7, ♣8, ♠J, ♦K | pair
+♥7, ♣7, ♣8, ♠J, ♦Q | pair
+♥7, ♣7, ♣8, ♠J, ♠K | pair
+♥7, ♣7, ♣8, ♠J, ♣J | two pairs
+♥7, ♣7, ♣8, ♥K, ♣10 | pair
+♥7, ♣7, ♣8, ♥K, ♦K | two pairs
+♥7, ♣7, ♣8, ♥K, ♦Q | pair
+♥7, ♣7, ♣8, ♥K, ♠K | two pairs
+♥7, ♣7, ♣8, ♥K, ♣J | pair
+♥7, ♣7, ♣8, ♣10, ♦K | pair
+♥7, ♣7, ♣8, ♣10, ♦Q | pair
+♥7, ♣7, ♣8, ♣10, ♠K | pair
+♥7, ♣7, ♣8, ♣10, ♣J | pair
+♥7, ♣7, ♣8, ♦K, ♦Q | pair
+♥7, ♣7, ♣8, ♦K, ♠K | two pairs
+♥7, ♣7, ♣8, ♦K, ♣J | pair
+♥7, ♣7, ♣8, ♦Q, ♠K | pair
+♥7, ♣7, ♣8, ♦Q, ♣J | pair
+♥7, ♣7, ♣8, ♠K, ♣J | pair
+♥7, ♣7, ♣5, ♥6, ♠J | pair
+♥7, ♣7, ♣5, ♥6, ♥K | pair
+♥7, ♣7, ♣5, ♥6, ♣10 | pair
+♥7, ♣7, ♣5, ♥6, ♦K | pair
+♥7, ♣7, ♣5, ♥6, ♦Q | pair
+♥7, ♣7, ♣5, ♥6, ♠K | pair
+♥7, ♣7, ♣5, ♥6, ♣J | pair
+♥7, ♣7, ♣5, ♠J, ♥K | pair
+♥7, ♣7, ♣5, ♠J, ♣10 | pair
+♥7, ♣7, ♣5, ♠J, ♦K | pair
+♥7, ♣7, ♣5, ♠J, ♦Q | pair
+♥7, ♣7, ♣5, ♠J, ♠K | pair
+♥7, ♣7, ♣5, ♠J, ♣J | two pairs
+♥7, ♣7, ♣5, ♥K, ♣10 | pair
+♥7, ♣7, ♣5, ♥K, ♦K | two pairs
+♥7, ♣7, ♣5, ♥K, ♦Q | pair
+♥7, ♣7, ♣5, ♥K, ♠K | two pairs
+♥7, ♣7, ♣5, ♥K, ♣J | pair
+♥7, ♣7, ♣5, ♣10, ♦K | pair
+♥7, ♣7, ♣5, ♣10, ♦Q | pair
+♥7, ♣7, ♣5, ♣10, ♠K | pair
+♥7, ♣7, ♣5, ♣10, ♣J | pair
+♥7, ♣7, ♣5, ♦K, ♦Q | pair
+♥7, ♣7, ♣5, ♦K, ♠K | two pairs
+♥7, ♣7, ♣5, ♦K, ♣J | pair
+♥7, ♣7, ♣5, ♦Q, ♠K | pair
+♥7, ♣7, ♣5, ♦Q, ♣J | pair
+♥7, ♣7, ♣5, ♠K, ♣J | pair
+♥7, ♣7, ♥6, ♠J, ♥K | pair
+♥7, ♣7, ♥6, ♠J, ♣10 | pair
+♥7, ♣7, ♥6, ♠J, ♦K | pair
+♥7, ♣7, ♥6, ♠J, ♦Q | pair
+♥7, ♣7, ♥6, ♠J, ♠K | pair
+♥7, ♣7, ♥6, ♠J, ♣J | two pairs
+♥7, ♣7, ♥6, ♥K, ♣10 | pair
+♥7, ♣7, ♥6, ♥K, ♦K | two pairs
+♥7, ♣7, ♥6, ♥K, ♦Q | pair
+♥7, ♣7, ♥6, ♥K, ♠K | two pairs
+♥7, ♣7, ♥6, ♥K, ♣J | pair
+♥7, ♣7, ♥6, ♣10, ♦K | pair
+♥7, ♣7, ♥6, ♣10, ♦Q | pair
+♥7, ♣7, ♥6, ♣10, ♠K | pair
+♥7, ♣7, ♥6, ♣10, ♣J | pair
+♥7, ♣7, ♥6, ♦K, ♦Q | pair
+♥7, ♣7, ♥6, ♦K, ♠K | two pairs
+♥7, ♣7, ♥6, ♦K, ♣J | pair
+♥7, ♣7, ♥6, ♦Q, ♠K | pair
+♥7, ♣7, ♥6, ♦Q, ♣J | pair
+♥7, ♣7, ♥6, ♠K, ♣J | pair
+♥7, ♣7, ♠J, ♥K, ♣10 | pair
+♥7, ♣7, ♠J, ♥K, ♦K | two pairs
+♥7, ♣7, ♠J, ♥K, ♦Q | pair
+♥7, ♣7, ♠J, ♥K, ♠K | two pairs
+♥7, ♣7, ♠J, ♥K, ♣J | two pairs
+♥7, ♣7, ♠J, ♣10, ♦K | pair
+♥7, ♣7, ♠J, ♣10, ♦Q | pair
+♥7, ♣7, ♠J, ♣10, ♠K | pair
+♥7, ♣7, ♠J, ♣10, ♣J | two pairs
+♥7, ♣7, ♠J, ♦K, ♦Q | pair
+♥7, ♣7, ♠J, ♦K, ♠K | two pairs
+♥7, ♣7, ♠J, ♦K, ♣J | two pairs
+♥7, ♣7, ♠J, ♦Q, ♠K | pair
+♥7, ♣7, ♠J, ♦Q, ♣J | two pairs
+♥7, ♣7, ♠J, ♠K, ♣J | two pairs
+♥7, ♣7, ♥K, ♣10, ♦K | two pairs
+♥7, ♣7, ♥K, ♣10, ♦Q | pair
+♥7, ♣7, ♥K, ♣10, ♠K | two pairs
+♥7, ♣7, ♥K, ♣10, ♣J | pair
+♥7, ♣7, ♥K, ♦K, ♦Q | two pairs
+♥7, ♣7, ♥K, ♦K, ♠K | fullhouse
+♥7, ♣7, ♥K, ♦K, ♣J | two pairs
+♥7, ♣7, ♥K, ♦Q, ♠K | two pairs
+♥7, ♣7, ♥K, ♦Q, ♣J | pair
+♥7, ♣7, ♥K, ♠K, ♣J | two pairs
+♥7, ♣7, ♣10, ♦K, ♦Q | pair
+♥7, ♣7, ♣10, ♦K, ♠K | two pairs
+♥7, ♣7, ♣10, ♦K, ♣J | pair
+♥7, ♣7, ♣10, ♦Q, ♠K | pair
+♥7, ♣7, ♣10, ♦Q, ♣J | pair
+♥7, ♣7, ♣10, ♠K, ♣J | pair
+♥7, ♣7, ♦K, ♦Q, ♠K | two pairs
+♥7, ♣7, ♦K, ♦Q, ♣J | pair
+♥7, ♣7, ♦K, ♠K, ♣J | two pairs
+♥7, ♣7, ♦Q, ♠K, ♣J | pair
+♥7, ♥3, ♣8, ♠J, ♣J | pair
+♥7, ♥3, ♣8, ♥K, ♦K | pair
+♥7, ♥3, ♣8, ♥K, ♠K | pair
+♥7, ♥3, ♣8, ♦K, ♠K | pair
+♥7, ♥3, ♣5, ♠J, ♣J | pair
+♥7, ♥3, ♣5, ♥K, ♦K | pair
+♥7, ♥3, ♣5, ♥K, ♠K | pair
+♥7, ♥3, ♣5, ♦K, ♠K | pair
+♥7, ♥3, ♥6, ♠J, ♣J | pair
+♥7, ♥3, ♥6, ♥K, ♦K | pair
+♥7, ♥3, ♥6, ♥K, ♠K | pair
+♥7, ♥3, ♥6, ♦K, ♠K | pair
+♥7, ♥3, ♠J, ♥K, ♦K | pair
+♥7, ♥3, ♠J, ♥K, ♠K | pair
+♥7, ♥3, ♠J, ♥K, ♣J | pair
+♥7, ♥3, ♠J, ♣10, ♣J | pair
+♥7, ♥3, ♠J, ♦K, ♠K | pair
+♥7, ♥3, ♠J, ♦K, ♣J | pair
+♥7, ♥3, ♠J, ♦Q, ♣J | pair
+♥7, ♥3, ♠J, ♠K, ♣J | pair
+♥7, ♥3, ♥K, ♣10, ♦K | pair
+♥7, ♥3, ♥K, ♣10, ♠K | pair
+♥7, ♥3, ♥K, ♦K, ♦Q | pair
+♥7, ♥3, ♥K, ♦K, ♠K | three of a kind
+♥7, ♥3, ♥K, ♦K, ♣J | pair
+♥7, ♥3, ♥K, ♦Q, ♠K | pair
+♥7, ♥3, ♥K, ♠K, ♣J | pair
+♥7, ♥3, ♣10, ♦K, ♠K | pair
+♥7, ♥3, ♦K, ♦Q, ♠K | pair
+♥7, ♥3, ♦K, ♠K, ♣J | pair
+♥7, ♣8, ♣5, ♠J, ♣J | pair
+♥7, ♣8, ♣5, ♥K, ♦K | pair
+♥7, ♣8, ♣5, ♥K, ♠K | pair
+♥7, ♣8, ♣5, ♦K, ♠K | pair
+♥7, ♣8, ♥6, ♠J, ♣J | pair
+♥7, ♣8, ♥6, ♥K, ♦K | pair
+♥7, ♣8, ♥6, ♥K, ♠K | pair
+♥7, ♣8, ♥6, ♦K, ♠K | pair
+♥7, ♣8, ♠J, ♥K, ♦K | pair
+♥7, ♣8, ♠J, ♥K, ♠K | pair
+♥7, ♣8, ♠J, ♥K, ♣J | pair
+♥7, ♣8, ♠J, ♣10, ♣J | pair
+♥7, ♣8, ♠J, ♦K, ♠K | pair
+♥7, ♣8, ♠J, ♦K, ♣J | pair
+♥7, ♣8, ♠J, ♦Q, ♣J | pair
+♥7, ♣8, ♠J, ♠K, ♣J | pair
+♥7, ♣8, ♥K, ♣10, ♦K | pair
+♥7, ♣8, ♥K, ♣10, ♠K | pair
+♥7, ♣8, ♥K, ♦K, ♦Q | pair
+♥7, ♣8, ♥K, ♦K, ♠K | three of a kind
+♥7, ♣8, ♥K, ♦K, ♣J | pair
+♥7, ♣8, ♥K, ♦Q, ♠K | pair
+♥7, ♣8, ♥K, ♠K, ♣J | pair
+♥7, ♣8, ♣10, ♦K, ♠K | pair
+♥7, ♣8, ♦K, ♦Q, ♠K | pair
+♥7, ♣8, ♦K, ♠K, ♣J | pair
+♥7, ♣5, ♥6, ♠J, ♣J | pair
+♥7, ♣5, ♥6, ♥K, ♦K | pair
+♥7, ♣5, ♥6, ♥K, ♠K | pair
+♥7, ♣5, ♥6, ♦K, ♠K | pair
+♥7, ♣5, ♠J, ♥K, ♦K | pair
+♥7, ♣5, ♠J, ♥K, ♠K | pair
+♥7, ♣5, ♠J, ♥K, ♣J | pair
+♥7, ♣5, ♠J, ♣10, ♣J | pair
+♥7, ♣5, ♠J, ♦K, ♠K | pair
+♥7, ♣5, ♠J, ♦K, ♣J | pair
+♥7, ♣5, ♠J, ♦Q, ♣J | pair
+♥7, ♣5, ♠J, ♠K, ♣J | pair
+♥7, ♣5, ♥K, ♣10, ♦K | pair
+♥7, ♣5, ♥K, ♣10, ♠K | pair
+♥7, ♣5, ♥K, ♦K, ♦Q | pair
+♥7, ♣5, ♥K, ♦K, ♠K | three of a kind
+♥7, ♣5, ♥K, ♦K, ♣J | pair
+♥7, ♣5, ♥K, ♦Q, ♠K | pair
+♥7, ♣5, ♥K, ♠K, ♣J | pair
+♥7, ♣5, ♣10, ♦K, ♠K | pair
+♥7, ♣5, ♦K, ♦Q, ♠K | pair
+♥7, ♣5, ♦K, ♠K, ♣J | pair
+♥7, ♥6, ♠J, ♥K, ♦K | pair
+♥7, ♥6, ♠J, ♥K, ♠K | pair
+♥7, ♥6, ♠J, ♥K, ♣J | pair
+♥7, ♥6, ♠J, ♣10, ♣J | pair
+♥7, ♥6, ♠J, ♦K, ♠K | pair
+♥7, ♥6, ♠J, ♦K, ♣J | pair
+♥7, ♥6, ♠J, ♦Q, ♣J | pair
+♥7, ♥6, ♠J, ♠K, ♣J | pair
+♥7, ♥6, ♥K, ♣10, ♦K | pair
+♥7, ♥6, ♥K, ♣10, ♠K | pair
+♥7, ♥6, ♥K, ♦K, ♦Q | pair
+♥7, ♥6, ♥K, ♦K, ♠K | three of a kind
+♥7, ♥6, ♥K, ♦K, ♣J | pair
+♥7, ♥6, ♥K, ♦Q, ♠K | pair
+♥7, ♥6, ♥K, ♠K, ♣J | pair
+♥7, ♥6, ♣10, ♦K, ♠K | pair
+♥7, ♥6, ♦K, ♦Q, ♠K | pair
+♥7, ♥6, ♦K, ♠K, ♣J | pair
+♥7, ♠J, ♥K, ♣10, ♦K | pair
+♥7, ♠J, ♥K, ♣10, ♠K | pair
+♥7, ♠J, ♥K, ♣10, ♣J | pair
+♥7, ♠J, ♥K, ♦K, ♦Q | pair
+♥7, ♠J, ♥K, ♦K, ♠K | three of a kind
+♥7, ♠J, ♥K, ♦K, ♣J | two pairs
+♥7, ♠J, ♥K, ♦Q, ♠K | pair
+♥7, ♠J, ♥K, ♦Q, ♣J | pair
+♥7, ♠J, ♥K, ♠K, ♣J | two pairs
+♥7, ♠J, ♣10, ♦K, ♠K | pair
+♥7, ♠J, ♣10, ♦K, ♣J | pair
+♥7, ♠J, ♣10, ♦Q, ♣J | pair
+♥7, ♠J, ♣10, ♠K, ♣J | pair
+♥7, ♠J, ♦K, ♦Q, ♠K | pair
+♥7, ♠J, ♦K, ♦Q, ♣J | pair
+♥7, ♠J, ♦K, ♠K, ♣J | two pairs
+♥7, ♠J, ♦Q, ♠K, ♣J | pair
+♥7, ♥K, ♣10, ♦K, ♦Q | pair
+♥7, ♥K, ♣10, ♦K, ♠K | three of a kind
+♥7, ♥K, ♣10, ♦K, ♣J | pair
+♥7, ♥K, ♣10, ♦Q, ♠K | pair
+♥7, ♥K, ♣10, ♠K, ♣J | pair
+♥7, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♥7, ♥K, ♦K, ♦Q, ♣J | pair
+♥7, ♥K, ♦K, ♠K, ♣J | three of a kind
+♥7, ♥K, ♦Q, ♠K, ♣J | pair
+♥7, ♣10, ♦K, ♦Q, ♠K | pair
+♥7, ♣10, ♦K, ♠K, ♣J | pair
+♥7, ♦K, ♦Q, ♠K, ♣J | pair
+♣7, ♥3, ♣8, ♠J, ♣J | pair
+♣7, ♥3, ♣8, ♥K, ♦K | pair
+♣7, ♥3, ♣8, ♥K, ♠K | pair
+♣7, ♥3, ♣8, ♦K, ♠K | pair
+♣7, ♥3, ♣5, ♠J, ♣J | pair
+♣7, ♥3, ♣5, ♥K, ♦K | pair
+♣7, ♥3, ♣5, ♥K, ♠K | pair
+♣7, ♥3, ♣5, ♦K, ♠K | pair
+♣7, ♥3, ♥6, ♠J, ♣J | pair
+♣7, ♥3, ♥6, ♥K, ♦K | pair
+♣7, ♥3, ♥6, ♥K, ♠K | pair
+♣7, ♥3, ♥6, ♦K, ♠K | pair
+♣7, ♥3, ♠J, ♥K, ♦K | pair
+♣7, ♥3, ♠J, ♥K, ♠K | pair
+♣7, ♥3, ♠J, ♥K, ♣J | pair
+♣7, ♥3, ♠J, ♣10, ♣J | pair
+♣7, ♥3, ♠J, ♦K, ♠K | pair
+♣7, ♥3, ♠J, ♦K, ♣J | pair
+♣7, ♥3, ♠J, ♦Q, ♣J | pair
+♣7, ♥3, ♠J, ♠K, ♣J | pair
+♣7, ♥3, ♥K, ♣10, ♦K | pair
+♣7, ♥3, ♥K, ♣10, ♠K | pair
+♣7, ♥3, ♥K, ♦K, ♦Q | pair
+♣7, ♥3, ♥K, ♦K, ♠K | three of a kind
+♣7, ♥3, ♥K, ♦K, ♣J | pair
+♣7, ♥3, ♥K, ♦Q, ♠K | pair
+♣7, ♥3, ♥K, ♠K, ♣J | pair
+♣7, ♥3, ♣10, ♦K, ♠K | pair
+♣7, ♥3, ♦K, ♦Q, ♠K | pair
+♣7, ♥3, ♦K, ♠K, ♣J | pair
+♣7, ♣8, ♣5, ♠J, ♣J | pair
+♣7, ♣8, ♣5, ♥K, ♦K | pair
+♣7, ♣8, ♣5, ♥K, ♠K | pair
+♣7, ♣8, ♣5, ♣10, ♣J | flush
+♣7, ♣8, ♣5, ♦K, ♠K | pair
+♣7, ♣8, ♥6, ♠J, ♣J | pair
+♣7, ♣8, ♥6, ♥K, ♦K | pair
+♣7, ♣8, ♥6, ♥K, ♠K | pair
+♣7, ♣8, ♥6, ♦K, ♠K | pair
+♣7, ♣8, ♠J, ♥K, ♦K | pair
+♣7, ♣8, ♠J, ♥K, ♠K | pair
+♣7, ♣8, ♠J, ♥K, ♣J | pair
+♣7, ♣8, ♠J, ♣10, ♣J | pair
+♣7, ♣8, ♠J, ♦K, ♠K | pair
+♣7, ♣8, ♠J, ♦K, ♣J | pair
+♣7, ♣8, ♠J, ♦Q, ♣J | pair
+♣7, ♣8, ♠J, ♠K, ♣J | pair
+♣7, ♣8, ♥K, ♣10, ♦K | pair
+♣7, ♣8, ♥K, ♣10, ♠K | pair
+♣7, ♣8, ♥K, ♦K, ♦Q | pair
+♣7, ♣8, ♥K, ♦K, ♠K | three of a kind
+♣7, ♣8, ♥K, ♦K, ♣J | pair
+♣7, ♣8, ♥K, ♦Q, ♠K | pair
+♣7, ♣8, ♥K, ♠K, ♣J | pair
+♣7, ♣8, ♣10, ♦K, ♠K | pair
+♣7, ♣8, ♦K, ♦Q, ♠K | pair
+♣7, ♣8, ♦K, ♠K, ♣J | pair
+♣7, ♣5, ♥6, ♠J, ♣J | pair
+♣7, ♣5, ♥6, ♥K, ♦K | pair
+♣7, ♣5, ♥6, ♥K, ♠K | pair
+♣7, ♣5, ♥6, ♦K, ♠K | pair
+♣7, ♣5, ♠J, ♥K, ♦K | pair
+♣7, ♣5, ♠J, ♥K, ♠K | pair
+♣7, ♣5, ♠J, ♥K, ♣J | pair
+♣7, ♣5, ♠J, ♣10, ♣J | pair
+♣7, ♣5, ♠J, ♦K, ♠K | pair
+♣7, ♣5, ♠J, ♦K, ♣J | pair
+♣7, ♣5, ♠J, ♦Q, ♣J | pair
+♣7, ♣5, ♠J, ♠K, ♣J | pair
+♣7, ♣5, ♥K, ♣10, ♦K | pair
+♣7, ♣5, ♥K, ♣10, ♠K | pair
+♣7, ♣5, ♥K, ♦K, ♦Q | pair
+♣7, ♣5, ♥K, ♦K, ♠K | three of a kind
+♣7, ♣5, ♥K, ♦K, ♣J | pair
+♣7, ♣5, ♥K, ♦Q, ♠K | pair
+♣7, ♣5, ♥K, ♠K, ♣J | pair
+♣7, ♣5, ♣10, ♦K, ♠K | pair
+♣7, ♣5, ♦K, ♦Q, ♠K | pair
+♣7, ♣5, ♦K, ♠K, ♣J | pair
+♣7, ♥6, ♠J, ♥K, ♦K | pair
+♣7, ♥6, ♠J, ♥K, ♠K | pair
+♣7, ♥6, ♠J, ♥K, ♣J | pair
+♣7, ♥6, ♠J, ♣10, ♣J | pair
+♣7, ♥6, ♠J, ♦K, ♠K | pair
+♣7, ♥6, ♠J, ♦K, ♣J | pair
+♣7, ♥6, ♠J, ♦Q, ♣J | pair
+♣7, ♥6, ♠J, ♠K, ♣J | pair
+♣7, ♥6, ♥K, ♣10, ♦K | pair
+♣7, ♥6, ♥K, ♣10, ♠K | pair
+♣7, ♥6, ♥K, ♦K, ♦Q | pair
+♣7, ♥6, ♥K, ♦K, ♠K | three of a kind
+♣7, ♥6, ♥K, ♦K, ♣J | pair
+♣7, ♥6, ♥K, ♦Q, ♠K | pair
+♣7, ♥6, ♥K, ♠K, ♣J | pair
+♣7, ♥6, ♣10, ♦K, ♠K | pair
+♣7, ♥6, ♦K, ♦Q, ♠K | pair
+♣7, ♥6, ♦K, ♠K, ♣J | pair
+♣7, ♠J, ♥K, ♣10, ♦K | pair
+♣7, ♠J, ♥K, ♣10, ♠K | pair
+♣7, ♠J, ♥K, ♣10, ♣J | pair
+♣7, ♠J, ♥K, ♦K, ♦Q | pair
+♣7, ♠J, ♥K, ♦K, ♠K | three of a kind
+♣7, ♠J, ♥K, ♦K, ♣J | two pairs
+♣7, ♠J, ♥K, ♦Q, ♠K | pair
+♣7, ♠J, ♥K, ♦Q, ♣J | pair
+♣7, ♠J, ♥K, ♠K, ♣J | two pairs
+♣7, ♠J, ♣10, ♦K, ♠K | pair
+♣7, ♠J, ♣10, ♦K, ♣J | pair
+♣7, ♠J, ♣10, ♦Q, ♣J | pair
+♣7, ♠J, ♣10, ♠K, ♣J | pair
+♣7, ♠J, ♦K, ♦Q, ♠K | pair
+♣7, ♠J, ♦K, ♦Q, ♣J | pair
+♣7, ♠J, ♦K, ♠K, ♣J | two pairs
+♣7, ♠J, ♦Q, ♠K, ♣J | pair
+♣7, ♥K, ♣10, ♦K, ♦Q | pair
+♣7, ♥K, ♣10, ♦K, ♠K | three of a kind
+♣7, ♥K, ♣10, ♦K, ♣J | pair
+♣7, ♥K, ♣10, ♦Q, ♠K | pair
+♣7, ♥K, ♣10, ♠K, ♣J | pair
+♣7, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♣7, ♥K, ♦K, ♦Q, ♣J | pair
+♣7, ♥K, ♦K, ♠K, ♣J | three of a kind
+♣7, ♥K, ♦Q, ♠K, ♣J | pair
+♣7, ♣10, ♦K, ♦Q, ♠K | pair
+♣7, ♣10, ♦K, ♠K, ♣J | pair
+♣7, ♦K, ♦Q, ♠K, ♣J | pair
+♥3, ♣8, ♣5, ♠J, ♣J | pair
+♥3, ♣8, ♣5, ♥K, ♦K | pair
+♥3, ♣8, ♣5, ♥K, ♠K | pair
+♥3, ♣8, ♣5, ♦K, ♠K | pair
+♥3, ♣8, ♥6, ♠J, ♣J | pair
+♥3, ♣8, ♥6, ♥K, ♦K | pair
+♥3, ♣8, ♥6, ♥K, ♠K | pair
+♥3, ♣8, ♥6, ♦K, ♠K | pair
+♥3, ♣8, ♠J, ♥K, ♦K | pair
+♥3, ♣8, ♠J, ♥K, ♠K | pair
+♥3, ♣8, ♠J, ♥K, ♣J | pair
+♥3, ♣8, ♠J, ♣10, ♣J | pair
+♥3, ♣8, ♠J, ♦K, ♠K | pair
+♥3, ♣8, ♠J, ♦K, ♣J | pair
+♥3, ♣8, ♠J, ♦Q, ♣J | pair
+♥3, ♣8, ♠J, ♠K, ♣J | pair
+♥3, ♣8, ♥K, ♣10, ♦K | pair
+♥3, ♣8, ♥K, ♣10, ♠K | pair
+♥3, ♣8, ♥K, ♦K, ♦Q | pair
+♥3, ♣8, ♥K, ♦K, ♠K | three of a kind
+♥3, ♣8, ♥K, ♦K, ♣J | pair
+♥3, ♣8, ♥K, ♦Q, ♠K | pair
+♥3, ♣8, ♥K, ♠K, ♣J | pair
+♥3, ♣8, ♣10, ♦K, ♠K | pair
+♥3, ♣8, ♦K, ♦Q, ♠K | pair
+♥3, ♣8, ♦K, ♠K, ♣J | pair
+♥3, ♣5, ♥6, ♠J, ♣J | pair
+♥3, ♣5, ♥6, ♥K, ♦K | pair
+♥3, ♣5, ♥6, ♥K, ♠K | pair
+♥3, ♣5, ♥6, ♦K, ♠K | pair
+♥3, ♣5, ♠J, ♥K, ♦K | pair
+♥3, ♣5, ♠J, ♥K, ♠K | pair
+♥3, ♣5, ♠J, ♥K, ♣J | pair
+♥3, ♣5, ♠J, ♣10, ♣J | pair
+♥3, ♣5, ♠J, ♦K, ♠K | pair
+♥3, ♣5, ♠J, ♦K, ♣J | pair
+♥3, ♣5, ♠J, ♦Q, ♣J | pair
+♥3, ♣5, ♠J, ♠K, ♣J | pair
+♥3, ♣5, ♥K, ♣10, ♦K | pair
+♥3, ♣5, ♥K, ♣10, ♠K | pair
+♥3, ♣5, ♥K, ♦K, ♦Q | pair
+♥3, ♣5, ♥K, ♦K, ♠K | three of a kind
+♥3, ♣5, ♥K, ♦K, ♣J | pair
+♥3, ♣5, ♥K, ♦Q, ♠K | pair
+♥3, ♣5, ♥K, ♠K, ♣J | pair
+♥3, ♣5, ♣10, ♦K, ♠K | pair
+♥3, ♣5, ♦K, ♦Q, ♠K | pair
+♥3, ♣5, ♦K, ♠K, ♣J | pair
+♥3, ♥6, ♠J, ♥K, ♦K | pair
+♥3, ♥6, ♠J, ♥K, ♠K | pair
+♥3, ♥6, ♠J, ♥K, ♣J | pair
+♥3, ♥6, ♠J, ♣10, ♣J | pair
+♥3, ♥6, ♠J, ♦K, ♠K | pair
+♥3, ♥6, ♠J, ♦K, ♣J | pair
+♥3, ♥6, ♠J, ♦Q, ♣J | pair
+♥3, ♥6, ♠J, ♠K, ♣J | pair
+♥3, ♥6, ♥K, ♣10, ♦K | pair
+♥3, ♥6, ♥K, ♣10, ♠K | pair
+♥3, ♥6, ♥K, ♦K, ♦Q | pair
+♥3, ♥6, ♥K, ♦K, ♠K | three of a kind
+♥3, ♥6, ♥K, ♦K, ♣J | pair
+♥3, ♥6, ♥K, ♦Q, ♠K | pair
+♥3, ♥6, ♥K, ♠K, ♣J | pair
+♥3, ♥6, ♣10, ♦K, ♠K | pair
+♥3, ♥6, ♦K, ♦Q, ♠K | pair
+♥3, ♥6, ♦K, ♠K, ♣J | pair
+♥3, ♠J, ♥K, ♣10, ♦K | pair
+♥3, ♠J, ♥K, ♣10, ♠K | pair
+♥3, ♠J, ♥K, ♣10, ♣J | pair
+♥3, ♠J, ♥K, ♦K, ♦Q | pair
+♥3, ♠J, ♥K, ♦K, ♠K | three of a kind
+♥3, ♠J, ♥K, ♦K, ♣J | two pairs
+♥3, ♠J, ♥K, ♦Q, ♠K | pair
+♥3, ♠J, ♥K, ♦Q, ♣J | pair
+♥3, ♠J, ♥K, ♠K, ♣J | two pairs
+♥3, ♠J, ♣10, ♦K, ♠K | pair
+♥3, ♠J, ♣10, ♦K, ♣J | pair
+♥3, ♠J, ♣10, ♦Q, ♣J | pair
+♥3, ♠J, ♣10, ♠K, ♣J | pair
+♥3, ♠J, ♦K, ♦Q, ♠K | pair
+♥3, ♠J, ♦K, ♦Q, ♣J | pair
+♥3, ♠J, ♦K, ♠K, ♣J | two pairs
+♥3, ♠J, ♦Q, ♠K, ♣J | pair
+♥3, ♥K, ♣10, ♦K, ♦Q | pair
+♥3, ♥K, ♣10, ♦K, ♠K | three of a kind
+♥3, ♥K, ♣10, ♦K, ♣J | pair
+♥3, ♥K, ♣10, ♦Q, ♠K | pair
+♥3, ♥K, ♣10, ♠K, ♣J | pair
+♥3, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♥3, ♥K, ♦K, ♦Q, ♣J | pair
+♥3, ♥K, ♦K, ♠K, ♣J | three of a kind
+♥3, ♥K, ♦Q, ♠K, ♣J | pair
+♥3, ♣10, ♦K, ♦Q, ♠K | pair
+♥3, ♣10, ♦K, ♠K, ♣J | pair
+♥3, ♦K, ♦Q, ♠K, ♣J | pair
+♣8, ♣5, ♥6, ♠J, ♣J | pair
+♣8, ♣5, ♥6, ♥K, ♦K | pair
+♣8, ♣5, ♥6, ♥K, ♠K | pair
+♣8, ♣5, ♥6, ♦K, ♠K | pair
+♣8, ♣5, ♠J, ♥K, ♦K | pair
+♣8, ♣5, ♠J, ♥K, ♠K | pair
+♣8, ♣5, ♠J, ♥K, ♣J | pair
+♣8, ♣5, ♠J, ♣10, ♣J | pair
+♣8, ♣5, ♠J, ♦K, ♠K | pair
+♣8, ♣5, ♠J, ♦K, ♣J | pair
+♣8, ♣5, ♠J, ♦Q, ♣J | pair
+♣8, ♣5, ♠J, ♠K, ♣J | pair
+♣8, ♣5, ♥K, ♣10, ♦K | pair
+♣8, ♣5, ♥K, ♣10, ♠K | pair
+♣8, ♣5, ♥K, ♦K, ♦Q | pair
+♣8, ♣5, ♥K, ♦K, ♠K | three of a kind
+♣8, ♣5, ♥K, ♦K, ♣J | pair
+♣8, ♣5, ♥K, ♦Q, ♠K | pair
+♣8, ♣5, ♥K, ♠K, ♣J | pair
+♣8, ♣5, ♣10, ♦K, ♠K | pair
+♣8, ♣5, ♦K, ♦Q, ♠K | pair
+♣8, ♣5, ♦K, ♠K, ♣J | pair
+♣8, ♥6, ♠J, ♥K, ♦K | pair
+♣8, ♥6, ♠J, ♥K, ♠K | pair
+♣8, ♥6, ♠J, ♥K, ♣J | pair
+♣8, ♥6, ♠J, ♣10, ♣J | pair
+♣8, ♥6, ♠J, ♦K, ♠K | pair
+♣8, ♥6, ♠J, ♦K, ♣J | pair
+♣8, ♥6, ♠J, ♦Q, ♣J | pair
+♣8, ♥6, ♠J, ♠K, ♣J | pair
+♣8, ♥6, ♥K, ♣10, ♦K | pair
+♣8, ♥6, ♥K, ♣10, ♠K | pair
+♣8, ♥6, ♥K, ♦K, ♦Q | pair
+♣8, ♥6, ♥K, ♦K, ♠K | three of a kind
+♣8, ♥6, ♥K, ♦K, ♣J | pair
+♣8, ♥6, ♥K, ♦Q, ♠K | pair
+♣8, ♥6, ♥K, ♠K, ♣J | pair
+♣8, ♥6, ♣10, ♦K, ♠K | pair
+♣8, ♥6, ♦K, ♦Q, ♠K | pair
+♣8, ♥6, ♦K, ♠K, ♣J | pair
+♣8, ♠J, ♥K, ♣10, ♦K | pair
+♣8, ♠J, ♥K, ♣10, ♠K | pair
+♣8, ♠J, ♥K, ♣10, ♣J | pair
+♣8, ♠J, ♥K, ♦K, ♦Q | pair
+♣8, ♠J, ♥K, ♦K, ♠K | three of a kind
+♣8, ♠J, ♥K, ♦K, ♣J | two pairs
+♣8, ♠J, ♥K, ♦Q, ♠K | pair
+♣8, ♠J, ♥K, ♦Q, ♣J | pair
+♣8, ♠J, ♥K, ♠K, ♣J | two pairs
+♣8, ♠J, ♣10, ♦K, ♠K | pair
+♣8, ♠J, ♣10, ♦K, ♣J | pair
+♣8, ♠J, ♣10, ♦Q, ♣J | pair
+♣8, ♠J, ♣10, ♠K, ♣J | pair
+♣8, ♠J, ♦K, ♦Q, ♠K | pair
+♣8, ♠J, ♦K, ♦Q, ♣J | pair
+♣8, ♠J, ♦K, ♠K, ♣J | two pairs
+♣8, ♠J, ♦Q, ♠K, ♣J | pair
+♣8, ♥K, ♣10, ♦K, ♦Q | pair
+♣8, ♥K, ♣10, ♦K, ♠K | three of a kind
+♣8, ♥K, ♣10, ♦K, ♣J | pair
+♣8, ♥K, ♣10, ♦Q, ♠K | pair
+♣8, ♥K, ♣10, ♠K, ♣J | pair
+♣8, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♣8, ♥K, ♦K, ♦Q, ♣J | pair
+♣8, ♥K, ♦K, ♠K, ♣J | three of a kind
+♣8, ♥K, ♦Q, ♠K, ♣J | pair
+♣8, ♣10, ♦K, ♦Q, ♠K | pair
+♣8, ♣10, ♦K, ♠K, ♣J | pair
+♣8, ♦K, ♦Q, ♠K, ♣J | pair
+♣5, ♥6, ♠J, ♥K, ♦K | pair
+♣5, ♥6, ♠J, ♥K, ♠K | pair
+♣5, ♥6, ♠J, ♥K, ♣J | pair
+♣5, ♥6, ♠J, ♣10, ♣J | pair
+♣5, ♥6, ♠J, ♦K, ♠K | pair
+♣5, ♥6, ♠J, ♦K, ♣J | pair
+♣5, ♥6, ♠J, ♦Q, ♣J | pair
+♣5, ♥6, ♠J, ♠K, ♣J | pair
+♣5, ♥6, ♥K, ♣10, ♦K | pair
+♣5, ♥6, ♥K, ♣10, ♠K | pair
+♣5, ♥6, ♥K, ♦K, ♦Q | pair
+♣5, ♥6, ♥K, ♦K, ♠K | three of a kind
+♣5, ♥6, ♥K, ♦K, ♣J | pair
+♣5, ♥6, ♥K, ♦Q, ♠K | pair
+♣5, ♥6, ♥K, ♠K, ♣J | pair
+♣5, ♥6, ♣10, ♦K, ♠K | pair
+♣5, ♥6, ♦K, ♦Q, ♠K | pair
+♣5, ♥6, ♦K, ♠K, ♣J | pair
+♣5, ♠J, ♥K, ♣10, ♦K | pair
+♣5, ♠J, ♥K, ♣10, ♠K | pair
+♣5, ♠J, ♥K, ♣10, ♣J | pair
+♣5, ♠J, ♥K, ♦K, ♦Q | pair
+♣5, ♠J, ♥K, ♦K, ♠K | three of a kind
+♣5, ♠J, ♥K, ♦K, ♣J | two pairs
+♣5, ♠J, ♥K, ♦Q, ♠K | pair
+♣5, ♠J, ♥K, ♦Q, ♣J | pair
+♣5, ♠J, ♥K, ♠K, ♣J | two pairs
+♣5, ♠J, ♣10, ♦K, ♠K | pair
+♣5, ♠J, ♣10, ♦K, ♣J | pair
+♣5, ♠J, ♣10, ♦Q, ♣J | pair
+♣5, ♠J, ♣10, ♠K, ♣J | pair
+♣5, ♠J, ♦K, ♦Q, ♠K | pair
+♣5, ♠J, ♦K, ♦Q, ♣J | pair
+♣5, ♠J, ♦K, ♠K, ♣J | two pairs
+♣5, ♠J, ♦Q, ♠K, ♣J | pair
+♣5, ♥K, ♣10, ♦K, ♦Q | pair
+♣5, ♥K, ♣10, ♦K, ♠K | three of a kind
+♣5, ♥K, ♣10, ♦K, ♣J | pair
+♣5, ♥K, ♣10, ♦Q, ♠K | pair
+♣5, ♥K, ♣10, ♠K, ♣J | pair
+♣5, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♣5, ♥K, ♦K, ♦Q, ♣J | pair
+♣5, ♥K, ♦K, ♠K, ♣J | three of a kind
+♣5, ♥K, ♦Q, ♠K, ♣J | pair
+♣5, ♣10, ♦K, ♦Q, ♠K | pair
+♣5, ♣10, ♦K, ♠K, ♣J | pair
+♣5, ♦K, ♦Q, ♠K, ♣J | pair
+♥6, ♠J, ♥K, ♣10, ♦K | pair
+♥6, ♠J, ♥K, ♣10, ♠K | pair
+♥6, ♠J, ♥K, ♣10, ♣J | pair
+♥6, ♠J, ♥K, ♦K, ♦Q | pair
+♥6, ♠J, ♥K, ♦K, ♠K | three of a kind
+♥6, ♠J, ♥K, ♦K, ♣J | two pairs
+♥6, ♠J, ♥K, ♦Q, ♠K | pair
+♥6, ♠J, ♥K, ♦Q, ♣J | pair
+♥6, ♠J, ♥K, ♠K, ♣J | two pairs
+♥6, ♠J, ♣10, ♦K, ♠K | pair
+♥6, ♠J, ♣10, ♦K, ♣J | pair
+♥6, ♠J, ♣10, ♦Q, ♣J | pair
+♥6, ♠J, ♣10, ♠K, ♣J | pair
+♥6, ♠J, ♦K, ♦Q, ♠K | pair
+♥6, ♠J, ♦K, ♦Q, ♣J | pair
+♥6, ♠J, ♦K, ♠K, ♣J | two pairs
+♥6, ♠J, ♦Q, ♠K, ♣J | pair
+♥6, ♥K, ♣10, ♦K, ♦Q | pair
+♥6, ♥K, ♣10, ♦K, ♠K | three of a kind
+♥6, ♥K, ♣10, ♦K, ♣J | pair
+♥6, ♥K, ♣10, ♦Q, ♠K | pair
+♥6, ♥K, ♣10, ♠K, ♣J | pair
+♥6, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♥6, ♥K, ♦K, ♦Q, ♣J | pair
+♥6, ♥K, ♦K, ♠K, ♣J | three of a kind
+♥6, ♥K, ♦Q, ♠K, ♣J | pair
+♥6, ♣10, ♦K, ♦Q, ♠K | pair
+♥6, ♣10, ♦K, ♠K, ♣J | pair
+♥6, ♦K, ♦Q, ♠K, ♣J | pair
+♠J, ♥K, ♣10, ♦K, ♦Q | pair
+♠J, ♥K, ♣10, ♦K, ♠K | three of a kind
+♠J, ♥K, ♣10, ♦K, ♣J | two pairs
+♠J, ♥K, ♣10, ♦Q, ♠K | pair
+♠J, ♥K, ♣10, ♦Q, ♣J | pair
+♠J, ♥K, ♣10, ♠K, ♣J | two pairs
+♠J, ♥K, ♦K, ♦Q, ♠K | three of a kind
+♠J, ♥K, ♦K, ♦Q, ♣J | two pairs
+♠J, ♥K, ♦K, ♠K, ♣J | fullhouse
+♠J, ♥K, ♦Q, ♠K, ♣J | two pairs
+♠J, ♣10, ♦K, ♦Q, ♠K | pair
+♠J, ♣10, ♦K, ♦Q, ♣J | pair
+♠J, ♣10, ♦K, ♠K, ♣J | two pairs
+♠J, ♣10, ♦Q, ♠K, ♣J | pair
+♠J, ♦K, ♦Q, ♠K, ♣J | two pairs
+♥K, ♣10, ♦K, ♦Q, ♠K | three of a kind
+♥K, ♣10, ♦K, ♦Q, ♣J | pair
+♥K, ♣10, ♦K, ♠K, ♣J | three of a kind
+♥K, ♣10, ♦Q, ♠K, ♣J | pair
+♥K, ♦K, ♦Q, ♠K, ♣J | three of a kind
+♣10, ♦K, ♦Q, ♠K, ♣J | pair
