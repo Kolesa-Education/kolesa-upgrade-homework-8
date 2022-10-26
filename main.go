@@ -6,9 +6,11 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"strings"
 
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
 	"github.com/samber/lo"
+	"gonum.org/v1/gonum/stat/combin"
 )
 
 func cardsToRepresentations(cards []card.Card) []string {
@@ -64,16 +66,52 @@ func removeDuplicates(records []string) []string {
 	return distinctCards
 }
 
-func getCardCombinations(chnl chan int) {
-	for i := 0; i < 100; i++ {
-		records := readCsvFile(fmt.Sprintf("dataset/dat%d.csv", i))
-		fmt.Println(removeDuplicates(records))
-		distinctrecords := removeDuplicates(records)
-		writeCsvFile(distinctrecords, i)
+func getCardCombinations(n int) {
+	records := readCsvFile(fmt.Sprintf("dataset/dat%d.csv", n))
+	distinctrecords := removeDuplicates(records)
+	var splitcards []string
 
-		chnl <- i
+	cs := combin.Combinations(len(distinctrecords), 5)
+	for _, c := range cs {
+		fmt.Printf("%s,%s,%s,%s,%s\n", distinctrecords[c[0]], distinctrecords[c[1]], distinctrecords[c[2]], distinctrecords[c[3]], distinctrecords[c[4]])
 	}
-	close(chnl)
+
+	size := 1
+	var j int
+	for i := 0; i < len(distinctrecords); i += size {
+		j += size
+		if j > len(distinctrecords) {
+			j = len(distinctrecords)
+		}
+		distinctrecordsString := strings.Join(distinctrecords[i:j], "")
+		splitcard := strings.SplitN(distinctrecordsString, "", 2)
+		switch splitcard[0] {
+		case "\u2666":
+			splitcard[0] = "diamonds"
+		case "\u2663":
+			splitcard[0] = "clubs"
+		case "\u2665":
+			splitcard[0] = "hearts"
+		case "\u2660":
+			splitcard[0] = "spades"
+		}
+		switch splitcard[1] {
+		case "J":
+			splitcard[1] = "11"
+		case "Q":
+			splitcard[1] = "12"
+		case "K":
+			splitcard[1] = "13"
+		case "A":
+			splitcard[1] = "14"
+		}
+		splitcardString := strings.Join(splitcard, "")
+		splitcards = append(splitcards, splitcardString)
+	}
+
+	fmt.Println(distinctrecords)
+	fmt.Println(splitcards)
+	writeCsvFile(distinctrecords, n)
 }
 
 func main() {
@@ -109,9 +147,7 @@ func main() {
 		_ = file.Close()
 	}
 
-	done := make(chan int)
-	go getCardCombinations(done)
-	for v := range done {
-		fmt.Println("Received ", v+1)
+	for i := 0; i < 100; i++ {
+		getCardCombinations(i)
 	}
 }
