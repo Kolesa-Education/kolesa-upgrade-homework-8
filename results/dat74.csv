@@ -1,0 +1,434 @@
+♦2,♣Q,♦4,♣A,♣Q | Pair
+♦2,♣Q,♦4,♣A,♣Q | Three Of A Kind
+♦2,♣Q,♦4,♣A,♣J | Pair
+♦2,♣Q,♦4,♣A,♣J | Three Of A Kind
+♦2,♣Q,♦4,♣A,♦3 | Pair
+♦2,♣Q,♦4,♣A,♠5 | Pair
+♦2,♣Q,♦4,♣A,♣Q | Pair
+♦2,♣Q,♦4,♣A,♣Q | Three Of A Kind
+♦2,♣Q,♦4,♣A,♣4 | Pair
+♦2,♣Q,♦4,♣A,♣4 | Pair
+♦2,♣Q,♦4,♣Q,♣J | Pair
+♦2,♣Q,♦4,♣Q,♣J | Three Of A Kind
+♦2,♣Q,♦4,♣Q,♦3 | Pair
+♦2,♣Q,♦4,♣Q,♠5 | Pair
+♦2,♣Q,♦4,♣Q,♣Q | Pair
+♦2,♣Q,♦4,♣Q,♣Q | Three Of A Kind
+♦2,♣Q,♦4,♣Q,♣4 | Pair
+♦2,♣Q,♦4,♣Q,♣4 | Pair
+♦2,♣Q,♦4,♣J,♦3 | Pair
+♦2,♣Q,♦4,♣J,♠5 | Pair
+♦2,♣Q,♦4,♣J,♣Q | Pair
+♦2,♣Q,♦4,♣J,♣Q | Three Of A Kind
+♦2,♣Q,♦4,♣J,♣4 | Pair
+♦2,♣Q,♦4,♣J,♣4 | Pair
+♦2,♣Q,♦4,♦3,♣Q | Pair
+♦2,♣Q,♦4,♦3,♣4 | Pair
+♦2,♣Q,♦4,♠5,♣Q | Pair
+♦2,♣Q,♦4,♠5,♣4 | Pair
+♦2,♣Q,♦4,♣Q,♣4 | Pair
+♦2,♣Q,♦4,♣Q,♣4 | Pair
+♦2,♣Q,♣A,♣Q,♣J | Pair
+♦2,♣Q,♣A,♣Q,♣J | Three Of A Kind
+♦2,♣Q,♣A,♣Q,♣J | Four Of A Kind
+♦2,♣Q,♣A,♣Q,♦3 | Pair
+♦2,♣Q,♣A,♣Q,♦3 | Three Of A Kind
+♦2,♣Q,♣A,♣Q,♠5 | Pair
+♦2,♣Q,♣A,♣Q,♠5 | Three Of A Kind
+♦2,♣Q,♣A,♣Q,♣Q | Pair
+♦2,♣Q,♣A,♣Q,♣Q | Three Of A Kind
+♦2,♣Q,♣A,♣Q,♣Q | Four Of A Kind
+♦2,♣Q,♣A,♣Q,♣4 | Pair
+♦2,♣Q,♣A,♣Q,♣4 | Three Of A Kind
+♦2,♣Q,♣A,♣J,♦3 | Pair
+♦2,♣Q,♣A,♣J,♦3 | Three Of A Kind
+♦2,♣Q,♣A,♣J,♠5 | Pair
+♦2,♣Q,♣A,♣J,♠5 | Three Of A Kind
+♦2,♣Q,♣A,♣J,♣Q | Pair
+♦2,♣Q,♣A,♣J,♣Q | Three Of A Kind
+♦2,♣Q,♣A,♣J,♣Q | Four Of A Kind
+♦2,♣Q,♣A,♣J,♣4 | Pair
+♦2,♣Q,♣A,♣J,♣4 | Three Of A Kind
+♦2,♣Q,♣A,♦3,♠5 | Pair
+♦2,♣Q,♣A,♦3,♣Q | Pair
+♦2,♣Q,♣A,♦3,♣Q | Three Of A Kind
+♦2,♣Q,♣A,♦3,♣4 | Pair
+♦2,♣Q,♣A,♠5,♣Q | Pair
+♦2,♣Q,♣A,♠5,♣Q | Three Of A Kind
+♦2,♣Q,♣A,♠5,♣4 | Pair
+♦2,♣Q,♣A,♣Q,♣4 | Pair
+♦2,♣Q,♣A,♣Q,♣4 | Three Of A Kind
+♦2,♣Q,♣Q,♣J,♦3 | Pair
+♦2,♣Q,♣Q,♣J,♦3 | Three Of A Kind
+♦2,♣Q,♣Q,♣J,♠5 | Pair
+♦2,♣Q,♣Q,♣J,♠5 | Three Of A Kind
+♦2,♣Q,♣Q,♣J,♣Q | Pair
+♦2,♣Q,♣Q,♣J,♣Q | Three Of A Kind
+♦2,♣Q,♣Q,♣J,♣Q | Four Of A Kind
+♦2,♣Q,♣Q,♣J,♣4 | Pair
+♦2,♣Q,♣Q,♣J,♣4 | Three Of A Kind
+♦2,♣Q,♣Q,♦3,♠5 | Pair
+♦2,♣Q,♣Q,♦3,♣Q | Pair
+♦2,♣Q,♣Q,♦3,♣Q | Three Of A Kind
+♦2,♣Q,♣Q,♦3,♣4 | Pair
+♦2,♣Q,♣Q,♠5,♣Q | Pair
+♦2,♣Q,♣Q,♠5,♣Q | Three Of A Kind
+♦2,♣Q,♣Q,♠5,♣4 | Pair
+♦2,♣Q,♣Q,♣Q,♣4 | Pair
+♦2,♣Q,♣Q,♣Q,♣4 | Three Of A Kind
+♦2,♣Q,♣J,♦3,♠5 | Pair
+♦2,♣Q,♣J,♦3,♣Q | Pair
+♦2,♣Q,♣J,♦3,♣Q | Three Of A Kind
+♦2,♣Q,♣J,♦3,♣4 | Pair
+♦2,♣Q,♣J,♠5,♣Q | Pair
+♦2,♣Q,♣J,♠5,♣Q | Three Of A Kind
+♦2,♣Q,♣J,♠5,♣4 | Pair
+♦2,♣Q,♣J,♣Q,♣4 | Pair
+♦2,♣Q,♣J,♣Q,♣4 | Three Of A Kind
+♦2,♣Q,♦3,♠5,♣Q | Pair
+♦2,♣Q,♦3,♣Q,♣4 | Pair
+♦2,♣Q,♠5,♣Q,♣4 | Pair
+♦2,♦4,♣A,♣Q,♣J | Pair
+♦2,♦4,♣A,♣Q,♣J | Three Of A Kind
+♦2,♦4,♣A,♣Q,♦3 | Pair
+♦2,♦4,♣A,♣Q,♠5 | Pair
+♦2,♦4,♣A,♣Q,♣Q | Pair
+♦2,♦4,♣A,♣Q,♣Q | Three Of A Kind
+♦2,♦4,♣A,♣Q,♣4 | Pair
+♦2,♦4,♣A,♣Q,♣4 | Pair
+♦2,♦4,♣A,♣J,♦3 | Pair
+♦2,♦4,♣A,♣J,♠5 | Pair
+♦2,♦4,♣A,♣J,♣Q | Pair
+♦2,♦4,♣A,♣J,♣Q | Three Of A Kind
+♦2,♦4,♣A,♣J,♣4 | Pair
+♦2,♦4,♣A,♣J,♣4 | Pair
+♦2,♦4,♣A,♦3,♣Q | Pair
+♦2,♦4,♣A,♦3,♣4 | Pair
+♦2,♦4,♣A,♠5,♣Q | Pair
+♦2,♦4,♣A,♠5,♣4 | Pair
+♦2,♦4,♣A,♣Q,♣4 | Pair
+♦2,♦4,♣A,♣Q,♣4 | Pair
+♦2,♦4,♣Q,♣J,♦3 | Pair
+♦2,♦4,♣Q,♣J,♠5 | Pair
+♦2,♦4,♣Q,♣J,♣Q | Pair
+♦2,♦4,♣Q,♣J,♣Q | Three Of A Kind
+♦2,♦4,♣Q,♣J,♣4 | Pair
+♦2,♦4,♣Q,♣J,♣4 | Pair
+♦2,♦4,♣Q,♦3,♣Q | Pair
+♦2,♦4,♣Q,♦3,♣4 | Pair
+♦2,♦4,♣Q,♠5,♣Q | Pair
+♦2,♦4,♣Q,♠5,♣4 | Pair
+♦2,♦4,♣Q,♣Q,♣4 | Pair
+♦2,♦4,♣Q,♣Q,♣4 | Pair
+♦2,♦4,♣J,♦3,♣Q | Pair
+♦2,♦4,♣J,♦3,♣4 | Pair
+♦2,♦4,♣J,♠5,♣Q | Pair
+♦2,♦4,♣J,♠5,♣4 | Pair
+♦2,♦4,♣J,♣Q,♣4 | Pair
+♦2,♦4,♣J,♣Q,♣4 | Pair
+♦2,♦4,♦3,♠5,♣4 | Pair
+♦2,♦4,♦3,♣Q,♣4 | Pair
+♦2,♦4,♠5,♣Q,♣4 | Pair
+♦2,♣A,♣Q,♣J,♦3 | Pair
+♦2,♣A,♣Q,♣J,♦3 | Three Of A Kind
+♦2,♣A,♣Q,♣J,♠5 | Pair
+♦2,♣A,♣Q,♣J,♠5 | Three Of A Kind
+♦2,♣A,♣Q,♣J,♣Q | Pair
+♦2,♣A,♣Q,♣J,♣Q | Three Of A Kind
+♦2,♣A,♣Q,♣J,♣Q | Four Of A Kind
+♦2,♣A,♣Q,♣J,♣4 | Pair
+♦2,♣A,♣Q,♣J,♣4 | Three Of A Kind
+♦2,♣A,♣Q,♦3,♠5 | Pair
+♦2,♣A,♣Q,♦3,♣Q | Pair
+♦2,♣A,♣Q,♦3,♣Q | Three Of A Kind
+♦2,♣A,♣Q,♦3,♣4 | Pair
+♦2,♣A,♣Q,♠5,♣Q | Pair
+♦2,♣A,♣Q,♠5,♣Q | Three Of A Kind
+♦2,♣A,♣Q,♠5,♣4 | Pair
+♦2,♣A,♣Q,♣Q,♣4 | Pair
+♦2,♣A,♣Q,♣Q,♣4 | Three Of A Kind
+♦2,♣A,♣J,♦3,♠5 | Pair
+♦2,♣A,♣J,♦3,♣Q | Pair
+♦2,♣A,♣J,♦3,♣Q | Three Of A Kind
+♦2,♣A,♣J,♦3,♣4 | Pair
+♦2,♣A,♣J,♠5,♣Q | Pair
+♦2,♣A,♣J,♠5,♣Q | Three Of A Kind
+♦2,♣A,♣J,♠5,♣4 | Pair
+♦2,♣A,♣J,♣Q,♣4 | Pair
+♦2,♣A,♣J,♣Q,♣4 | Three Of A Kind
+♦2,♣A,♦3,♠5,♣Q | Pair
+♦2,♣A,♦3,♣Q,♣4 | Pair
+♦2,♣A,♠5,♣Q,♣4 | Pair
+♦2,♣Q,♣J,♦3,♠5 | Pair
+♦2,♣Q,♣J,♦3,♣Q | Pair
+♦2,♣Q,♣J,♦3,♣Q | Three Of A Kind
+♦2,♣Q,♣J,♦3,♣4 | Pair
+♦2,♣Q,♣J,♠5,♣Q | Pair
+♦2,♣Q,♣J,♠5,♣Q | Three Of A Kind
+♦2,♣Q,♣J,♠5,♣4 | Pair
+♦2,♣Q,♣J,♣Q,♣4 | Pair
+♦2,♣Q,♣J,♣Q,♣4 | Three Of A Kind
+♦2,♣Q,♦3,♠5,♣Q | Pair
+♦2,♣Q,♦3,♣Q,♣4 | Pair
+♦2,♣Q,♠5,♣Q,♣4 | Pair
+♦2,♣J,♦3,♠5,♣Q | Pair
+♦2,♣J,♦3,♣Q,♣4 | Pair
+♦2,♣J,♠5,♣Q,♣4 | Pair
+♣Q,♦4,♣A,♣Q,♣J | Pair
+♣Q,♦4,♣A,♣Q,♣J | Three Of A Kind
+♣Q,♦4,♣A,♣Q,♣J | Four Of A Kind
+♣Q,♦4,♣A,♣Q,♦3 | Pair
+♣Q,♦4,♣A,♣Q,♦3 | Three Of A Kind
+♣Q,♦4,♣A,♣Q,♠5 | Pair
+♣Q,♦4,♣A,♣Q,♠5 | Three Of A Kind
+♣Q,♦4,♣A,♣Q,♣Q | Pair
+♣Q,♦4,♣A,♣Q,♣Q | Three Of A Kind
+♣Q,♦4,♣A,♣Q,♣Q | Four Of A Kind
+♣Q,♦4,♣A,♣Q,♣4 | Pair
+♣Q,♦4,♣A,♣Q,♣4 | Three Of A Kind
+♣Q,♦4,♣A,♣Q,♣4 | Pair
+♣Q,♦4,♣A,♣J,♦3 | Pair
+♣Q,♦4,♣A,♣J,♦3 | Three Of A Kind
+♣Q,♦4,♣A,♣J,♠5 | Pair
+♣Q,♦4,♣A,♣J,♠5 | Three Of A Kind
+♣Q,♦4,♣A,♣J,♣Q | Pair
+♣Q,♦4,♣A,♣J,♣Q | Three Of A Kind
+♣Q,♦4,♣A,♣J,♣Q | Four Of A Kind
+♣Q,♦4,♣A,♣J,♣4 | Pair
+♣Q,♦4,♣A,♣J,♣4 | Three Of A Kind
+♣Q,♦4,♣A,♣J,♣4 | Pair
+♣Q,♦4,♣A,♦3,♠5 | Pair
+♣Q,♦4,♣A,♦3,♣Q | Pair
+♣Q,♦4,♣A,♦3,♣Q | Three Of A Kind
+♣Q,♦4,♣A,♦3,♣4 | Pair
+♣Q,♦4,♣A,♦3,♣4 | Pair
+♣Q,♦4,♣A,♠5,♣Q | Pair
+♣Q,♦4,♣A,♠5,♣Q | Three Of A Kind
+♣Q,♦4,♣A,♠5,♣4 | Pair
+♣Q,♦4,♣A,♠5,♣4 | Pair
+♣Q,♦4,♣A,♣Q,♣4 | Pair
+♣Q,♦4,♣A,♣Q,♣4 | Pair
+♣Q,♦4,♣A,♣Q,♣4 | Three Of A Kind
+♣Q,♦4,♣Q,♣J,♦3 | Pair
+♣Q,♦4,♣Q,♣J,♦3 | Three Of A Kind
+♣Q,♦4,♣Q,♣J,♠5 | Pair
+♣Q,♦4,♣Q,♣J,♠5 | Three Of A Kind
+♣Q,♦4,♣Q,♣J,♣Q | Pair
+♣Q,♦4,♣Q,♣J,♣Q | Three Of A Kind
+♣Q,♦4,♣Q,♣J,♣Q | Four Of A Kind
+♣Q,♦4,♣Q,♣J,♣4 | Pair
+♣Q,♦4,♣Q,♣J,♣4 | Three Of A Kind
+♣Q,♦4,♣Q,♣J,♣4 | Pair
+♣Q,♦4,♣Q,♦3,♠5 | Pair
+♣Q,♦4,♣Q,♦3,♣Q | Pair
+♣Q,♦4,♣Q,♦3,♣Q | Three Of A Kind
+♣Q,♦4,♣Q,♦3,♣4 | Pair
+♣Q,♦4,♣Q,♦3,♣4 | Pair
+♣Q,♦4,♣Q,♠5,♣Q | Pair
+♣Q,♦4,♣Q,♠5,♣Q | Three Of A Kind
+♣Q,♦4,♣Q,♠5,♣4 | Pair
+♣Q,♦4,♣Q,♠5,♣4 | Pair
+♣Q,♦4,♣Q,♣Q,♣4 | Pair
+♣Q,♦4,♣Q,♣Q,♣4 | Three Of A Kind
+♣Q,♦4,♣Q,♣Q,♣4 | Pair
+♣Q,♦4,♣J,♦3,♠5 | Pair
+♣Q,♦4,♣J,♦3,♣Q | Pair
+♣Q,♦4,♣J,♦3,♣Q | Three Of A Kind
+♣Q,♦4,♣J,♦3,♣4 | Pair
+♣Q,♦4,♣J,♦3,♣4 | Pair
+♣Q,♦4,♣J,♠5,♣Q | Pair
+♣Q,♦4,♣J,♠5,♣Q | Three Of A Kind
+♣Q,♦4,♣J,♠5,♣4 | Pair
+♣Q,♦4,♣J,♠5,♣4 | Pair
+♣Q,♦4,♣J,♣Q,♣4 | Pair
+♣Q,♦4,♣J,♣Q,♣4 | Three Of A Kind
+♣Q,♦4,♣J,♣Q,♣4 | Pair
+♣Q,♦4,♦3,♠5,♣Q | Pair
+♣Q,♦4,♦3,♠5,♣4 | Pair
+♣Q,♦4,♦3,♣Q,♣4 | Pair
+♣Q,♦4,♦3,♣Q,♣4 | Pair
+♣Q,♦4,♠5,♣Q,♣4 | Pair
+♣Q,♦4,♠5,♣Q,♣4 | Pair
+♣Q,♣A,♣Q,♣J,♦3 | Pair
+♣Q,♣A,♣Q,♣J,♦3 | Three Of A Kind
+♣Q,♣A,♣Q,♣J,♦3 | Four Of A Kind
+♣Q,♣A,♣Q,♣J,♠5 | Pair
+♣Q,♣A,♣Q,♣J,♠5 | Three Of A Kind
+♣Q,♣A,♣Q,♣J,♠5 | Four Of A Kind
+♣Q,♣A,♣Q,♣J,♣Q | Pair
+♣Q,♣A,♣Q,♣J,♣Q | Three Of A Kind
+♣Q,♣A,♣Q,♣J,♣Q | Four Of A Kind
+♣Q,♣A,♣Q,♣J,♣4 | Pair
+♣Q,♣A,♣Q,♣J,♣4 | Three Of A Kind
+♣Q,♣A,♣Q,♣J,♣4 | Four Of A Kind
+♣Q,♣A,♣Q,♦3,♠5 | Pair
+♣Q,♣A,♣Q,♦3,♠5 | Three Of A Kind
+♣Q,♣A,♣Q,♦3,♣Q | Pair
+♣Q,♣A,♣Q,♦3,♣Q | Three Of A Kind
+♣Q,♣A,♣Q,♦3,♣Q | Four Of A Kind
+♣Q,♣A,♣Q,♦3,♣4 | Pair
+♣Q,♣A,♣Q,♦3,♣4 | Three Of A Kind
+♣Q,♣A,♣Q,♠5,♣Q | Pair
+♣Q,♣A,♣Q,♠5,♣Q | Three Of A Kind
+♣Q,♣A,♣Q,♠5,♣Q | Four Of A Kind
+♣Q,♣A,♣Q,♠5,♣4 | Pair
+♣Q,♣A,♣Q,♠5,♣4 | Three Of A Kind
+♣Q,♣A,♣Q,♣Q,♣4 | Pair
+♣Q,♣A,♣Q,♣Q,♣4 | Three Of A Kind
+♣Q,♣A,♣Q,♣Q,♣4 | Four Of A Kind
+♣Q,♣A,♣J,♦3,♠5 | Pair
+♣Q,♣A,♣J,♦3,♠5 | Three Of A Kind
+♣Q,♣A,♣J,♦3,♣Q | Pair
+♣Q,♣A,♣J,♦3,♣Q | Three Of A Kind
+♣Q,♣A,♣J,♦3,♣Q | Four Of A Kind
+♣Q,♣A,♣J,♦3,♣4 | Pair
+♣Q,♣A,♣J,♦3,♣4 | Three Of A Kind
+♣Q,♣A,♣J,♠5,♣Q | Pair
+♣Q,♣A,♣J,♠5,♣Q | Three Of A Kind
+♣Q,♣A,♣J,♠5,♣Q | Four Of A Kind
+♣Q,♣A,♣J,♠5,♣4 | Pair
+♣Q,♣A,♣J,♠5,♣4 | Three Of A Kind
+♣Q,♣A,♣J,♣Q,♣4 | Pair
+♣Q,♣A,♣J,♣Q,♣4 | Three Of A Kind
+♣Q,♣A,♣J,♣Q,♣4 | Four Of A Kind
+♣Q,♣A,♦3,♠5,♣Q | Pair
+♣Q,♣A,♦3,♠5,♣Q | Three Of A Kind
+♣Q,♣A,♦3,♠5,♣4 | Pair
+♣Q,♣A,♦3,♣Q,♣4 | Pair
+♣Q,♣A,♦3,♣Q,♣4 | Three Of A Kind
+♣Q,♣A,♠5,♣Q,♣4 | Pair
+♣Q,♣A,♠5,♣Q,♣4 | Three Of A Kind
+♣Q,♣Q,♣J,♦3,♠5 | Pair
+♣Q,♣Q,♣J,♦3,♠5 | Three Of A Kind
+♣Q,♣Q,♣J,♦3,♣Q | Pair
+♣Q,♣Q,♣J,♦3,♣Q | Three Of A Kind
+♣Q,♣Q,♣J,♦3,♣Q | Four Of A Kind
+♣Q,♣Q,♣J,♦3,♣4 | Pair
+♣Q,♣Q,♣J,♦3,♣4 | Three Of A Kind
+♣Q,♣Q,♣J,♠5,♣Q | Pair
+♣Q,♣Q,♣J,♠5,♣Q | Three Of A Kind
+♣Q,♣Q,♣J,♠5,♣Q | Four Of A Kind
+♣Q,♣Q,♣J,♠5,♣4 | Pair
+♣Q,♣Q,♣J,♠5,♣4 | Three Of A Kind
+♣Q,♣Q,♣J,♣Q,♣4 | Pair
+♣Q,♣Q,♣J,♣Q,♣4 | Three Of A Kind
+♣Q,♣Q,♣J,♣Q,♣4 | Four Of A Kind
+♣Q,♣Q,♦3,♠5,♣Q | Pair
+♣Q,♣Q,♦3,♠5,♣Q | Three Of A Kind
+♣Q,♣Q,♦3,♠5,♣4 | Pair
+♣Q,♣Q,♦3,♣Q,♣4 | Pair
+♣Q,♣Q,♦3,♣Q,♣4 | Three Of A Kind
+♣Q,♣Q,♠5,♣Q,♣4 | Pair
+♣Q,♣Q,♠5,♣Q,♣4 | Three Of A Kind
+♣Q,♣J,♦3,♠5,♣Q | Pair
+♣Q,♣J,♦3,♠5,♣Q | Three Of A Kind
+♣Q,♣J,♦3,♠5,♣4 | Pair
+♣Q,♣J,♦3,♣Q,♣4 | Pair
+♣Q,♣J,♦3,♣Q,♣4 | Three Of A Kind
+♣Q,♣J,♠5,♣Q,♣4 | Pair
+♣Q,♣J,♠5,♣Q,♣4 | Three Of A Kind
+♣Q,♦3,♠5,♣Q,♣4 | Pair
+♦4,♣A,♣Q,♣J,♦3 | Pair
+♦4,♣A,♣Q,♣J,♦3 | Three Of A Kind
+♦4,♣A,♣Q,♣J,♠5 | Pair
+♦4,♣A,♣Q,♣J,♠5 | Three Of A Kind
+♦4,♣A,♣Q,♣J,♣Q | Pair
+♦4,♣A,♣Q,♣J,♣Q | Three Of A Kind
+♦4,♣A,♣Q,♣J,♣Q | Four Of A Kind
+♦4,♣A,♣Q,♣J,♣4 | Pair
+♦4,♣A,♣Q,♣J,♣4 | Pair
+♦4,♣A,♣Q,♣J,♣4 | Three Of A Kind
+♦4,♣A,♣Q,♦3,♠5 | Pair
+♦4,♣A,♣Q,♦3,♣Q | Pair
+♦4,♣A,♣Q,♦3,♣Q | Three Of A Kind
+♦4,♣A,♣Q,♦3,♣4 | Pair
+♦4,♣A,♣Q,♦3,♣4 | Pair
+♦4,♣A,♣Q,♠5,♣Q | Pair
+♦4,♣A,♣Q,♠5,♣Q | Three Of A Kind
+♦4,♣A,♣Q,♠5,♣4 | Pair
+♦4,♣A,♣Q,♠5,♣4 | Pair
+♦4,♣A,♣Q,♣Q,♣4 | Pair
+♦4,♣A,♣Q,♣Q,♣4 | Three Of A Kind
+♦4,♣A,♣Q,♣Q,♣4 | Pair
+♦4,♣A,♣J,♦3,♠5 | Pair
+♦4,♣A,♣J,♦3,♣Q | Pair
+♦4,♣A,♣J,♦3,♣Q | Three Of A Kind
+♦4,♣A,♣J,♦3,♣4 | Pair
+♦4,♣A,♣J,♦3,♣4 | Pair
+♦4,♣A,♣J,♠5,♣Q | Pair
+♦4,♣A,♣J,♠5,♣Q | Three Of A Kind
+♦4,♣A,♣J,♠5,♣4 | Pair
+♦4,♣A,♣J,♠5,♣4 | Pair
+♦4,♣A,♣J,♣Q,♣4 | Pair
+♦4,♣A,♣J,♣Q,♣4 | Pair
+♦4,♣A,♣J,♣Q,♣4 | Three Of A Kind
+♦4,♣A,♦3,♠5,♣Q | Pair
+♦4,♣A,♦3,♠5,♣4 | Pair
+♦4,♣A,♦3,♣Q,♣4 | Pair
+♦4,♣A,♦3,♣Q,♣4 | Pair
+♦4,♣A,♠5,♣Q,♣4 | Pair
+♦4,♣A,♠5,♣Q,♣4 | Pair
+♦4,♣Q,♣J,♦3,♠5 | Pair
+♦4,♣Q,♣J,♦3,♣Q | Pair
+♦4,♣Q,♣J,♦3,♣Q | Three Of A Kind
+♦4,♣Q,♣J,♦3,♣4 | Pair
+♦4,♣Q,♣J,♦3,♣4 | Pair
+♦4,♣Q,♣J,♠5,♣Q | Pair
+♦4,♣Q,♣J,♠5,♣Q | Three Of A Kind
+♦4,♣Q,♣J,♠5,♣4 | Pair
+♦4,♣Q,♣J,♠5,♣4 | Pair
+♦4,♣Q,♣J,♣Q,♣4 | Pair
+♦4,♣Q,♣J,♣Q,♣4 | Pair
+♦4,♣Q,♣J,♣Q,♣4 | Three Of A Kind
+♦4,♣Q,♦3,♠5,♣Q | Pair
+♦4,♣Q,♦3,♠5,♣4 | Pair
+♦4,♣Q,♦3,♣Q,♣4 | Pair
+♦4,♣Q,♦3,♣Q,♣4 | Pair
+♦4,♣Q,♠5,♣Q,♣4 | Pair
+♦4,♣Q,♠5,♣Q,♣4 | Pair
+♦4,♣J,♦3,♠5,♣Q | Pair
+♦4,♣J,♦3,♠5,♣4 | Pair
+♦4,♣J,♦3,♣Q,♣4 | Pair
+♦4,♣J,♦3,♣Q,♣4 | Pair
+♦4,♣J,♠5,♣Q,♣4 | Pair
+♦4,♣J,♠5,♣Q,♣4 | Pair
+♦4,♦3,♠5,♣Q,♣4 | Pair
+♣A,♣Q,♣J,♦3,♠5 | Pair
+♣A,♣Q,♣J,♦3,♠5 | Three Of A Kind
+♣A,♣Q,♣J,♦3,♣Q | Pair
+♣A,♣Q,♣J,♦3,♣Q | Three Of A Kind
+♣A,♣Q,♣J,♦3,♣Q | Four Of A Kind
+♣A,♣Q,♣J,♦3,♣4 | Pair
+♣A,♣Q,♣J,♦3,♣4 | Three Of A Kind
+♣A,♣Q,♣J,♠5,♣Q | Pair
+♣A,♣Q,♣J,♠5,♣Q | Three Of A Kind
+♣A,♣Q,♣J,♠5,♣Q | Four Of A Kind
+♣A,♣Q,♣J,♠5,♣4 | Pair
+♣A,♣Q,♣J,♠5,♣4 | Three Of A Kind
+♣A,♣Q,♣J,♣Q,♣4 | Pair
+♣A,♣Q,♣J,♣Q,♣4 | Three Of A Kind
+♣A,♣Q,♣J,♣Q,♣4 | Four Of A Kind
+♣A,♣Q,♦3,♠5,♣Q | Pair
+♣A,♣Q,♦3,♠5,♣Q | Three Of A Kind
+♣A,♣Q,♦3,♠5,♣4 | Pair
+♣A,♣Q,♦3,♣Q,♣4 | Pair
+♣A,♣Q,♦3,♣Q,♣4 | Three Of A Kind
+♣A,♣Q,♠5,♣Q,♣4 | Pair
+♣A,♣Q,♠5,♣Q,♣4 | Three Of A Kind
+♣A,♣J,♦3,♠5,♣Q | Pair
+♣A,♣J,♦3,♠5,♣Q | Three Of A Kind
+♣A,♣J,♦3,♠5,♣4 | Pair
+♣A,♣J,♦3,♣Q,♣4 | Pair
+♣A,♣J,♦3,♣Q,♣4 | Three Of A Kind
+♣A,♣J,♠5,♣Q,♣4 | Pair
+♣A,♣J,♠5,♣Q,♣4 | Three Of A Kind
+♣A,♦3,♠5,♣Q,♣4 | Pair
+♣Q,♣J,♦3,♠5,♣Q | Pair
+♣Q,♣J,♦3,♠5,♣Q | Three Of A Kind
+♣Q,♣J,♦3,♠5,♣4 | Pair
+♣Q,♣J,♦3,♣Q,♣4 | Pair
+♣Q,♣J,♦3,♣Q,♣4 | Three Of A Kind
+♣Q,♣J,♠5,♣Q,♣4 | Pair
+♣Q,♣J,♠5,♣Q,♣4 | Three Of A Kind
+♣Q,♦3,♠5,♣Q,♣4 | Pair
+♣J,♦3,♠5,♣Q,♣4 | Pair
