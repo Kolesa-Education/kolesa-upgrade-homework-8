@@ -14,7 +14,7 @@ func getFactorial(n int) int {
 	return res
 }
 
-func makeCombinations(cardsSlice []string) string {
+/*func makeCombinations(cardsSlice []string) string {
 	length := len(cardsSlice)
 	res := ""
 	for i := 0; i < length-1; i++ {
@@ -32,7 +32,7 @@ func makeCombinations(cardsSlice []string) string {
 	}
 	//fmt.Println(res)
 	return res
-}
+}*/
 
 func getBinaryCombinations(n int, k int) []string {
 	resLength := getFactorial(n) / (getFactorial(k) * getFactorial(n-k))

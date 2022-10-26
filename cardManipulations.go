@@ -57,7 +57,7 @@ func checkQuantativeCombinations(valuesSlice []string, dataMap map[string]int) (
 	if ok {
 		return combination, nil
 	}
-	return "", errors.New("Empty combination")
+	return "", errors.New("empty combination")
 
 }
 

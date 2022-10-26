@@ -15,16 +15,46 @@ func getCombinationsPerFile(file os.FileInfo) []string {
 	dataSlice = getUniqueValuesFromDataMap(dataMap, -1)
 	cardCombinations := makeCombinationsFromMasks(dataSlice, 5)
 	combinations := []string{}
-	for _, cardCombination := range cardCombinations {
-		if len(cardCombinations) == 1 {
-			continue
+	numPerGoroutine := 1500
+	numOfGoroutine := len(cardCombinations) / numPerGoroutine
+	reminder := 0
+	var wg sync.WaitGroup
+	channel := make(chan string, len(cardCombinations))
+	if len(cardCombinations)%numPerGoroutine != 0 {
+		numOfGoroutine++
+		reminder = len(cardCombinations) % numPerGoroutine
+	}
+	for i := 0; i < numOfGoroutine; i++ {
+		rightBound := i*numPerGoroutine + numPerGoroutine
+		if reminder != 0 && i == numOfGoroutine-1 {
+			rightBound = i*numPerGoroutine + reminder
 		}
+		wg.Add(1)
+		go func(i int, channel chan string) {
+			defer wg.Done()
+			for j := i * numPerGoroutine; j < rightBound; j++ {
 
-		res := findCombination(cardCombination)
+				if len(cardCombinations) == 1 {
+					continue
+				}
+
+				res := findCombination(cardCombinations[j])
+				channel <- res
+
+			}
+
+		}(i, channel)
+	}
+	wg.Wait()
+
+	for i := 0; i < len(cardCombinations); i++ {
+		res := <-channel
 		if res != "" {
 			combinations = append(combinations, res)
 		}
+
 	}
+
 	return combinations
 }
 
