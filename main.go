@@ -73,46 +73,35 @@ func findComb(cards []string, path string) {
 		}
     }
 
-	for _, v := range freq {
-        if v >= 2 {
-			addToFile(cards, "Pair", path)
-		}
-		if v >= 3 {
-			addToFile(cards, "Three Of A Kind", path)
-		}
-		if v >= 4 {
-			addToFile(cards, "Four Of A Kind", path)
-		}
-    }
 }
 
-func solve(nums []string, temp []string, k, i int, path string) {
-	if (i == len(nums)) {
+func solve(allCards []string, fiveCards []string, limitOfFive, idx int, path string) {
+	if (idx == len(allCards)) {
 		return
 	}	
 
-	if (k == 0) {
-		findComb(temp, path)
-		if len(temp) > 0 {
-			temp = temp[:len(temp)-1]
+	if (limitOfFive== 0) {
+		findComb(fiveCards, path)
+		if len(fiveCards) > 0 {
+			fiveCards = fiveCards[:len(fiveCards)-1]
 		}
 		return
 	}
 
-	temp = append(temp, nums[i])
+	fiveCards = append(fiveCards, allCards[idx])
 	
-	solve(nums, temp, k - 1, i + 1, path)
-	if len(temp) > 0 {
-		temp = temp[:len(temp)-1]
+	solve(allCards, fiveCards, limitOfFive - 1, idx + 1, path)
+	if len(fiveCards) > 0 {
+		fiveCards = fiveCards[:len(fiveCards)-1]
 	}
-	solve(nums, temp, k, i + 1, path)
+	solve(allCards, fiveCards, limitOfFive, idx + 1, path)
 }
 
 func combinations(path, data string) {
-	arr := strings.Split(data, ",")
-	temp := make([]string, 0)
+	allCards := strings.Split(data, ",")
+	fiveCards := make([]string, 0)
 
-	solve(arr, temp, 5, 0, path)
+	solve(allCards, fiveCards, 5, 0, path)
 }
 
 func generate(number int, line string) {
