@@ -268,7 +268,17 @@ func main() {
 		_ = file.Close()
 	}
 
+	ch := make(chan int)
+	go channel(ch)
+	for v := range ch {
+		fmt.Println("done ", v)
+	}
+}
+
+func channel(chnl chan int) {
 	for i := 0; i < 100; i++ {
 		writePokerCombinations(i)
+		chnl <- i
 	}
+	close(chnl)
 }
