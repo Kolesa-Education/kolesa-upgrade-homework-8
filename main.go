@@ -1,53 +1,117 @@
 package main
 
 import (
-	"encoding/csv"
 	"fmt"
 	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/card"
+	"github.com/Kolesa-Education/kolesa-upgrade-homework-8/combinatorics"
 	"github.com/samber/lo"
 	"log"
-	"math/rand"
 	"os"
+	"path/filepath"
+	"strings"
+	"sync"
+	"time"
 )
 
-func cardsToRepresentations(cards []card.Card) []string {
-	representations := lo.Map[card.Card, string](cards, func(c card.Card, index int) string {
-		r, _ := c.ShortRepresentation()
-		return r
+func processDatasetEntry(cards []card.Card) ([]card.PokerCombination, error) {
+	var result []card.PokerCombination
+	deduplicated := combinatorics.Deduplicate(cards)
+	combinations, err := combinatorics.Combinations(deduplicated, card.ValidCombinationSize)
+	if err != nil {
+		return nil, err
+	}
+	for _, comb := range combinations {
+		combination, err := card.CombinationOf(comb)
+		if err != nil {
+			return nil, err
+		}
+		if combination != nil {
+			result = append(result, combination)
+		}
+	}
+	return result, nil
+}
+
+func readCardsFromCSV(cardsCSV string) ([]card.Card, error) {
+	cards := strings.Split(cardsCSV, ",")
+	parsed := lo.Map[string, card.Card](cards, func(csvCard string, index int) card.Card {
+		parsedCard, err := card.FromShortRepresentation(csvCard)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		return *parsedCard
 	})
-	return representations
+	return parsed, nil
+}
+
+func processFile(dirName, fileName, resultDirName string) {
+	inputData, err := os.ReadFile(fmt.Sprintf("%s/%s", dirName, fileName))
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	inputCards, err := readCardsFromCSV(string(inputData))
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	result, err := processDatasetEntry(inputCards)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	resultFile, err := os.OpenFile(
+		fmt.Sprintf("%s/%s", resultDirName, fileName),
+		os.O_CREATE|os.O_APPEND|os.O_WRONLY,
+		0644)
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	lo.ForEach[card.PokerCombination](result, func(combination card.PokerCombination, index int) {
+		representation, err := combination.Representation()
+		if err != nil {
+			log.Fatalln(err)
+		}
+
+		_, err = resultFile.WriteString(fmt.Sprintf("%s\n", representation))
+		if err != nil {
+			log.Fatalln(err)
+		}
+	})
+
+	_ = resultFile.Close()
 }
 
 func main() {
-	var seed int64 = 1665694295623135151
-	randomSource := rand.NewSource(seed)
-	random := rand.New(randomSource)
-	log.Printf("Initialized random with seed %d\n", seed)
+	log.Println("Starting counting combinations...")
+	files, err := os.ReadDir("dataset/")
 
-	fmt.Println("Starting to generate cards...")
-	for i := 0; i < 100; i++ {
-		log.Printf("Iteration %d\n", i)
-		cardsInFile := random.Intn(7) + 10 // [10, 17]
-		cards := make([]card.Card, 0)
-
-		for j := 0; j < cardsInFile; j++ {
-			generatedCard, _ := card.Random(*random)
-			cards = append(cards, *generatedCard)
-		}
-		log.Printf("Generated cards %s\n", cards)
-		summary := cardsToRepresentations(cards)
-		file, err := os.Create(fmt.Sprintf("dataset/dat%d.csv", i))
-
-		if err != nil {
-			log.Fatalln("failed to open file", err)
-		}
-
-		writer := csv.NewWriter(file)
-		if err = writer.Write(summary); err != nil {
-			log.Fatalln("error writing to a file!")
-		}
-
-		writer.Flush()
-		_ = file.Close()
+	if err != nil {
+		log.Fatalln(err)
 	}
+
+	err = os.MkdirAll(filepath.Join(".", "results"), os.ModePerm)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	start := time.Now()
+	var wg sync.WaitGroup
+	for _, dirEntry := range files {
+		log.Printf("iterating dirEntry %s\n", dirEntry)
+		wg.Add(1)
+
+		go func(entry os.DirEntry) {
+			defer wg.Done()
+			log.Printf("concurrently starting working on entry {%s}\n", entry.Name())
+			processFile("dataset", entry.Name(), "results")
+		}(dirEntry)
+	}
+	wg.Wait()
+
+	end := time.Now()
+	elapsed := end.Sub(start) //monotonic
+	log.Printf("Finished in {%d}ns/{%d}ms", elapsed, elapsed/time.Millisecond)
 }
